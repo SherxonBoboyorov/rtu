@@ -1,0 +1,249 @@
+// academy start
+
+.academy{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-position:top center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 80px 0;
+    margin-bottom: 60px;
+
+    &__title__h2{
+        @include fontAll(2.75rem,700,$fff);
+        line-height: 135%;
+        margin-bottom: 10px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        grid-gap: 15px;
+        flex-wrap: wrap;
+
+        li{
+            position: relative;
+        }
+
+        li+li{
+            padding-left: 23px;
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 8px;
+                height: 2px;
+                background-color: $fff;
+                transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                -moz-transform: translate(0,-50%);
+                -ms-transform: translate(0,-50%);
+                -o-transform: translate(0,-50%);
+            }
+        }
+    }
+
+    &__menu__link{
+        @include fontAll(1.125rem,400,$fff);
+        line-height: 135%;
+    }
+}
+
+// academy end
+
+
+// academy_contint start
+
+.academy_contint{
+    position: relative;
+    margin-bottom: 60px;
+
+    &__img{
+        @include fiximg(100%,600px,true);
+        margin-bottom: 60px;
+        img{
+            max-height: 600px;
+            object-position: center top;
+        }
+    }
+
+    &__text{
+        @include fontAll(1rem,400,$text);
+        line-height: 150%;
+        text-align: justify;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+        h1,h2,h3,h4,h5,h6,em,strong{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+    
+        a{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+    
+        img{
+            width: 48%;
+            height: 390px;
+            object-fit: cover;
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+        }
+    
+        img:nth-child(even){
+            float: right;
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+// academy_contint end
+
+
+// programmes start
+
+.programmes{
+    position: relative;
+    margin-bottom: 60px;
+    background-color:$link;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+
+    .about__title__h2{
+        color:$fff;
+
+        &::after{
+            background-color:$fff;
+        }
+    }
+
+    &__menu__link{
+        @include fontAll(1.375rem,600,$fff);
+        line-height: 135%;
+    }
+
+    &__menu{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items:start;
+        margin-top: 20px;
+        grid-gap: 20px;
+        li{
+            position: relative;
+            padding-left: 20px;
+            &::after{
+                content: "";
+                width: 8px;
+                height: 8px;
+                background-color:rgba(255, 255, 255, 0.5);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                border-radius:50px;
+                -webkit-border-radius:50px;
+                -moz-border-radius:50px;
+                -ms-border-radius:50px;
+                -o-border-radius:50px;
+    
+                transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                -moz-transform: translate(0,-50%);
+                -ms-transform: translate(0,-50%);
+                -o-transform: translate(0,-50%);
+            }
+        }
+    }
+}
+
+// programmes end
+
+
+// magistracy_in start
+
+.magistracy_in{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+// magistracy_in end
+
+
+@media (max-width:1150px){
+    .academy__title__h2{
+        font-size: 2.5rem;
+    }
+
+    .academy__menu__link {
+        font-size: 1rem;
+    }
+
+    .programmes__menu__link{
+        font-size: 1.25rem;
+    }
+
+    .academy_contint__img{
+        height: auto;
+        img{
+            min-height: 200px;
+        }
+    }
+}
+
+@media (max-width:1000px){
+    .academy__title__h2 {
+        font-size: 2.25rem;
+    }
+
+    .academy{
+        padding: 50px 0;
+    }
+
+    .programmes{
+        padding: 30px 0;
+    }
+
+    .programmes__menu__link {
+        font-size: 1.125rem;
+    }
+
+    .academy_contint__text img,
+    .academy_contint__text img:nth-child(even){
+        float: initial;
+        width: 100%;
+        max-height: 600px;
+        height: auto;
+        min-height: 200px;
+        margin: 0px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:650px){
+    .academy__title__h2 {
+        font-size: 2rem;
+    } 
+
+    .academy {
+        padding: 40px 0;
+    }
+
+    .programmes__menu{
+        grid-template-columns: auto;
+    }
+}

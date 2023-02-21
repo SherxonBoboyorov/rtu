@@ -1,0 +1,303 @@
+// programmes start
+
+.programmes_in{
+    position: relative;
+    margin-bottom: 60px;
+
+    &__list{
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        background-color:$fff;
+        width: 100%;
+        height: auto;
+        padding: 30px 40px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-gap: 20px;
+        align-items:start;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    &__list__item{
+        display: flex;
+        align-items: flex-start;
+        grid-gap: 10px;
+        flex-direction: column;
+    }
+
+    &__title__h4{
+        @include fontAll(1rem,500,$title);
+        line-height: 135%;
+    }
+
+    &__title__h3{
+        @include fontAll(1rem,700,$title);
+        line-height: 135%;
+    }
+
+    &__video{
+        margin-bottom: 60px;
+        margin-top: 50px;
+        position: relative;
+        .products__title__h2{
+            text-align: start;
+        }
+        img{
+            width: 100%;
+            height: 600px;
+            object-fit: cover
+        }
+
+        .button__min{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+        }
+    }
+
+    &__video__item{
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+    }
+
+    &__video__title{
+        @include fontAll(1.125rem,600,$fff);
+        line-height: 135%;
+        margin-bottom: 5px;
+
+        max-height: 72px;
+        -webkit-line-clamp: 3;
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        padding-right: 20px;
+    }
+
+    &__video__data{
+        @include fontAll(0.875rem,400,$fff);
+        line-height: 135%;
+    }
+
+    &__img{
+        @include fiximg(50%,500px,true);
+        float: left;
+        margin-right: 60px;
+        img{
+            max-height: 500px;
+        }
+    }
+
+    &__item{
+        margin-bottom: 30px;
+    }
+
+    &__reviews__list{
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    &__reviews__item{
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        background-color:$fff;
+        padding-bottom: 20px;
+    }
+
+    &__reviews__img{
+        @include fiximg(100%,300px,true);
+        margin-bottom: 20px;
+        img{
+            max-height: 300px;
+        }
+    }
+
+    &__reviews__name{
+        @include fontAll(1.5rem,600,$title);
+        line-height: 135%;
+        padding:0 30px;
+        margin-bottom: 5px;
+    }
+
+    &__reviews__graduate{
+        @include fontAll(1rem,600,$fon);
+        line-height: 135%;
+        padding: 0 30px;
+        margin-bottom: 10px;
+    }
+
+    &__reviews__text{
+        @include fontAll(1.125rem,400,$text);
+        line-height: 150%;
+        padding: 0 30px;
+        text-align: justify;
+
+        img{
+            display: none;
+        }
+
+        max-height: 80px;
+        -webkit-line-clamp: 3;
+        position: relative;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+
+    &__reviews__button{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+    &__reviews__link{
+        display: inline-block;
+        @include fontAll(0.75rem,600,$fff);
+        text-transform: uppercase;
+        line-height: 100%;
+        position: relative;
+        background-color:$fon;
+        padding: 18px 40px;
+        @extend%transition;
+        border:2px solid $fon;
+        &:hover{
+            background-color:transparent;
+            color:$fon;
+        }
+    }
+
+    &__item__menu{
+        list-style: auto !important;
+        padding-left: 20px;
+        @include fontAll(1rem,700,$text);
+        line-height: 150%;
+    }
+
+}
+
+// programmes end
+
+
+@media (max-width:1150px){
+    .programmes_in__list{
+        grid-template-columns: auto auto auto;
+    }
+
+    .programmes_in__img{
+        margin-right: 30px;
+        width: 40%;
+        height: 300px;
+    }
+
+    .programmes_in__reviews__img{
+        height: auto;
+        img{
+            min-height: 150px;
+        }
+    }
+
+    .programmes_in__reviews__list{
+        grid-gap: 20px;
+    }
+
+    .programmes_in__reviews__name {
+        padding: 0px 20px;
+        font-size: 1.25rem;
+    }
+
+    .programmes_in__reviews__graduate{
+        padding: 0px 20px;
+    }
+
+    .programmes_in__reviews__text{
+        padding: 0px 20px;
+        font-size: 1rem;
+        max-height: 72px;
+    }
+
+    .programmes_in__item {
+        margin-bottom: 20px;
+    }
+
+    .programmes_in__video img {
+        height: 500px;
+    }
+}
+
+@media (max-width:900px){
+    .programmes_in__img{
+        margin-right: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+        img{
+            min-height: 200px;
+        }
+    }
+
+    .programmes_in__reviews__list{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .programmes_in__video img {
+        height: 400px;
+    }
+
+    .programmes_in__video {
+        margin-top: 30px;
+    }
+
+    .programmes_in__video__item{
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .programmes_in__video__title{
+        font-size: 1rem;
+        max-height: 65px;
+    }
+}
+
+@media (max-width:650px){
+    .programmes_in__list{
+        grid-template-columns: auto auto;
+    }
+
+    .programmes_in__reviews__list{
+        grid-template-columns: 1fr;
+    }
+
+    .programmes_in__reviews__img img{
+        max-height: 400px;
+    }
+
+    .programmes_in__video img {
+        height: 300px;
+    }
+
+    .programmes_in__list{
+        padding: 20px;
+    }
+
+    .programmes_in__reviews__name{
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width:450px){
+    .programmes_in__list{
+        grid-template-columns: auto;
+    }
+}

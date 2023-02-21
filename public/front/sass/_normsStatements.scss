@@ -1,0 +1,82 @@
+// Norms & Statements start
+
+.normsStatements{
+    position: relative;
+    margin-bottom: 60px;
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        align-items: start;
+    }
+
+    &__item{
+        background-color:$fff;
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        padding: 30px 40px;
+    }
+
+    &__item__link{
+        display: grid;
+        grid-template-columns: 30px auto 24px;
+        grid-gap: 10px;
+        align-items: center;
+
+        @include fontAll(1.25rem,600,$title);
+        line-height: 135%;
+        span{
+            opacity: 0.2;
+        }
+
+        span + span{
+            opacity: 1;
+            svg{
+                fill:$fon;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+// Norms & Statements end
+
+@media (max-width:1200px){
+    .normsStatements__item__link{
+        grid-template-columns: 15px auto 24px;
+    }
+
+    .normsStatements__item {
+        padding: 20px 30px;
+    }
+
+    .normsStatements__list {
+        grid-gap: 30px;
+    }
+
+    .normsStatements__item__link {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width:900px){
+    .normsStatements__list{
+        grid-template-columns: 1fr;
+    }
+
+    .normsStatements__item__link {
+        font-size: 1rem;
+    }
+
+    .normsStatements__item__link span + span svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width:650px){
+    .normsStatements__list{
+        grid-gap: 20px;
+    }
+}

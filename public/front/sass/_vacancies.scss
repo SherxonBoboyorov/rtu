@@ -1,0 +1,93 @@
+// vacancies start
+
+.vacancies{
+    position: relative;
+    margin-bottom: 60px;
+
+    &__list{
+        grid-gap: 40px;
+        .active{
+            .vacancies__text{
+                opacity: 1;
+                height: auto;
+                width: auto;
+                margin-top: 40px;
+            }
+
+            .vacancies__title__h3{
+                background-color: $fon;
+                color: $fff;
+
+                span{
+                    transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                }
+            }
+        }
+
+        .vacancies__item + .vacancies__item{
+            margin-top: 40px;
+        }
+    }
+
+    &__title__h3{
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        @include fontAll(1.25rem,600,$title);
+        line-height: 135%;
+        display: grid;
+        grid-template-columns: auto 15px;
+        grid-gap: 20px;
+        align-items:center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        cursor: pointer;
+        @extend%transition;
+        span{
+            @extend%transition;
+            font-size: 22px;
+        }
+    }
+
+    &__text{
+        @include fontAll(1.125rem,400,$text);
+        line-height: 145%;
+        padding: 0 40px;
+        @extend%transition;
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+        overflow: hidden;
+    }
+}
+
+// vacancies end
+
+@media (max-width:1200px){
+    .vacancies__title__h3 {
+        font-size:1.125rem;
+        padding: 15px 20px;
+    }
+
+    .vacancies__text{
+        font-size:1rem;
+        padding: 0px 30px;
+    }
+
+    .vacancies__list .active .vacancies__text{
+        margin-top: 20px;
+    }
+
+    .vacancies__list .vacancies__item + .vacancies__item {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:650px){
+    .vacancies__text {
+        font-size:1rem;
+        padding: 0px 20px;
+    }
+}
