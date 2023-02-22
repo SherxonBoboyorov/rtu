@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateStatement extends FormRequest
+class UpdateNorm extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,6 +27,9 @@ class UpdateStatement extends FormRequest
             'title_ru' => 'required|max:255',
             'title_uz' => 'required|max:255',
             'title_en' => 'required|max:255',
+            'content_ru' => 'required',
+            'content_uz' => 'required',
+            'content_en' => 'required',
         ];
     }
 }

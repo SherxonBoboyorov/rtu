@@ -21,7 +21,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label for="department_id">Departments & Staff </label>
                             <select name="department_id" id="department_id" class="form-control">
                                 @foreach ($department as $department)
@@ -38,26 +38,7 @@
                             @endif
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="faculty_id">Faculties </label>
-                            <select name="faculty_id" id="faculty_id" class="form-control">
-                                @foreach ($faculty as $faculty)
-                                <option @if($faculty->id == $team->faculty_id) selected @endif value="{{ $faculty->id }}">{{ $faculty->title_en }}</option>
-                                @endforeach
-                            </select>
-                            @if($errors->has('faculty_id'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{ $errors->first('faculty_id') }}
-                            </div>
-                            @endif
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top: 15px">
-
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="name_uz">Name [Uzbek]</label>
                             <input type="text" id="name_uz" value="{{ $team->name_uz }}" class="form-control" name="name_uz">
                             @if($errors->has('name_uz'))
@@ -69,7 +50,7 @@
                             </div>
                             @endif
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="name_ru">Name [Russian]</label>
                             <input type="text" id="name_ru" value="{{ $team->name_ru }}" class="form-control" name="name_ru">
                             @if($errors->has('name_ru'))
@@ -81,7 +62,7 @@
                             </div>
                             @endif
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label for="name_en">Name [English]</label>
                             <input type="text" id="name_en" value="{{ $team->name_en }}" class="form-control" name="name_en">
                             @if($errors->has('name_en'))
@@ -98,7 +79,7 @@
 
                      <div class="row" style="margin-top: 15px">
                         <div class="col-md-3">
-                            <label for="job_title_uz">Job title: [Uzbek]</label>
+                            <label for="job_title_uz">Position: [Uzbek]</label>
                             <input type="text" id="job_title_uz" value="{{ $team->job_title_uz }}" class="form-control" name="job_title_uz">
                             @if($errors->has('job_title_uz'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -112,7 +93,7 @@
                         </div>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-3">
-                                <label for="job_title_ru">Job title: [Russian]</label>
+                                <label for="job_title_ru">Position: [Russian]</label>
                                 <input type="text" id="job_title_ru" value="{{ $team->job_title_ru }}" class="form-control" name="job_title_ru">
                                 @if($errors->has('job_title_ru'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -126,7 +107,7 @@
                         </div>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-3">
-                                <label for="job_title_en">Job title: [English]</label>
+                                <label for="job_title_en">Position: [English]</label>
                                 <input type="text" id="job_title_en" value="{{ $team->job_title_en }}" class="form-control" name="job_title_en">
                                 @if($errors->has('job_title_en'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -139,24 +120,10 @@
                             </div>
                         </div><br>
 
-                        <div class="row" style="margin-top: 15px">
-                            <div class="col-md-3">
-                                <label for="phone_number">Phone number:</label>
-                                <input type="text" id="phone_number" value="{{ $team->phone_number }}" class="form-control" name="phone_number">
-                                @if($errors->has('phone_number'))
-                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    {{ $errors->first('phone_number') }}
-                                </div>
-                                @endif
-                            </div>
-                        </div><br>
 
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-3">
-                            <label for="reception_days_uz">Reception days: [Uzbek]</label>
+                            <label for="reception_days_uz">Teaching work experience: [Uzbek]</label>
                             <input type="text" id="reception_days_uz" value="{{ $team->reception_days_uz }}" class="form-control" name="reception_days_uz">
                             @if($errors->has('reception_days_uz'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -170,7 +137,7 @@
                       </div>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-3">
-                                <label for="reception_days_ru">Reception days: [Russian]</label>
+                                <label for="reception_days_ru">Teaching work experience: [Russian]</label>
                                 <input type="text" id="reception_days_ru" value="{{ $team->reception_days_ru }}" class="form-control" name="reception_days_ru">
                                 @if($errors->has('reception_days_ru'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -184,7 +151,7 @@
                         </div>
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-3">
-                                <label for="reception_days_en">Reception days: [English]</label>
+                                <label for="reception_days_en">Teaching work experience: [English]</label>
                                 <input type="text" id="reception_days_en" value="{{ $team->reception_days_en }}" class="form-control" name="reception_days_en">
                                 @if($errors->has('reception_days_en'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -198,20 +165,43 @@
                         </div><br>
 
                         <div class="row" style="margin-top: 15px">
-                            <div class="col-md-3">
-                                <label for="email">Email:</label>
-                                <input type="text" id="email" value="{{ $team->email }}" class="form-control" name="email">
-                                @if($errors->has('email'))
+                            <div class="col-md-4">
+                                <label for="specialties_uz">Specialties: [Uzbek]</label>
+                                <input type="text" id="specialties_uz" value="{{ $team->specialties_uz }}" class="form-control" name="specialties_uz">
+                                @if($errors->has('specialties_uz'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    {{ $errors->first('email') }}
+                                    {{ $errors->first('specialties_uz') }}
                                 </div>
                                 @endif
                             </div>
-                        </div><br><br>
-
+                            <div class="col-md-4">
+                                <label for="specialties_ru">Specialties: [Russian]</label>
+                                <input type="text" id="specialties_ru" value="{{ $team->specialties_ru }}" class="form-control" name="specialties_ru">
+                                @if($errors->has('specialties_ru'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    {{ $errors->first('specialties_ru') }}
+                                </div>
+                                @endif
+                            </div>
+                            <div class="col-md-4">
+                                <label for="specialties_en">Specialties: [English]</label>
+                                <input type="text" id="specialties_en" value="{{ $team->specialties_en }}" class="form-control" name="specialties_en">
+                                @if($errors->has('specialties_en'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    {{ $errors->first('specialties_en') }}
+                                </div>
+                                @endif
+                            </div>
+                         </div><br>
 
                      <div class="row" style="margin-top: 15px">
                         <div class="col-md-12">

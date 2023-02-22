@@ -22,12 +22,6 @@ return new class extends Migration
             ->on('departments')
             ->onDelete('cascade');
 
-            $table->unsignedBigInteger('faculty_id')->nullable()->unsigned();
-            $table->foreign('faculty_id')
-            ->references('id')
-            ->on('faculties')
-            ->onDelete('cascade');
-
             $table->string('image');
 
             $table->string('name_ru');
@@ -42,13 +36,13 @@ return new class extends Migration
             $table->string('job_title_uz');
             $table->string('job_title_en');
 
-            $table->string('phone_number');
-
             $table->string('reception_days_ru');
             $table->string('reception_days_uz');
             $table->string('reception_days_en');
 
-            $table->string('email');
+            $table->string('specialties_ru');
+            $table->string('specialties_uz');
+            $table->string('specialties_en');
 
             $table->text('description_ru');
             $table->text('description_uz');
@@ -61,7 +55,7 @@ return new class extends Migration
             $table->text('meta_description_ru')->nullable();
             $table->text('meta_description_uz')->nullable();
             $table->text('meta_description_en')->nullable();
-            
+
             $table->timestamps();
         });
     }

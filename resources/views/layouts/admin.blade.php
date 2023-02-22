@@ -54,11 +54,11 @@
                             </a>
                         </li>
                         </ul>
-                     </li>
+                       </li>
 
-                     {{-- end --}}
+                       {{-- end --}}
 
-                     {{-- start--}}
+                       {{-- start--}}
 
                         <li class="nav-item">
 
@@ -81,8 +81,8 @@
                                 </a>
                             </li> --}}
                             </ul>
-                         </li>
-                       {{-- end --}}
+                          </li>
+                         {{-- end --}}
 
 
                          {{-- start--}}
@@ -108,133 +108,159 @@
                                 </a>
                             </li>
                             </ul>
+                          </li>
+                         {{-- end --}}
+
+
+                         {{-- start--}}
+
+                         <li class="nav-item">
+
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>
+                                Structure
+                                 <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('structure.index') }}" class="nav-link">
+                                   <p>List</p>
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a href="{{ route('structure.create') }}" class="nav-link">
+                                   <p>Create</p>
+                                </a>
+                            </li> --}}
+                            </ul>
                          </li>
                        {{-- end --}}
 
 
-                       {{-- start--}}
-                       <li class="nav-item">
-                        <a href="#" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                            Our Partners
-                             <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('ourpartner.index') }}" class="nav-link">
-                               <p>List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('ourpartner.create') }}" class="nav-link">
-                               <p>Create</p>
-                            </a>
-                        </li>
-                        </ul>
-                     </li>
-                     {{-- end --}}
+                               {{-- start--}}
 
-                     {{-- start--}}
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                             Advisory Board
-                             <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('advisoryboard.index') }}" class="nav-link">
-                               <p>List</p>
-                            </a>
-                        </li>
-                        {{-- <li class="nav-item">
-                            <a href="{{ route('advisoryboard.create') }}" class="nav-link">
-                               <p>Add</p>
-                            </a>
-                        </li> --}}
-                        </ul>
-                     </li>
-                     {{-- end --}}
+                               <li class="nav-item">
 
-                       {{-- start--}}
-                       <li class="nav-item">
-                        <a href="#" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                             Leadership
-                             <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('leadership.index') }}" class="nav-link">
-                               <p>List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('leadership.create') }}" class="nav-link">
-                               <p>Create</p>
-                            </a>
-                        </li>
-                        </ul>
-                     </li>
-                     {{-- end --}}
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Norms & statements
+                                     <i class="right fas fa-angle-left"></i>
+                                </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('norm.index') }}" class="nav-link">
+                                       <p>List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('norm.create') }}" class="nav-link">
+                                       <p>Create</p>
+                                    </a>
+                                </li>
+                                </ul>
+                             </li>
+                           {{-- end --}}
+
+                             {{-- start--}}
+
+                             <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Departments & Staff
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('department.index') }}" class="nav-link">
+                                        <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('department.create') }}" class="nav-link">
+                                        <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            {{-- end--}}
 
 
-                     {{-- start--}}
+                             {{-- start--}}
 
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Team
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('team.index') }}" class="nav-link">
+                                        <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('team.create') }}" class="nav-link">
+                                        <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            {{-- end--}}
+
+                        {{-- start--}}
+                         <li class="nav-item">
+                            <a href="#" class="nav-link">
                             <i class="nav-icon"></i>
                             <p>
-                                Norms & Statements
+                                Our Partners
+                                <i class="right fas fa-angle-left"></i>
                             </p>
-                        </a>
-                        <ul class="nav nav-treeview">
+                            </a>
+                            <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('statement.index') }}" class="nav-link">
-                                   <p>List</p>
+                                <a href="{{ route('ourpartner.index') }}" class="nav-link">
+                                <p>List</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('statement.create') }}" class="nav-link">
-                                   <p>Create</p>
+                                <a href="{{ route('ourpartner.create') }}" class="nav-link">
+                                <p>Create</p>
                                 </a>
                             </li>
                             </ul>
+                         </li>
+                        {{-- end --}}
 
-                     </li>
-                     {{-- end--}}
-
-
-                     {{-- start--}}
-
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        {{-- start--}}
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                             <i class="nav-icon"></i>
                             <p>
-                                Departments & Staff
+                                Leadership
+                                <i class="right fas fa-angle-left"></i>
                             </p>
-                        </a>
-                        <ul class="nav nav-treeview">
+                            </a>
+                            <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('department.index') }}" class="nav-link">
-                                   <p>List</p>
+                                <a href="{{ route('leadership.index') }}" class="nav-link">
+                                <p>List</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('department.create') }}" class="nav-link">
-                                   <p>Create</p>
+                                <a href="{{ route('leadership.create') }}" class="nav-link">
+                                <p>Create</p>
                                 </a>
                             </li>
                             </ul>
-
-                     </li>
-                     {{-- end--}}
+                         </li>
+                        {{-- end --}}
 
                        {{-- start--}}
 
@@ -261,78 +287,6 @@
                       {{-- end--}}
 
 
-                      {{-- start--}}
-
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon"></i>
-                            <p>
-                                Team
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('team.index') }}" class="nav-link">
-                                   <p>List</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('team.create') }}" class="nav-link">
-                                   <p>Create</p>
-                                </a>
-                            </li>
-                            </ul>
-                      </li>
-                     {{-- end--}}
-
-                        {{-- start--}}
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon"></i>
-                                <p>
-                                    Photo gallery
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('photo.index') }}" class="nav-link">
-                                       <p>List</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('photo.create') }}" class="nav-link">
-                                       <p>Create</p>
-                                    </a>
-                                </li>
-                                </ul>
-                          </li>
-                         {{-- end--}}
-
-
-                          {{-- start--}}
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon"></i>
-                                <p>
-                                    Video gallery
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('video.index') }}" class="nav-link">
-                                       <p>List</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('video.create') }}" class="nav-link">
-                                       <p>Create</p>
-                                    </a>
-                                </li>
-                                </ul>
-                          </li>
-                         {{-- end--}}
 
 
                           {{-- start--}}

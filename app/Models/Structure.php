@@ -15,4 +15,50 @@ class Structure extends Model
     protected $fillable = [
         'image'
     ];
+
+    public static function uploadImage($request): ?string
+    {
+        if ($request->hasFile('image')) {
+
+            self::checkDirectory();
+
+            $request->file('image')
+                ->move(
+                    public_path() . '/upload/structure/' . date('d-m-Y'),
+                    $request->file('image')->getClientOriginalName()
+                );
+            return '/upload/structure/' . date('d-m-Y') . '/' . $request->file('image')->getClientOriginalName();
+        }
+
+        return null;
+    }
+
+    public static function updateImage($request, $structure): string
+    {
+        if ($request->hasFile('image')) {
+            if (File::exists(public_path() . $structure->image)) {
+                File::delete(public_path() . $structure->image);
+            }
+
+            self::checkDirectory();
+
+            $request->file('image')
+                ->move(
+                    public_path() . '/upload/structure/' . date('d-m-Y'),
+                    $request->file('image')->getClientOriginalName()
+                );
+            return '/upload/structure/' . date('d-m-Y') . '/' . $request->file('image')->getClientOriginalName();
+        }
+
+        return $structure->image;
+    }
+
+    private static function checkDirectory(): bool
+    {
+        if (!File::exists(public_path() . '/upload/structure/' . date('d-m-Y'))) {
+            File::makeDirectory(public_path() . '/upload/structure/' . date('d-m-Y'), $mode = 0777, true, true);
+        }
+
+        return true;
+    }
 }

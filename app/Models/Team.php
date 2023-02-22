@@ -14,7 +14,6 @@ class Team extends Model
 
     protected $fillable = [
         'department_id',
-        'faculty_id',
         'image',
         'name_ru',
         'name_uz',
@@ -25,11 +24,12 @@ class Team extends Model
         'job_title_ru',
         'job_title_uz',
         'job_title_en',
-        'phone_number',
         'reception_days_ru',
         'reception_days_uz',
         'reception_days_en',
-        'email',
+        'specialties_ru',
+        'specialties_uz',
+        'specialties_en',
         'description_ru',
         'description_uz',
         'description_en',

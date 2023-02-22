@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Advisoryboard extends Model
+class Norm extends Model
 {
     use HasFactory;
 
-    protected $table = 'advisoryboards';
-
+    protected $table = 'norms';
     protected $fillable = [
-        'description_ru',
-        'description_uz',
-        'description_en',
+        'title_ru',
+        'title_uz',
+        'title_en',
+        'content_ru',
+        'content_uz',
+        'content_en',
         'meta_title_ru',
         'meta_title_uz',
         'meta_title_en',

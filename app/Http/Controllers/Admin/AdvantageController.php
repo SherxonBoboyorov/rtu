@@ -8,7 +8,6 @@ use App\Http\Requests\Admin\UpdateAdvantage;
 use App\Models\Advantage;
 use Illuminate\Http\Request;
 
-
 class AdvantageController extends Controller
 {
     /**

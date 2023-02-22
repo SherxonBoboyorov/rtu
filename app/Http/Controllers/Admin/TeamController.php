@@ -35,11 +35,9 @@ class TeamController extends Controller
     public function create()
     {
         $departments = Department::orderBy('created_at', 'DESC')->get();
-        $faculties = Faculty::orderBy('created_at', 'DESC')->get();
 
         return view('admin.team.create', [
             'departments' => $departments,
-            'faculties' => $faculties
         ]);
     }
 
@@ -85,11 +83,9 @@ class TeamController extends Controller
     public function edit(Team $team)
     {
         $department = Department::orderBy('created_at', 'DESC')->get();
-        $faculty = Faculty::orderBy('created_at', 'DESC')->get();
 
         return view('admin.team.edit', [
             'department' => $department,
-            'faculty' => $faculty,
             'team' => $team
         ]);
     }

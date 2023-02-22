@@ -50,7 +50,7 @@
                                 <td>{{ $slider->title_ru }}</td>
                                 <td>{{ $slider->title_en }}</td>
                                 <td>
-                                    <a href="{{ route('slider.edit', $slider->id) }}" class="btn btn-info btn-icon">
+                                    <a href="{{ route('slider.edit', $slider->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
@@ -58,7 +58,7 @@
                                     <form action="{{ route('slider.destroy', $slider->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-warning btn-icon">
+                                        <button type="submit" class="btn btn-danger btn-icon">
                                             <i class="fa fa-trash">Delete</i>
                                         </button>
                                     </form>

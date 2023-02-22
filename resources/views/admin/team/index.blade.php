@@ -52,7 +52,7 @@
                                 <td>{{ $team->name_ru }}</td>
                                 <td>{{ $team->name_en }}</td>
                                 <td>
-                                    <a href="{{ route('team.edit', $team->id) }}" class="btn btn-info btn-icon">
+                                    <a href="{{ route('team.edit', $team->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
@@ -60,7 +60,7 @@
                                     <form action="{{ route('team.destroy', $team->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-warning btn-icon">
+                                        <button type="submit" class="btn btn-danger btn-icon">
                                             <i class="fa fa-trash">Delete</i>
                                         </button>
                                     </form>

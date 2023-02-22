@@ -6,14 +6,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\PageController;
-use App\Http\Controllers\Admin\AdvisoryboardController;
 use App\Http\Controllers\Admin\LeadershipController;
-use App\Http\Controllers\Admin\StatementController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\FacultyController;
-use App\Http\Controllers\Admin\PhotoController;
-use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\VacancyController;
 use App\Http\Controllers\Admin\MagistracyController;
 use App\Http\Controllers\Admin\OptionsController;
@@ -23,6 +19,8 @@ use App\Http\Controllers\Admin\OurPartnerController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\TenderController;
 use App\Http\Controllers\Admin\AdvantageController;
+use App\Http\Controllers\Admin\StructureController;
+use App\Http\Controllers\Admin\NormController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -37,14 +35,10 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
     Route::resources([
          'slider' => SliderController::class,
          'page' => PageController::class,
-         'advisoryboard' => AdvisoryboardController::class,
          'leadership' => LeadershipController::class,
-         'statement' => StatementController::class,
          'department' => DepartmentController::class,
          'team' => TeamController::class,
          'faculty' => FacultyController::class,
-         'photo' => PhotoController::class,
-         'video' => VideoController::class,
          'vacancy' => VacancyController::class,
          'magistracy' => MagistracyController::class,
          'options' => OptionsController::class,
@@ -53,7 +47,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'ourpartner' => OurPartnerController::class,
          'article' => ArticleController::class,
          'tender' => TenderController::class,
-         'advantage' => AdvantageController::class
+         'advantage' => AdvantageController::class,
+         'structure' => StructureController::class,
+         'norm' => NormController::class
      ]);
 });
 

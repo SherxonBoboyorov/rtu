@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('advisoryboards', function (Blueprint $table) {
+        Schema::create('norms', function (Blueprint $table) {
             $table->id();
 
-            $table->text('description_ru');
-            $table->text('description_uz');
-            $table->text('description_en');
+            $table->string('title_ru');
+            $table->string('title_uz');
+            $table->string('title_en');
+
+            $table->text('content_ru');
+            $table->text('content_uz');
+            $table->text('content_en');
 
             $table->text('meta_title_ru')->nullable();
             $table->text('meta_title_uz')->nullable();
@@ -39,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('advisoryboards');
+        Schema::dropIfExists('norms');
     }
 };

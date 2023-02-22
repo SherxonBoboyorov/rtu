@@ -25,7 +25,6 @@ class CreateTeam extends FormRequest
     {
         return [
             'department_id' => 'required',
-            'faculty_id' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,webp',
             'name_ru' => 'required|max:255',
             'name_uz' => 'required|max:255',
@@ -33,11 +32,12 @@ class CreateTeam extends FormRequest
             'job_title_ru' => 'required|max:255',
             'job_title_uz' => 'required|max:255',
             'job_title_en' => 'required|max:255',
-            'phone_number' => 'required|max:50',
             'reception_days_ru' => 'required|max:255',
             'reception_days_uz' => 'required|max:255',
             'reception_days_en' => 'required|max:255',
-            'email' => 'required',
+            'specialties_ru' => 'required|max:255',
+            'specialties_uz' => 'required|max:255',
+            'specialties_en' => 'required|max:255',
             'description_ru' => 'required',
             'description_uz' => 'required',
             'description_en' => 'required',

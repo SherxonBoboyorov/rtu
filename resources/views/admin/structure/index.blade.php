@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">List Photo gallery</h4>
+                        <h4 class="page-title">List Structure</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -33,41 +33,35 @@
                         <tr>
                             <th style="width: 2%;">#</th>
                             <th>Image</th>
-                            <th>Title [Uzbek]</th>
-                            <th>Title [Russian]</th>
-                            <th>Title [English]</th>
                             <th colspan="2" style="width: 2%;">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($photos as $photo)
+                        @foreach ($structures as $structure)
                             <tr>
-                                <td>{{ $photo->id }}</td>
+                                <td>{{ $structure->id }}</td>
                                 <td>
-                                    <img src="{{ asset($photo->image) }}" alt="" width="35" height="35">
+                                    <img src="{{ asset($structure->image) }}" alt="" width="35" height="35">
                                 </td>
-                                <td>{{ $photo->title_uz }}</td>
-                                <td>{{ $photo->title_ru }}</td>
-                                <td>{{ $photo->title_en }}</td>
                                 <td>
-                                    <a href="{{ route('photo.edit', $photo->id) }}" class="btn btn-info btn-icon">
+                                    <a href="{{ route('structure.edit', $structure->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
-                                <td>
-                                    <form action="{{ route('photo.destroy', $photo->id) }}" method="POST">
+                                {{-- <td>
+                                    <form action="{{ route('structure.destroy', $structure->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-warning btn-icon">
+                                        <button type="submit" class="btn btn-danger btn-icon">
                                             <i class="fa fa-trash">Delete</i>
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    {!! $photos->links() !!}
+
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateVideo extends FormRequest
+class UpdateStructure extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,7 @@ class UpdateVideo extends FormRequest
     public function rules(): array
     {
         return [
-            'title_ru' => 'required|max:255',
-            'title_uz' => 'required|max:255',
-            'title_en' => 'required|max:255',
-            'frame' => 'required'
+            //
         ];
     }
 }
