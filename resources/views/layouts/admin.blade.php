@@ -55,26 +55,17 @@
                         </li>
                         </ul>
                      </li>
+
                      {{-- end --}}
 
                      {{-- start--}}
-                     <li class="nav-item">
-
-                        <a href="#" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                            About university
-                             <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
 
                         <li class="nav-item">
 
                             <a href="#" class="nav-link">
                             <i class="nav-icon"></i>
-                            <p style="color: #007bff">
-                                About
+                            <p>
+                                About university
                                  <i class="right fas fa-angle-left"></i>
                             </p>
                             </a>
@@ -90,60 +81,36 @@
                                 </a>
                             </li> --}}
                             </ul>
+                         </li>
+                       {{-- end --}}
 
+
+                         {{-- start--}}
 
                          <li class="nav-item">
 
                             <a href="#" class="nav-link">
                             <i class="nav-icon"></i>
-                            <p style="color: #007bff">
-                                Masters
+                            <p>
+                                Advantages
                                  <i class="right fas fa-angle-left"></i>
                             </p>
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('magistracy.index') }}" class="nav-link">
+                                <a href="{{ route('advantage.index') }}" class="nav-link">
                                    <p>List</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('magistracy.create') }}" class="nav-link">
+                                <a href="{{ route('advantage.create') }}" class="nav-link">
                                    <p>Create</p>
                                 </a>
                             </li>
                             </ul>
                          </li>
-                         </li>
+                       {{-- end --}}
 
-                        </ul>
-                     </li>
-                    {{-- end --}}
-
-
-                      {{-- start--}}
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                        <i class="nav-icon"></i>
-                        <p>
-                            Why to choose The Academy
-                             <i class="right fas fa-angle-left"></i>
-                        </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('whydipacademy.index') }}" class="nav-link">
-                               <p>List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('whydipacademy.create') }}" class="nav-link">
-                               <p>Create</p>
-                            </a>
-                        </li>
-                        </ul>
-                     </li>
-                     {{-- end --}}
 
                        {{-- start--}}
                        <li class="nav-item">

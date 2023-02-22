@@ -4,14 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
-class Advantage extends Model
+class Structure extends Model
 {
     use HasFactory;
 
-    protected $table = 'advantages';
+    protected $table = 'structures';
+
     protected $fillable = [
-        'result',
-        'description_ru', 'description_uz', 'description_en'
+        'image'
     ];
 }

@@ -19,11 +19,10 @@ use App\Http\Controllers\Admin\MagistracyController;
 use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\ResearchController;
 use App\Http\Controllers\Admin\InternationalController;
-use App\Http\Controllers\Admin\WhyDipAcademyController;
 use App\Http\Controllers\Admin\OurPartnerController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\TenderController;
-
+use App\Http\Controllers\Admin\AdvantageController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -51,12 +50,10 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'options' => OptionsController::class,
          'research' => ResearchController::class,
          'international' => InternationalController::class,
-         'whydipacademy' => WhyDipAcademyController::class,
          'ourpartner' => OurPartnerController::class,
          'article' => ArticleController::class,
          'tender' => TenderController::class,
-
-
+         'advantage' => AdvantageController::class
      ]);
 });
 

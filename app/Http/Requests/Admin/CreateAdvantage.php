@@ -11,9 +11,9 @@ class CreateAdvantage extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,13 @@ class CreateAdvantage extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'result' => 'required|max:255',
+            'description_ru' => 'required',
+            'description_uz' => 'required',
+            'description_en' => 'required',
         ];
     }
 }

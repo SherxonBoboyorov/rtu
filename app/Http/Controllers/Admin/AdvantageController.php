@@ -7,7 +7,7 @@ use App\Http\Requests\Admin\CreateAdvantage;
 use App\Http\Requests\Admin\UpdateAdvantage;
 use App\Models\Advantage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
+
 
 class AdvantageController extends Controller
 {
@@ -41,8 +41,6 @@ class AdvantageController extends Controller
     public function store(CreateAdvantage $request)
     {
         $data = $request->all();
-
-        $data['image'] = Advantage::uploadImage($request);
 
         if(Advantage::create($data)) {
             return redirect()->route('advantage.index')->with('message', "Avdavtages created successfully!!!");
@@ -83,7 +81,18 @@ class AdvantageController extends Controller
      */
     public function update(UpdateAdvantage $request, $id)
     {
-        //
+        if (!Advantage::find($id)) {
+            return redirect()->route('advantage.index')->with('message', 'Avdavtages not found');
+        }
+
+        $advantage = Advantage::find($id);
+
+        $data = $request->all();
+
+        if ($advantage->update($data)) {
+            return redirect()->route('advantage.index')->with('message', 'Avdavtages changed successfully');
+        }
+        return redirect()->route('advantage.index')->with('message', 'Unable to update Avdavtages');
     }
 
     /**
@@ -94,6 +103,15 @@ class AdvantageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (!Advantage::find($id)) {
+            return redirect()->route('advantage.index')->with('message', "Slider not found");
+        }
+
+        $advantage = Advantage::find($id);
+
+        if ($advantage->delete()) {
+            return redirect()->route('advantage.index')->with('message', "Avdavtages deleted successfully");
+        }
+        return redirect()->route('advantage.index')->with('message', "unable to delete Avdavtages");
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Renessans panel')
+@section('title', 'Admin panel')
 
 @section('content')
 
@@ -187,6 +187,12 @@
             </div>
 
     </div>
+
+
+
+
+
+
 
 
 
