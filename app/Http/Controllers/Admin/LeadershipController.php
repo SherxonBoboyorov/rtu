@@ -84,7 +84,7 @@ class LeadershipController extends Controller
     public function update(UpdateLeadership $request, $id)
     {
         if (!Leadership::find($id)) {
-            return redirect()->route('leadership.index')->with('message', 'Slider not found');
+            return redirect()->route('leadership.index')->with('message', 'Leadership not found');
         }
 
         $leadership = Leadership::find($id);

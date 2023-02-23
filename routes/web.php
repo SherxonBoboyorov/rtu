@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\TenderController;
 use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\StructureController;
 use App\Http\Controllers\Admin\NormController;
+use App\Http\Controllers\Admin\CouncilController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -49,7 +50,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'tender' => TenderController::class,
          'advantage' => AdvantageController::class,
          'structure' => StructureController::class,
-         'norm' => NormController::class
+         'norm' => NormController::class,
+         'council' => CouncilController::class
      ]);
 });
 

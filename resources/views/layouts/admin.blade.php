@@ -214,6 +214,31 @@
                             </li>
                             {{-- end--}}
 
+
+                             {{-- start--}}
+
+                             <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Academic Council
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('council.index') }}" class="nav-link">
+                                        <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('council.create') }}" class="nav-link">
+                                        <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            {{-- end--}}
+
                         {{-- start--}}
                          <li class="nav-item">
                             <a href="#" class="nav-link">
