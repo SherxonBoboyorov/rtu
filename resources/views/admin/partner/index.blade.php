@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">List Careers</h4>
+                        <h4 class="page-title">List Partners</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -32,6 +32,7 @@
                         <thead>
                         <tr>
                             <th style="width: 2%;">#</th>
+                            <th>Image</th>
                             <th>Title [Uzbek]</th>
                             <th>Title [Russian]</th>
                             <th>Title [English]</th>
@@ -39,22 +40,25 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($vacancies as $vacancy)
+                        @foreach ($partners as $partner)
                             <tr>
-                                <td>{{ $vacancy->id }}</td>
-                                <td>{{ $vacancy->title_uz }}</td>
-                                <td>{{ $vacancy->title_ru }}</td>
-                                <td>{{ $vacancy->title_en }}</td>
+                                <td>{{ $partner->id }}</td>
                                 <td>
-                                    <a href="{{ route('vacancy.edit', $vacancy->id) }}" class="btn btn-info btn-icon">
+                                    <img src="{{ asset($partner->image) }}" alt="" width="35" height="35">
+                                </td>
+                                <td>{{ $partner->title_uz }}</td>
+                                <td>{{ $partner->title_ru }}</td>
+                                <td>{{ $partner->title_en }}</td>
+                                <td>
+                                    <a href="{{ route('partner.edit', $partner->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('vacancy.destroy', $vacancy->id) }}" method="POST">
+                                    <form action="{{ route('partner.destroy', $partner->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-warning btn-icon">
+                                        <button type="submit" class="btn btn-danger btn-icon">
                                             <i class="fa fa-trash">Delete</i>
                                         </button>
                                     </form>
@@ -63,8 +67,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {!! $vacancies->links() !!}
-
+                    {!! $partners->links() !!}
                 </div>
             </div>
 

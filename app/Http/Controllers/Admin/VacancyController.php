@@ -42,9 +42,9 @@ class VacancyController extends Controller
         $data = $request->all();
 
         if(Vacancy::create($data)) {
-            return redirect()->route('vacancy.index')->with('message', "Job vacancies created successfully!!!");
+            return redirect()->route('vacancy.index')->with('message', "Careers created successfully!!!");
         }
-        return redirect()->route('vacancy.index')->with('message', "Unable to created Job vacancies!!!");
+        return redirect()->route('vacancy.index')->with('message', "Unable to created Careers!!!");
 
     }
 
@@ -85,10 +85,10 @@ class VacancyController extends Controller
         $data = $request->all();
 
         if ($vacancy->update($data)) {
-            return redirect()->route('vacancy.index')->with('message', 'Job vacancies changed successfully!!!');
+            return redirect()->route('vacancy.index')->with('message', 'Careers changed successfully!!!');
         }
 
-        return redirect()->route('vacancy.index')->with('message', 'Unable to update Job vacancies!!!');
+        return redirect()->route('vacancy.index')->with('message', 'Unable to update Careers!!!');
     }
 
     /**
@@ -102,8 +102,8 @@ class VacancyController extends Controller
         $vacancy = Vacancy::find($id);
 
         if ($vacancy->delete()) {
-            return redirect()->route('vacancy.index')->with('message', "Job vacancies deleted successfully");
+            return redirect()->route('vacancy.index')->with('message', "Careers deleted successfully");
         }
-        return redirect()->route('vacancy.index')->with('message', "unable to delete Job vacancies");
+        return redirect()->route('vacancy.index')->with('message', "unable to delete Careers");
     }
 }

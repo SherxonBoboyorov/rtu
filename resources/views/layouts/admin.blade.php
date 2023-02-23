@@ -211,9 +211,8 @@
                                         </a>
                                     </li>
                                     </ul>
-                            </li>
-                            {{-- end--}}
-
+                              </li>
+                             {{-- end--}}
 
                              {{-- start--}}
 
@@ -236,8 +235,58 @@
                                         </a>
                                     </li>
                                     </ul>
-                            </li>
+                             </li>
                             {{-- end--}}
+
+                               {{-- start--}}
+
+                               <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Labour union
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('labour.index') }}" class="nav-link">
+                                        <p>List</p>
+                                        </a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('labour.create') }}" class="nav-link">
+                                        <p>Create</p>
+                                        </a>
+                                    </li> --}}
+                                    </ul>
+                             </li>
+                            {{-- end--}}
+
+                             {{-- start--}}
+
+                             <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Partners
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('partner.index') }}" class="nav-link">
+                                        <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('partner.create') }}" class="nav-link">
+                                        <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                             </li>
+                            {{-- end--}}
+
+
 
                         {{-- start--}}
                          <li class="nav-item">
@@ -308,10 +357,8 @@
                                 </a>
                             </li>
                             </ul>
-                      </li>
-                      {{-- end--}}
-
-
+                        </li>
+                       {{-- end--}}
 
 
                           {{-- start--}}
@@ -320,7 +367,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon"></i>
                                 <p>
-                                    Job vacancies
+                                    Careers
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
@@ -458,7 +505,7 @@
                                     </li>
                                     </ul>
                                 </li>
-                                {{-- end --}}
+                             {{-- end --}}
                 </ul>
             </nav>
         </div>

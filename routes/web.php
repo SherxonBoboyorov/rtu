@@ -22,6 +22,8 @@ use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\StructureController;
 use App\Http\Controllers\Admin\NormController;
 use App\Http\Controllers\Admin\CouncilController;
+use App\Http\Controllers\Admin\LabourController;
+use App\Http\Controllers\Admin\PartnerController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -51,7 +53,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'advantage' => AdvantageController::class,
          'structure' => StructureController::class,
          'norm' => NormController::class,
-         'council' => CouncilController::class
+         'council' => CouncilController::class,
+         'labour' => LabourController::class,
+         'partner' => PartnerController::class
      ]);
 });
 
