@@ -47,7 +47,7 @@ class SliderController extends Controller
         if (Slider::create($data)) {
             return redirect()->route('slider.index')->with('message', "Slider created seccessfully");
         }
-        return redirect()->route('slider.index')->with('message', "unable to create sldider");
+        return redirect()->route('slider.index')->with('message', "unable to create slider");
     }
 
     /**

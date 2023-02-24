@@ -344,7 +344,7 @@
                         <div class="col-md-6">
                             <img src="{{ asset($team->image) }}" width="150" height="150" alt="">
                         </div>
-                    </div>
+                    </div><br>
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-12">
                             <button type="submit" class="btn btn-success btn-block">Update</button>

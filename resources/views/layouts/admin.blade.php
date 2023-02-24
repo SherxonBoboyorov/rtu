@@ -84,7 +84,6 @@
                           </li>
                          {{-- end --}}
 
-
                          {{-- start--}}
 
                          <li class="nav-item">
@@ -110,6 +109,30 @@
                             </ul>
                           </li>
                          {{-- end --}}
+
+                           {{-- start--}}
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>
+                                Leadership
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('leadership.index') }}" class="nav-link">
+                                <p>List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('leadership.create') }}" class="nav-link">
+                                <p>Create</p>
+                                </a>
+                            </li>
+                            </ul>
+                         </li>
+                        {{-- end --}}
 
 
                          {{-- start--}}
@@ -287,6 +310,81 @@
                             {{-- end--}}
 
 
+                              {{-- start--}}
+                              <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Bachelor
+                                     <i class="right fas fa-angle-left"></i>
+                                </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('bachelor.index') }}" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('bachelor.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li> --}}
+
+
+                                <li class="nav-item">
+
+                                    <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p style="color: #007bff">
+                                         Bachelor Category
+                                         <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('bachelorcategory.index') }}" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('bachelorcategory.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+
+
+                                 <li class="nav-item">
+
+                                    <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p style="color: #007bff">
+                                         Bachelor Product
+                                         <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('bachelorin.index') }}" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('bachelorin.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                 </li>
+                                 </li>
+
+                                </ul>
+                             </li>
+                            {{-- end --}}
+
+
 
                         {{-- start--}}
                          <li class="nav-item">
@@ -312,29 +410,6 @@
                          </li>
                         {{-- end --}}
 
-                        {{-- start--}}
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                            <i class="nav-icon"></i>
-                            <p>
-                                Leadership
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('leadership.index') }}" class="nav-link">
-                                <p>List</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('leadership.create') }}" class="nav-link">
-                                <p>Create</p>
-                                </a>
-                            </li>
-                            </ul>
-                         </li>
-                        {{-- end --}}
 
                        {{-- start--}}
 
@@ -384,31 +459,6 @@
                                 </ul>
                           </li>
                          {{-- end--}}
-
-                          {{-- start--}}
-
-                          <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon"></i>
-                                <p>
-                                    Bachelor
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('bachelor.index') }}" class="nav-link">
-                                       <p>List</p>
-                                    </a>
-                                </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{ route('bachelor.create') }}" class="nav-link">
-                                       <p>Create</p>
-                                    </a>
-                                </li> --}}
-                                </ul>
-                          </li>
-                         {{-- end--}}
-
 
                           {{-- start--}}
 

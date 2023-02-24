@@ -25,6 +25,8 @@ use App\Http\Controllers\Admin\CouncilController;
 use App\Http\Controllers\Admin\LabourController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\BachelorController;
+use App\Http\Controllers\Admin\BachelorCategoryController;
+use App\Http\Controllers\Admin\BachelorInController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -57,7 +59,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'council' => CouncilController::class,
          'labour' => LabourController::class,
          'partner' => PartnerController::class,
-         'bachelor' => BachelorController::class
+         'bachelor' => BachelorController::class,
+         'bachelorcategory' => BachelorCategoryController::class,
+         'bachelorin' => BachelorInController::class
      ]);
 });
 
