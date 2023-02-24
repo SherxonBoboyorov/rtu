@@ -385,6 +385,30 @@
                           </li>
                          {{-- end--}}
 
+                          {{-- start--}}
+
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Bachelor
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('bachelor.index') }}" class="nav-link">
+                                       <p>List</p>
+                                    </a>
+                                </li>
+                                {{-- <li class="nav-item">
+                                    <a href="{{ route('bachelor.create') }}" class="nav-link">
+                                       <p>Create</p>
+                                    </a>
+                                </li> --}}
+                                </ul>
+                          </li>
+                         {{-- end--}}
+
 
                           {{-- start--}}
 

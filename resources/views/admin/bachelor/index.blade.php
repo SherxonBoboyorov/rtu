@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">List Labour union</h4>
+                    <h4 class="page-title">List Bachelor</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -39,18 +39,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($labours as $labour)
+                        @foreach ($bachelors as $bachelor)
                         <tr>
-                            <td class="table_cart_list">{!! $labour->content_uz !!}</td>
-                            <td class="table_cart_list">{!! $labour->content_ru !!}</td>
-                            <td class="table_cart_list">{!! $labour->content_en !!}</td>
+                            <td class="table_cart_list">{!! $bachelor->content_uz !!}</td>
+                            <td class="table_cart_list">{!! $bachelor->content_ru !!}</td>
+                            <td class="table_cart_list">{!! $bachelor->content_en !!}</td>
                             <td>
-                                <a href="{{ route('labour.edit', $labour->id) }}" class="btn btn-primary btn-icon">
+                                <a href="{{ route('bachelor.edit', $bachelor->id) }}" class="btn btn-primary btn-icon">
                                     <i class="fa fa-edit">Edit</i>
                                 </a>
                             </td>
                              {{-- <td>
-                                    <form action="{{ route('labour.destroy', $labour->id) }}" method="POST">
+                                    <form action="{{ route('bachelor.destroy', $bachelor->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-icon">

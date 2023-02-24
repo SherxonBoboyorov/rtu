@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requets\Admin\CreateBachelor;
-use App\Http\Requets\Admin\UpdateBachelor;
+use App\Http\Requests\Admin\CreateBachelor;
+use App\Http\Requests\Admin\UpdateBachelor;
 use App\Models\Bachelor;
 use Illuminate\Http\Request;
 
