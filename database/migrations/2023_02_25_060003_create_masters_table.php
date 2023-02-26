@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('masters', function (Blueprint $table) {
             $table->id();
 
-
             $table->text('content_ru');
             $table->text('content_uz');
             $table->text('content_en');
@@ -28,7 +27,7 @@ return new class extends Migration
             $table->text('meta_description_ru')->nullable();
             $table->text('meta_description_uz')->nullable();
             $table->text('meta_description_en')->nullable();
-            
+
             $table->timestamps();
         });
     }
