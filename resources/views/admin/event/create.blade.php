@@ -8,19 +8,18 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">Add tenders</h4>
+                    <h4 class="page-title">Add Events</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
         <!-- end page title end breadcrumb -->
-        <form action="{{ route('tender.store') }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('event.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="card">
                 <div class="card-body">
                     <div class="row" style="margin-top: 15px">
-
                         <div class="col-md-4">
                             <label for="title_uz">Title [Uzbek]</label>
                             <input type="text" id="title_uz" class="form-control" name="title_uz">
@@ -185,6 +184,7 @@
                             @endif
                         </div>
                     </div><br>
+
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-12">
                             <button type="submit" class="btn btn-success btn-block">Save</button>

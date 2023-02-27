@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\CreateTender;
-use App\Http\Requests\Admin\UpdateTender;
-use App\Models\Tender;
+use App\Http\Requests\Admin\CreateEvent;
+use App\Http\Requests\Admin\UpdateEvent;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class TenderController extends Controller
+use function PHPUnit\Framework\returnSelf;
+
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +20,8 @@ class TenderController extends Controller
      */
     public function index()
     {
-        $tenders = Tender::orderBy('created_at', 'DESC')->paginate(12);
-        return view('admin.tender.index', compact('tenders'));
+        $events = Event::orderBy('created_at', 'DESC')->paginate(12);
+        return view('admin.event.index', compact('events'));
     }
 
     /**
@@ -29,16 +31,16 @@ class TenderController extends Controller
      */
     public function create()
     {
-        return view('admin.tender.create');
+        return view('admin.event.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\Admin\CreateTender  $request
+     * @param  App\Http\Requests\Admin\CreateEvent  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateTender $request)
+    public function store(CreateEvent $request)
     {
         $data = $request->all();
 
@@ -46,10 +48,10 @@ class TenderController extends Controller
         $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
         $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
-        if(Tender::create($data)) {
-            return redirect()->route('tender.index')->with('message', "Tenders created seccessfully!!!");
+        if(Event::create($data)) {
+            return redirect()->route('event.index')->with('message', "Events created successfully!!!");
         }
-        return redirect()->route('tender.index')->with('message', "Unable to created Tender!!!");
+        return redirect()->route('event.index')->with('message', "Unable to created Events!!!");
     }
 
     /**
@@ -71,34 +73,34 @@ class TenderController extends Controller
      */
     public function edit($id)
     {
-        $tender = Tender::find($id);
-        return view('admin.tender.edit', compact('tender'));
+        $event = Event::find($id);
+        return view('admin.event.edit', compact('event'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  App\Http\Requests\Admin\UpdateTender  $request
+     * @param  App\Http\Requests\Admin\UpdateEvent  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTender $request, $id)
+    public function update(UpdateEvent $request, $id)
     {
-        if (!Tender::find($id)) {
-            return redirect()->route('tender.index')->with('message', "Tender not fount");
+        if (!Event::find($id)) {
+            return redirect()->route('event.index')->with('message', "Events not fount");
         }
 
-        $tender = Tender::find($id);
+        $event = Event::find($id);
 
         $data = $request->all();
         $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
         $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
         $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
-        if ($tender->update($data)) {
-            return redirect()->route('tender.index')->with('message', "Tenders changed successfully!!!");
+        if ($event->update($data)) {
+            return redirect()->route('event.index')->with('message', "Events changed successfully");
         }
-        return redirect()->route('tender.index')->with('message', "Unable to update Tenders!!!");
+        return redirect()->route('event.index')->with('message', "Unable to update Events");
     }
 
     /**
@@ -109,15 +111,15 @@ class TenderController extends Controller
      */
     public function destroy($id)
     {
-        if (!Tender::find($id)) {
-            return redirect()->route('tender.index')->with('message', "Tenders not found");
+        if (!Event::find($id)) {
+            return redirect()->route('event.index')->with('message', "Events not found");
         }
 
-        $tender = Tender::find($id);
+        $event = Event::find($id);
 
-        if ($tender->delete()) {
-            return redirect()->route('tender.index')->with('message', "Tenders deleted successfully");
+        if ($event->delete()) {
+            return redirect()->route('event.index')->with('message', "Events deleted successfully");
         }
-        return redirect()->route('tender.index')->with('message', "unable to delete Tender");
+        return redirect()->route('event.index')->with('message', "unable to delete Events");
     }
 }

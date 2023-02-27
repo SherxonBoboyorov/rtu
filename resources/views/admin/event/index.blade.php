@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">List Tenders</h4>
+                        <h4 class="page-title">List Events</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -39,19 +39,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($tenders as $tender)
+                        @foreach ($events as $event)
                             <tr>
-                                <td>{{ $tender->id }}</td>
-                                <td>{{ $tender->title_uz }}</td>
-                                <td>{{ $tender->title_ru }}</td>
-                                <td>{{ $tender->title_en }}</td>
+                                <td>{{ $event->id }}</td>
+                                <td>{{ $event->title_uz }}</td>
+                                <td>{{ $event->title_ru }}</td>
+                                <td>{{ $event->title_en }}</td>
                                 <td>
-                                    <a href="{{ route('tender.edit', $tender->id) }}" class="btn btn-info btn-icon">
+                                    <a href="{{ route('event.edit', $event->id) }}" class="btn btn-info btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('tender.destroy', $tender->id) }}" method="POST">
+                                    <form action="{{ route('event.destroy', $event->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-warning btn-icon">
@@ -63,7 +63,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {!! $tenders->links() !!}
+                    {!! $events->links() !!}
 
                 </div>
             </div>

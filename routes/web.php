@@ -17,7 +17,6 @@ use App\Http\Controllers\Admin\ResearchController;
 use App\Http\Controllers\Admin\InternationalController;
 use App\Http\Controllers\Admin\OurPartnerController;
 use App\Http\Controllers\Admin\ArticleController;
-use App\Http\Controllers\Admin\TenderController;
 use App\Http\Controllers\Admin\AdvantageController;
 use App\Http\Controllers\Admin\StructureController;
 use App\Http\Controllers\Admin\NormController;
@@ -33,6 +32,7 @@ use App\Http\Controllers\Admin\MasterInController;
 use App\Http\Controllers\Admin\TransferController;
 use App\Http\Controllers\Admin\TuitionController;
 use App\Http\Controllers\Admin\ScholarshipController;
+use App\Http\Controllers\Admin\EventController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -56,7 +56,6 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'international' => InternationalController::class,
          'ourpartner' => OurPartnerController::class,
          'article' => ArticleController::class,
-         'tender' => TenderController::class,
          'advantage' => AdvantageController::class,
          'structure' => StructureController::class,
          'norm' => NormController::class,
@@ -71,7 +70,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'masterin' => MasterInController::class,
          'transfer' => TransferController::class,
          'tuition' => TuitionController::class,
-         'scholarship' => ScholarshipController::class
+         'scholarship' => ScholarshipController::class,
+         'event' => EventController::class
      ]);
 });
 

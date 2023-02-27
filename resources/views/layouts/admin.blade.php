@@ -590,7 +590,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon"></i>
                                 <p>
-                                    Careers
+                                    Job vacancies
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
@@ -705,29 +705,30 @@
                             </li>
                             {{-- end --}}
 
-                                 {{-- start--}}
-                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                    <i class="nav-icon"></i>
-                                    <p>
-                                        Tenders
-                                        <i class="right fas fa-angle-left"></i>
-                                    </p>
+                             {{-- start--}}
+                             <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Events
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('event.index') }}" class="nav-link">
+                                    <p>List</p>
                                     </a>
-                                    <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="{{ route('tender.index') }}" class="nav-link">
-                                        <p>List</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ route('tender.create') }}" class="nav-link">
-                                        <p>Create</p>
-                                        </a>
-                                    </li>
-                                    </ul>
                                 </li>
-                             {{-- end --}}
+                                <li class="nav-item">
+                                    <a href="{{ route('event.create') }}" class="nav-link">
+                                    <p>Create</p>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            {{-- end --}}
+
                 </ul>
             </nav>
         </div>
