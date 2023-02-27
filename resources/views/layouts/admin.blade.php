@@ -484,6 +484,30 @@
                          </li>
                         {{-- end --}}
 
+                          {{-- start--}}
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>
+                                Transfer
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('transfer.index') }}" class="nav-link">
+                                <p>List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('transfer.create') }}" class="nav-link">
+                                <p>Create</p>
+                                </a>
+                            </li>
+                            </ul>
+                         </li>
+                        {{-- end --}}
+
 
                        {{-- start--}}
 

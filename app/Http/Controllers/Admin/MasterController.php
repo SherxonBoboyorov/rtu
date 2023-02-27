@@ -80,7 +80,7 @@ class MasterController extends Controller
     public function update(UpdateMaster $request, $id)
     {
         if (!Master::find($id)) {
-            return redirect()->route('bachelor.index')->with('message', "Masters not fount");
+            return redirect()->route('master.index')->with('message', "Masters not fount");
         }
 
         $master = Master::find($id);
