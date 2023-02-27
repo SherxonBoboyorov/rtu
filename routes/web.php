@@ -33,6 +33,7 @@ use App\Http\Controllers\Admin\TransferController;
 use App\Http\Controllers\Admin\TuitionController;
 use App\Http\Controllers\Admin\ScholarshipController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\CareerController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -71,7 +72,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'transfer' => TransferController::class,
          'tuition' => TuitionController::class,
          'scholarship' => ScholarshipController::class,
-         'event' => EventController::class
+         'event' => EventController::class,
+         'career' => CareerController::class
      ]);
 });
 
