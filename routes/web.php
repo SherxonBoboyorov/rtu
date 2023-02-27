@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\BachelorController;
 use App\Http\Controllers\Admin\BachelorCategoryController;
 use App\Http\Controllers\Admin\BachelorInController;
 use App\Http\Controllers\Admin\MasterController;
+use App\Http\Controllers\Admin\MasterCategoryController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -63,7 +64,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'bachelor' => BachelorController::class,
          'bachelorcategory' => BachelorCategoryController::class,
          'bachelorin' => BachelorInController::class,
-         'master' => MasterController::class
+         'master' => MasterController::class,
+         'mastercategory' => MasterCategoryController::class
      ]);
 });
 
