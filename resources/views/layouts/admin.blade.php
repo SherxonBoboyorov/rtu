@@ -508,6 +508,56 @@
                          </li>
                         {{-- end --}}
 
+                          {{-- start--}}
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>
+                                Tuition fees
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('tuition.index') }}" class="nav-link">
+                                <p>List</p>
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a href="{{ route('tuition.create') }}" class="nav-link">
+                                <p>Create</p>
+                                </a>
+                            </li> --}}
+                            </ul>
+                         </li>
+                        {{-- end --}}
+
+                        {{-- start--}}
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>
+                                 Scholarships
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('scholarship.index') }}" class="nav-link">
+                                <p>List</p>
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a href="{{ route('scholarship.create') }}" class="nav-link">
+                                <p>Create</p>
+                                </a>
+                            </li> --}}
+                            </ul>
+                         </li>
+                        {{-- end --}}
+
+
+
 
                        {{-- start--}}
 

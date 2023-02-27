@@ -41,7 +41,7 @@ class TransferController extends Controller
     {
         $data = $request->all();
 
-        if(transfer::create($data)) {
+        if(Transfer::create($data)) {
             return redirect()->route('transfer.index')->with('massage', "Transfer created successfully!!!");
         }
         return redirect()->route('transfer.index')->with('massage', "Unable to created Transfer!!!");

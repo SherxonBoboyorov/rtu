@@ -31,9 +31,9 @@ use App\Http\Controllers\Admin\MasterController;
 use App\Http\Controllers\Admin\MasterCategoryController;
 use App\Http\Controllers\Admin\MasterInController;
 use App\Http\Controllers\Admin\TransferController;
+use App\Http\Controllers\Admin\TuitionController;
+use App\Http\Controllers\Admin\ScholarshipController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
-
-
 
 
 Auth::routes();
@@ -69,7 +69,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'master' => MasterController::class,
          'mastercategory' => MasterCategoryController::class,
          'masterin' => MasterInController::class,
-         'transfer' => TransferController::class
+         'transfer' => TransferController::class,
+         'tuition' => TuitionController::class,
+         'scholarship' => ScholarshipController::class
      ]);
 });
 
