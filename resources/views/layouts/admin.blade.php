@@ -556,34 +556,6 @@
                          </li>
                         {{-- end --}}
 
-
-
-
-                       {{-- start--}}
-
-                       <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon"></i>
-                            <p>
-                                Faculty
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('faculty.index') }}" class="nav-link">
-                                   <p>List</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('faculty.create') }}" class="nav-link">
-                                   <p>Create</p>
-                                </a>
-                            </li>
-                            </ul>
-                        </li>
-                       {{-- end--}}
-
-
                           {{-- start--}}
 
                           <li class="nav-item">
@@ -779,6 +751,30 @@
                                 </ul>
                           </li>
                          {{-- end--}}
+
+                                  {{-- start--}}
+
+                                  <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon"></i>
+                                        <p>
+                                            Dormitory
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('dormitory.index') }}" class="nav-link">
+                                               <p>List</p>
+                                            </a>
+                                        </li>
+                                        {{-- <li class="nav-item">
+                                            <a href="{{ route('dormitory.create') }}" class="nav-link">
+                                               <p>Create</p>
+                                            </a>
+                                        </li> --}}
+                                        </ul>
+                                  </li>
+                                 {{-- end--}}
 
                              {{-- start--}}
                                <li class="nav-item">

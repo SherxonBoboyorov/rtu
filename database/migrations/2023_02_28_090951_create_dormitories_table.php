@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('faculties', function (Blueprint $table) {
+        Schema::create('dormitories', function (Blueprint $table) {
             $table->id();
-
-            $table->string('title_ru');
-            $table->string('title_uz');
-            $table->string('title_en');
 
             $table->text('content_ru');
             $table->text('content_uz');
@@ -31,7 +27,7 @@ return new class extends Migration
             $table->text('meta_description_ru')->nullable();
             $table->text('meta_description_uz')->nullable();
             $table->text('meta_description_en')->nullable();
-
+            
             $table->timestamps();
         });
     }
@@ -43,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faculties');
+        Schema::dropIfExists('dormitories');
     }
 };

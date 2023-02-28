@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Faculty extends Model
+class Dormitory extends Model
 {
     use HasFactory;
 
-    protected $table = 'faculties';
+    protected $table = 'dormitories';
 
     protected $fillable = [
-        'title_ru',
-        'title_uz',
-        'title_en',
         'content_ru',
         'content_uz',
         'content_en',

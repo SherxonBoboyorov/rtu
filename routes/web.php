@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\LeadershipController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\TeamController;
-use App\Http\Controllers\Admin\FacultyController;
 use App\Http\Controllers\Admin\VacancyController;
 use App\Http\Controllers\Admin\MagistracyController;
 use App\Http\Controllers\Admin\OptionsController;
@@ -37,6 +36,7 @@ use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ForeignController;
 use App\Http\Controllers\Admin\ForeignPartnerController;
 use App\Http\Controllers\Admin\StudentsstudioController;
+use App\Http\Controllers\Admin\DormitoryController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -52,7 +52,6 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'leadership' => LeadershipController::class,
          'department' => DepartmentController::class,
          'team' => TeamController::class,
-         'faculty' => FacultyController::class,
          'vacancy' => VacancyController::class,
          'magistracy' => MagistracyController::class,
          'options' => OptionsController::class,
@@ -79,7 +78,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'career' => CareerController::class,
          'foreign' => ForeignController::class,
          'foreignpartner' => ForeignPartnerController::class,
-         'studentsstudio' => StudentsstudioController::class
+         'studentsstudio' => StudentsstudioController::class,
+         'dormitory' => DormitoryController::class
      ]);
 });
 
