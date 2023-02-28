@@ -36,6 +36,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\ForeignController;
 use App\Http\Controllers\Admin\ForeignPartnerController;
+use App\Http\Controllers\Admin\StudentsstudioController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -77,7 +78,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'event' => EventController::class,
          'career' => CareerController::class,
          'foreign' => ForeignController::class,
-         'foreignpartner' => ForeignPartnerController::class
+         'foreignpartner' => ForeignPartnerController::class,
+         'studentsstudio' => StudentsstudioController::class
      ]);
 });
 
