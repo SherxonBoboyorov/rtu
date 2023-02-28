@@ -62,7 +62,7 @@
                         <div class="row" style="margin-top: 15px">
 
                             <div class="col-md-12">
-                                <label for="link">Title [English]</label>
+                                <label for="link">Link [English]</label>
                                 <input type="text" id="link" value="{{ $partner->link }}" class="form-control" name="link">
                                 @if($errors->has('link'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">

@@ -681,6 +681,56 @@
                           </li>
                          {{-- end--}}
 
+                       {{-- start--}}
+                       <li class="nav-item">
+
+                        <a href="#" class="nav-link">
+                        <i class="nav-icon"></i>
+                        <p>
+                            Foreign Partners
+                             <i class="right fas fa-angle-left"></i>
+                        </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('foreign.index') }}" class="nav-link">
+                                   <p>List</p>
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a href="{{ route('foreign.create') }}" class="nav-link">
+                                   <p>Create</p>
+                                </a>
+                            </li> --}}
+
+
+                        <li class="nav-item">
+
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p style="color: #007bff">
+                                 Partners
+                                 <i class="right fas fa-angle-left"></i>
+                            </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('foreignpartner.index') }}" class="nav-link">
+                                   <p>List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('foreignpartner.create') }}" class="nav-link">
+                                   <p>Create</p>
+                                </a>
+                            </li>
+                            </ul>
+                         </li>
+
+                        </ul>
+                     </li>
+                    {{-- end --}}
+
                            {{-- start--}}
 
                            <li class="nav-item">

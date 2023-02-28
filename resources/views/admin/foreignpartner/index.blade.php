@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">List Our Partners</h4>
+                        <h4 class="page-title">List Foreign Partners</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -37,19 +37,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($ourpartners as $ourpartner)
+                        @foreach ($foreignpartners as $foreignpartner)
                             <tr>
-                                <td>{{ $ourpartner->id }}</td>
+                                <td>{{ $foreignpartner->id }}</td>
                                 <td>
-                                    <img src="{{ asset($ourpartner->image) }}" alt="" width="35" height="35">
+                                    <img src="{{ asset($foreignpartner->image) }}" alt="" width="35" height="35">
                                 </td>
                                 <td>
-                                    <a href="{{ route('ourpartner.edit', $ourpartner->id) }}" class="btn btn-info btn-icon">
+                                    <a href="{{ route('foreignpartner.edit', $foreignpartner->id) }}" class="btn btn-info btn-icon">
                                         <i class="fa fa-edit">Edit</i>
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('ourpartner.destroy', $ourpartner->id) }}" method="POST">
+                                    <form action="{{ route('foreignpartner.destroy', $foreignpartner->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-warning btn-icon">
