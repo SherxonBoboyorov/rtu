@@ -37,6 +37,8 @@ use App\Http\Controllers\Admin\ForeignController;
 use App\Http\Controllers\Admin\ForeignPartnerController;
 use App\Http\Controllers\Admin\StudentsstudioController;
 use App\Http\Controllers\Admin\DormitoryController;
+use App\Http\Controllers\Admin\ResearchStatisticController;
+use App\Http\Controllers\Admin\StatisticController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -79,7 +81,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'foreign' => ForeignController::class,
          'foreignpartner' => ForeignPartnerController::class,
          'studentsstudio' => StudentsstudioController::class,
-         'dormitory' => DormitoryController::class
+         'dormitory' => DormitoryController::class,
+         'researchstatistic' => ResearchStatisticController::class,
+         'statistic' => StatisticController::class
      ]);
 });
 

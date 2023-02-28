@@ -23,7 +23,7 @@
         </nav>
     </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 <style>
                     .row {
                         display: flex;
@@ -186,7 +186,7 @@
 
             </div>
 
-    </div>
+    </div> --}}
 
 
 

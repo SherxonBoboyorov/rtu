@@ -42,9 +42,9 @@ class AdvantageController extends Controller
         $data = $request->all();
 
         if(Advantage::create($data)) {
-            return redirect()->route('advantage.index')->with('message', "Avdavtages created successfully!!!");
+            return redirect()->route('advantage.index')->with('message', "Avdantages created successfully!!!");
         }
-        return redirect()->route('advantage.index')->with('message', "Unable to created Avdavtages!!!");
+        return redirect()->route('advantage.index')->with('message', "Unable to created Avdantages!!!");
 
     }
 
@@ -81,7 +81,7 @@ class AdvantageController extends Controller
     public function update(UpdateAdvantage $request, $id)
     {
         if (!Advantage::find($id)) {
-            return redirect()->route('advantage.index')->with('message', 'Avdavtages not found');
+            return redirect()->route('advantage.index')->with('message', 'Avdantages not found');
         }
 
         $advantage = Advantage::find($id);
@@ -89,9 +89,9 @@ class AdvantageController extends Controller
         $data = $request->all();
 
         if ($advantage->update($data)) {
-            return redirect()->route('advantage.index')->with('message', 'Avdavtages changed successfully');
+            return redirect()->route('advantage.index')->with('message', 'Avdantages changed successfully');
         }
-        return redirect()->route('advantage.index')->with('message', 'Unable to update Avdavtages');
+        return redirect()->route('advantage.index')->with('message', 'Unable to update Avdantages');
     }
 
     /**
@@ -103,14 +103,14 @@ class AdvantageController extends Controller
     public function destroy($id)
     {
         if (!Advantage::find($id)) {
-            return redirect()->route('advantage.index')->with('message', "Slider not found");
+            return redirect()->route('advantage.index')->with('message', "Avdantages not found");
         }
 
         $advantage = Advantage::find($id);
 
         if ($advantage->delete()) {
-            return redirect()->route('advantage.index')->with('message', "Avdavtages deleted successfully");
+            return redirect()->route('advantage.index')->with('message', "Avdantages deleted successfully");
         }
-        return redirect()->route('advantage.index')->with('message', "unable to delete Avdavtages");
+        return redirect()->route('advantage.index')->with('message', "unable to delete Avdantages");
     }
 }

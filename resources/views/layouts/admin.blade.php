@@ -84,31 +84,29 @@
                           </li>
                          {{-- end --}}
 
-                         {{-- start--}}
+                           {{-- start--}}
 
-                         <li class="nav-item">
-
+                           <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon"></i>
-                            <p>
-                                Advantages
-                                 <i class="right fas fa-angle-left"></i>
-                            </p>
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Statistics
+                                </p>
                             </a>
                             <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('advantage.index') }}" class="nav-link">
-                                   <p>List</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('advantage.create') }}" class="nav-link">
-                                   <p>Create</p>
-                                </a>
-                            </li>
-                            </ul>
+                                <li class="nav-item">
+                                    <a href="{{ route('statistic.index') }}" class="nav-link">
+                                       <p>List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('statistic.create') }}" class="nav-link">
+                                       <p>Create</p>
+                                    </a>
+                                </li>
+                                </ul>
                           </li>
-                         {{-- end --}}
+                         {{-- end--}}
 
                            {{-- start--}}
                         <li class="nav-item">
@@ -158,8 +156,8 @@
                                 </a>
                             </li> --}}
                             </ul>
-                         </li>
-                       {{-- end --}}
+                          </li>
+                         {{-- end --}}
 
 
                                {{-- start--}}
@@ -258,8 +256,8 @@
                                         </a>
                                     </li>
                                     </ul>
-                             </li>
-                            {{-- end--}}
+                                </li>
+                              {{-- end--}}
 
                                {{-- start--}}
 
@@ -308,6 +306,32 @@
                                     </ul>
                              </li>
                             {{-- end--}}
+
+                            {{-- start--}}
+
+                            <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Advantages
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('advantage.index') }}" class="nav-link">
+                                    <p>List</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('advantage.create') }}" class="nav-link">
+                                    <p>Create</p>
+                                    </a>
+                                </li>
+                                </ul>
+                             </li>
+                            {{-- end --}}
 
 
                               {{-- start--}}
@@ -580,29 +604,55 @@
                           </li>
                          {{-- end--}}
 
-                          {{-- start--}}
+                       {{-- start--}}
+                       <li class="nav-item">
 
-                          <li class="nav-item">
+                        <a href="#" class="nav-link">
+                        <i class="nav-icon"></i>
+                        <p>
+                               Research
+                             <i class="right fas fa-angle-left"></i>
+                        </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('research.index') }}" class="nav-link">
+                                   <p>List</p>
+                                </a>
+                            </li>
+                            {{-- <li class="nav-item">
+                                <a href="{{ route('research.create') }}" class="nav-link">
+                                   <p>Create</p>
+                                </a>
+                            </li> --}}
+
+
+                        <li class="nav-item">
+
                             <a href="#" class="nav-link">
-                                <i class="nav-icon"></i>
-                                <p>
-                                    Research
-                                </p>
+                            <i class="nav-icon"></i>
+                            <p style="color: #007bff">
+                                Research Statistics
+                                 <i class="right fas fa-angle-left"></i>
+                            </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('research.index') }}" class="nav-link">
-                                       <p>List</p>
-                                    </a>
-                                </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{ route('research.create') }}" class="nav-link">
-                                       <p>Create</p>
-                                    </a>
-                                </li> --}}
-                                </ul>
-                          </li>
-                         {{-- end--}}
+                            <li class="nav-item">
+                                <a href="{{ route('researchstatistic.index') }}" class="nav-link">
+                                   <p>List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('researchstatistic.create') }}" class="nav-link">
+                                   <p>Create</p>
+                                </a>
+                            </li>
+                            </ul>
+                         </li>
+
+                        </ul>
+                     </li>
+                    {{-- end --}}
 
                           {{-- start--}}
 
