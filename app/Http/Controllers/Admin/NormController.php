@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\CreateNorm;
 use App\Http\Requests\Admin\UpdateNorm;
 use App\Models\Norm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class NormController extends Controller
 {
@@ -40,6 +41,10 @@ class NormController extends Controller
     public function store(CreateNorm $request)
     {
         $data = $request->all();
+
+        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
+        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if(Norm::create($data)) {
             return redirect()->route('norm.index')->with('message', "Norms & statements created successfully!!!");
@@ -86,6 +91,10 @@ class NormController extends Controller
         $norm = Norm::find($id);
 
         $data = $request->all();
+
+        $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
+        $data['slug_uz'] = Str::slug($request->title_uz, '-', 'uz');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
 
         if ($norm->update($data)) {
             return redirect()->route('norm.index')->with('message', "Norms & statements changed successfully!!!");

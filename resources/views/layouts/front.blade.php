@@ -32,7 +32,7 @@
                     <div class="header__list">
 
                         <div class="header__logo">
-                            <a href="index.html">
+                            <a href="{{ route('/') }}">
                                 <img src="{{ asset('front/foto/logo.svg') }}" alt="logo">
                                 <h2 class="header__title__logo">Renessans Ta'lim universiteti</h2>
                             </a>
@@ -56,19 +56,19 @@
                                             </li>
 
                                             <li>
-                                                <a href="leadership.html" class="header__bottom__link">
+                                                <a href="{{ route('leadership') }}" class="header__bottom__link">
                                                     Leadership
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="structure.html" class="header__bottom__link">
+                                                <a href="{{ route('structure') }}" class="header__bottom__link">
                                                     Structure
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="normsStatements.html" class="header__bottom__link">
+                                                <a href="{{ route('normsstatements') }}" class="header__bottom__link">
                                                     Norms & statements
                                                 </a>
                                             </li>

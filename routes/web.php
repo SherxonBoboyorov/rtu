@@ -40,14 +40,16 @@ use App\Http\Controllers\Admin\StudentsstudioController;
 use App\Http\Controllers\Admin\DormitoryController;
 use App\Http\Controllers\Admin\ResearchStatisticController;
 use App\Http\Controllers\Admin\StatisticController;
-use App\Http\Controllers\Front\AboutController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
 
 //front
 use App\Http\Controllers\Front\IndexController;
-
+use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\LeaderController;
+use App\Http\Controllers\Front\NormStatmentController;
+use App\Http\Controllers\Front\StructurController;
 
 Auth::routes();
 
@@ -102,6 +104,10 @@ Route::group(
     ], function(){
         Route::get('/', [IndexController::class, 'homepage'])->name('/');
         Route::get('about', [AboutController::class, 'about'])->name('about');
+        Route::get('leadership', [LeaderController::class, 'leadership'])->name('leadership');
+        Route::get('structure', [StructurController::class, 'structure'])->name('structure');
+        Route::get('normsstatements', [NormStatmentController::class, 'list'])->name('normsstatements');
+        Route::get('normsstatements/{slug}', [NormStatmentController::class, 'show'])->name('normsstatement');
 
  });
 

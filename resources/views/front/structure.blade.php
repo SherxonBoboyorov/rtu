@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">{{ $norm->{'title_' . app()->getLocale()} }}</h2>
+                <h2 class="about__title__h2">Structure</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
                         <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">{{ $norm->{'title_' . app()->getLocale()} }}</a>
+                        <a class="aboutUniversity__menu__link">Structure</a>
                     </li>
                 </ul>
             </div>
@@ -24,20 +24,21 @@
     <!-- aboutUniversity end -->
 
 
-    <!-- normsStatements_in start -->
+    <!-- Structure start -->
 
-    <div class="normsStatements_in">
+    <div class="structure">
         <section class="container">
-            <div class="normsStatements_in__cart">
-                <div class="aboutContint__text">
-                    <p>
-                        {!! $norm->{'content_' . app()->getLocale()} !!}
-                    </p>
+            <div class="structure__cart">
+              @foreach ($structures as $structure)
+                <div class="structure__imgs">
+                    <img src="{{ asset($structure->image) }}" alt="structure">
                 </div>
+                @endforeach
             </div>
         </section>
     </div>
 
-    <!-- normsStatements_in end -->
+    <!-- Structure end -->
 
-@endsection
+
+ @endsection
