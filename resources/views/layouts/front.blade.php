@@ -50,7 +50,7 @@
                                         <ul class="header__bottom__none__menu">
 
                                             <li>
-                                                <a href="aboutUniversity.html" class="header__bottom__link">
+                                                <a href="{{ route('about') }}" class="header__bottom__link">
                                                     About university
                                                 </a>
                                             </li>

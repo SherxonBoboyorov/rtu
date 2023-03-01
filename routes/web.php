@@ -40,6 +40,7 @@ use App\Http\Controllers\Admin\StudentsstudioController;
 use App\Http\Controllers\Admin\DormitoryController;
 use App\Http\Controllers\Admin\ResearchStatisticController;
 use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\Front\AboutController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -100,6 +101,7 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
         Route::get('/', [IndexController::class, 'homepage'])->name('/');
+        Route::get('about', [AboutController::class, 'about'])->name('about');
 
  });
 
