@@ -47,9 +47,11 @@ use Unisharp\Laravel\LaravelFilemanager\Lfm;
 //front
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\DepartmentsStaffController;
 use App\Http\Controllers\Front\LeaderController;
 use App\Http\Controllers\Front\NormStatmentController;
 use App\Http\Controllers\Front\StructurController;
+use App\Http\Controllers\Front\TeamInController;
 
 Auth::routes();
 
@@ -108,6 +110,9 @@ Route::group(
         Route::get('structure', [StructurController::class, 'structure'])->name('structure');
         Route::get('normsstatements', [NormStatmentController::class, 'list'])->name('normsstatements');
         Route::get('normsstatements/{slug}', [NormStatmentController::class, 'show'])->name('normsstatement');
+        Route::get('departmentsstaffs', [DepartmentsStaffController::class, 'list'])->name('departmentsstaffs');
+        Route::get('departmentsstaffs/{slug}', [DepartmentsStaffController::class, 'show'])->name('departmentsstaff');
+        Route::get('team/{slug}', [TeamInController::class, 'team'])->name('team');
 
  });
 

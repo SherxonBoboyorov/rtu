@@ -74,7 +74,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="departmentsStaff.html" class="header__bottom__link">
+                                                <a href="{{ route('departmentsstaffs') }}" class="header__bottom__link">
                                                     Departments & staff
                                                 </a>
                                             </li>
