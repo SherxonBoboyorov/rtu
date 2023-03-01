@@ -1,0 +1,52 @@
+// careers start
+
+.careers{
+    position: relative;
+    margin-bottom: 80px;
+
+    &__title__h2{
+        @include fontAll(32px,700,$title);
+        line-height: 135%;
+        margin-bottom: 30px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+    }
+}
+
+// careers end
+
+@media (max-width:1200px){
+    .careers__list{
+        grid-gap: 15px;
+    }
+
+    .careers__title__h2{
+        margin-bottom: 15px;
+    }
+
+    .careers__title__h2{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:1000px){
+    .careers__title__h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:800px){
+    .careers__title__h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width:600px){
+    .careers__title__h2 {
+        font-size: 24px;
+    }
+}

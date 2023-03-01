@@ -1,0 +1,28 @@
+// international start
+
+.international{
+    position: relative;
+    margin-bottom: 80px;
+
+    .aboutVideo__video{
+        float: left;
+        margin-left: 0px;
+        margin-right: 60px;
+    }
+}
+
+// international end
+
+@media (max-width:1200px){
+    .international .aboutVideo__video{
+        margin-right: 30px;
+    }
+}
+
+@media (max-width:1150px){
+    .international .aboutVideo__video{
+        margin-right: 0;
+        margin-bottom: 20px;
+        float: inherit;
+    }
+}

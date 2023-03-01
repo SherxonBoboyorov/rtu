@@ -1,82 +1,204 @@
-// Norms & Statements start
+// normsStatements start
 
 .normsStatements{
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+
+    .educational__item a {
+        grid-template-columns: 80px auto 20px;
+    }
+
+    .educational__img{
+        height: 80px;
+    }
+
+    .educational__img img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .educational__title__h3{
+        margin: 0px !important;
+    }
+}
+
+// normsStatements end
+
+
+// normsStatements_in start
+
+.normsStatements_in{
+    margin-bottom: 80px;
+    position: relative;
+}
+
+// normsStatements_in end
+
+
+// departmentsStaff_in start
+
+.departmentsStaff_in{
+    position: relative;
+    margin-bottom: 80px;
+
+    &__title__h2{
+        @include fontAll(32px,700,$title);
+        line-height: 135%;
+    }
 
     &__list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+        margin-top: 30px;
     }
 
     &__item{
+        padding: 30px;
         background-color:$fff;
         box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
-        padding: 30px 40px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+
+        a{
+            display: grid;
+            grid-template-columns: 160px auto 20px;
+            align-items:center;
+            grid-gap: 40px;
+        }
     }
 
-    &__item__link{
-        display: grid;
-        grid-template-columns: 30px auto 24px;
-        grid-gap: 10px;
-        align-items: center;
+    &__imgs{
+        @include fiximg(100%,160px,true);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        overflow: hidden;
+        img{
+            max-height: 160px;
+            object-position: center top;
+        }
+    }
 
-        @include fontAll(1.25rem,600,$title);
+    &__title__item{
+        @include fontAll(30px,700,$title);
         line-height: 135%;
-        span{
-            opacity: 0.2;
-        }
+        margin-bottom: 10px;
+    }
 
-        span + span{
-            opacity: 1;
-            svg{
-                fill:$fon;
-                width: 24px;
-                height: 24px;
-            }
-        }
+    &__title__h4{
+        @include fontAll(16px,600,$fon);
+        line-height: 135%;
     }
 }
 
-// Norms & Statements end
+// departmentsStaff_in end
+
+// command start
+
+.command{
+    position: relative;
+    margin-bottom: 80px;
+
+    .about__title__h2{
+        margin-bottom: 20px;
+    }
+
+    .leadership__menu__contacts{
+        margin-bottom: 0px;
+    }
+}
+
+// command end
+
 
 @media (max-width:1200px){
-    .normsStatements__item__link{
-        grid-template-columns: 15px auto 24px;
+    .departmentsStaff_in__title__h2 {
+        font-size: 30px;
     }
 
-    .normsStatements__item {
-        padding: 20px 30px;
+    .departmentsStaff_in__title__item{
+        font-size: 28px;
     }
 
-    .normsStatements__list {
+    .departmentsStaff_in__item a{
         grid-gap: 30px;
     }
+}
 
-    .normsStatements__item__link {
-        font-size: 1.125rem;
+@media (max-width:1000px){
+    .departmentsStaff_in__title__h2 {
+        font-size: 28px;
+    }
+
+    .departmentsStaff_in__title__item{
+        font-size: 26px;
+    }
+
+    .departmentsStaff_in__item {
+        padding: 20px;
+    }
+
+    .departmentsStaff_in__item a{
+        grid-template-columns: 120px auto 20px;
+    }
+
+    .departmentsStaff_in__imgs {
+        width: 100%;
+        height: 120px;
+    }
+
+    .departmentsStaff_in__list {
+        margin-top: 20px;
     }
 }
 
-@media (max-width:900px){
-    .normsStatements__list{
-        grid-template-columns: 1fr;
+@media (max-width:750px){
+    .departmentsStaff_in__title__h2 {
+        font-size: 26px;
     }
 
-    .normsStatements__item__link {
-        font-size: 1rem;
+    .departmentsStaff_in__title__item{
+        font-size: 24px;
     }
 
-    .normsStatements__item__link span + span svg {
-        width: 20px;
-        height: 20px;
+    .departmentsStaff_in__item a{
+        grid-template-columns: auto;
+    }
+
+    .departmentsStaff_in__item a{
+        grid-template-areas: "imags imags" "title icons";
+        justify-content: space-between;
+        grid-gap: 20px 10px;
+    }
+
+    .departmentsStaff_in__imgs {
+        width: 120px;
+        height: 120px;
+        grid-area: imags;
+    }
+
+    .departmentsStaff_in__item a section{
+        grid-area: title;
+    }
+
+    .departmentsStaff_in__item a .educational__icons{
+        grid-area: icons;
     }
 }
 
-@media (max-width:650px){
-    .normsStatements__list{
-        grid-gap: 20px;
+@media (max-width:500px){
+    .normsStatements .educational__item a {
+        grid-template-columns: auto;
+    }
+
+    .normsStatements .educational__img {
+        height: 80px;
+        width: 80px;
     }
 }

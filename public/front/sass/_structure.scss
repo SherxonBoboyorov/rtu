@@ -1,0 +1,16 @@
+// structure start
+
+.structure{
+    position: relative;
+    margin-bottom: 80px;
+
+    &__imgs{
+        @include fiximg(100%,auto,true);
+        img{
+            max-height: 950px;
+            object-position: center center;
+        }
+    }
+}
+
+// structure end

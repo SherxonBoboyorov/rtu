@@ -1,0 +1,142 @@
+// admissionsBachelor start
+
+.admissionsBachelor{
+    position: relative;
+    margin-bottom: 80px;
+
+    .about__title__h2{
+        margin-bottom: 40px;
+    }
+
+    .educational__title__h3{
+        margin-bottom: 0px;
+    }
+
+    &__list__text{
+        margin-top: 10px;
+    }
+
+    &__list{
+        margin-top: 40px;
+        .admissionsBachelor__ietm__cart + .admissionsBachelor__ietm__cart{
+            margin-top: 40px;
+        }
+    }
+
+    &__list__item{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 40px;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 120px auto;
+        grid-gap: 30px;
+        align-items: start;
+        background-color:$fff;
+        box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        padding: 40px;
+    }
+
+    &__menu{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+    }
+
+    &__title__h4{
+        @include fontAll(16px,400,$title);
+        line-height: 135%;
+        margin-bottom: 5px;
+    }
+
+    &__title__h3{
+        @include fontAll(18px,700,$link);
+        line-height: 135%;
+        margin-bottom: 5px;
+
+        s{
+            text-decoration-thickness: 2px;
+            text-decoration-color: $fon;
+            -moz-text-decoration-color: $fon;
+        }
+    }
+
+    &__link{
+        @include fontAll(12px,600,$fff);
+        text-transform: uppercase;
+        line-height: 100%;
+        position: relative;
+        background-color:$fon;
+        padding: 18px 40px;
+        @extend%transition;
+        border:2px solid $fon;
+        display: flex;
+        align-items:center;
+        grid-gap: 8px;
+        width: fit-content;
+
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        &:hover{
+            background-color:transparent;
+            color:$fon;
+        }
+    }
+
+    .educational__img {
+        grid-area: auto !important;
+    }
+}
+
+// admissionsBachelor end
+
+@media (max-width:1200px){
+    .admissionsBachelor__list__item{
+        grid-gap: 30px;
+    }
+
+    .admissionsBachelor .about__title__h2 {
+        margin-bottom: 30px;
+    }
+
+    .admissionsBachelor__list {
+        margin-top: 30px;
+    }
+
+    .admissionsBachelor__list .admissionsBachelor__ietm__cart + .admissionsBachelor__ietm__cart {
+        margin-top: 30px;
+    }
+
+    .admissionsBachelor__item {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width:1050px){
+    .admissionsBachelor__item{
+        padding: 30px;
+    }
+
+    .admissionsBachelor__list__item{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:500px){
+    .admissionsBachelor__item{
+        grid-template-columns: auto;
+        grid-gap: 10px;
+    }
+}

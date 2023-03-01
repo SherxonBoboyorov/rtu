@@ -2,7 +2,7 @@
 
 .leadership{
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 
     &__item{
         background-color: $fff;
@@ -15,41 +15,16 @@
         grid-template-columns: 190px auto;
         grid-gap: 50px;
         align-items: start;
-        margin-bottom: 50px;
-        padding-right: 30px;
-    }
-
-    &__item__text{
-        margin-top: 40px;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
     }
 
     &__title__h2{
         @include fontAll(1.875rem,700,$title);
         line-height: 135%;
         position: relative;
-        padding-left: 18px;
         margin-bottom: 20px;
-
-        &::after{
-            content: "";
-            width: 8px;
-            height: 8px;
-            background-color:$fon;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            border-radius:50px;
-            -webkit-border-radius:50px;
-            -moz-border-radius:50px;
-            -ms-border-radius:50px;
-            -o-border-radius:50px;
-
-            transform: translate(0,-50%);
-            -webkit-transform: translate(0,-50%);
-            -moz-transform: translate(0,-50%);
-            -ms-transform: translate(0,-50%);
-            -o-transform: translate(0,-50%);
-        }
     }
 
     &__menu__contacts{
@@ -66,7 +41,7 @@
             grid-gap: 80px;
 
             span{
-                @include fontAll(1rem,400,$text);
+                @include fontAll(1rem,500,$fon);
                 line-height: 135%;
                 display: inline-block;
             }
@@ -80,8 +55,7 @@
     }
 
     &__button__open{
-        display: inline-block;
-        @include fontAll(0.75rem,600,$fff);
+        @include fontAll(12px,600,$fff);
         text-transform: uppercase;
         line-height: 100%;
         position: relative;
@@ -89,6 +63,16 @@
         padding: 18px 40px;
         @extend%transition;
         border:2px solid $fon;
+        display: flex;
+        align-items:center;
+        grid-gap: 8px;
+        width: fit-content;
+
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
         &:hover{
             background-color:transparent;
             color:$fon;
@@ -96,13 +80,14 @@
     }
 
     &__text__next{
-        margin-left: 50px;
-        margin-right: 50px;
+        padding: 40px;
         width: 0;
         height: 0;
         overflow: hidden;
         opacity: 0;
         @extend%transition;
+        position: relative;
+        background-color:$max;
 
         .academy_contint__text{
             margin: 0px;
@@ -121,14 +106,17 @@
             height: auto;
             opacity: 1;
             overflow: initial;
-            padding-bottom: 40px;
-            padding-top: 50px;
-            border-top: 1px solid #D7E0E8;
         }
     }
 
     &__img{
         @include fiximg(auto,190px,true);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        overflow: hidden;
         img{
             max-height: 190px;
             aspect-ratio: 1;
@@ -141,10 +129,101 @@
         flex-direction: column;
         grid-gap: 40px;
     }
+
+    .about__title__h2{
+        margin-bottom: 10px;
+    }
+
+    &__item__cart{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 10000;
+        display: none;
+        height: auto;
+        width: 100%;
+        max-width: 1340px;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    &__fixed{
+        position: fixed;
+        z-index: 999;
+        top: -25%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 125%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        opacity: 1 !important;
+        will-change: opacity;
+    }
+
+    .active{
+        .leadership__item__cart{
+            display: block;
+            overflow-y: scroll;
+        }
+
+        .leadership__fixed{
+            display: block;
+        }
+
+        .leadership__item__cart .leadership__item {
+            box-shadow: none;
+        }
+
+        .leadership__button__open{
+            background-color:transparent;
+            color:$fon;
+        }
+
+        .leadership__text__next{
+            width: auto;
+            height: auto;
+            opacity: 1;
+            overflow: initial;
+        }
+
+        .leadership__menu__contacts {
+            margin: 0px;
+        }
+    }
+}
+
+.leadership__item__cart::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.leadership__item__cart::-webkit-scrollbar-track {
+    background: $max;
+}
+
+.leadership__item__cart::-webkit-scrollbar-thumb {
+    background: $fon;
+    width: 5px;
+    height: 5px;
 }
 
 // leadership end
 
+@media (max-width:1440px){
+    .leadership__item__cart{
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .leadership .active .leadership__item__cart{
+        min-height: fit-content;
+    }
+}
 
 @media (max-width:1200px){
     .leadership__title__h2 {
@@ -159,24 +238,17 @@
         font-size: 0.875rem;
     }
 
-    .leadership__item__text {
-        margin-top: 20px;
-    }
-
     .leadership__menu__contacts li{
         grid-gap: 40px;
     }
 
-    .leadership__item__list {
-        margin-bottom: 30px;
+    .leadership__active .leadership__text__next,
+    .leadership .active .leadership__text__next{
+        padding: 30px;
     }
 
-    .leadership__active .leadership__text__next{
-        padding: 30px 0;
-    }
-
-    .leadership__text__next{
-        margin: 0 30px;
+    .leadership__item__list{
+        padding: 30px;
     }
 
     .leadership__list {
@@ -202,7 +274,7 @@
 @media (max-width:750px){
     .leadership__item__list{
         grid-template-columns: auto;
-        padding-left: 20px;
+        padding: 30px;
     }
 
     .leadership__img{
@@ -213,10 +285,6 @@
         img{
             max-width: 190px;
         }
-    }
-
-    .leadership__item__text{
-        margin-top: 0;
     }
 }
 

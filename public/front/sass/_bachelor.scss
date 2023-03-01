@@ -1,0 +1,26 @@
+// bachelor start
+
+.bachelor{
+    position: relative;
+    margin-bottom: 80px;
+
+    &__list{
+        margin-top: 40px;
+    }
+
+    .about__title__h2{
+        margin-bottom: 40px;
+    }
+}
+
+// bachelor end
+
+@media (max-width:1000px){
+    .bachelor__list{
+        margin-top: 30px;
+    }
+
+    .bachelor .about__title__h2 {
+        margin-bottom: 30px;
+    }
+}

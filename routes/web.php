@@ -1,5 +1,6 @@
 <?php
 
+//admin
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -40,6 +41,11 @@ use App\Http\Controllers\Admin\DormitoryController;
 use App\Http\Controllers\Admin\ResearchStatisticController;
 use App\Http\Controllers\Admin\StatisticController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
+
+
+
+//front
+use App\Http\Controllers\Front\IndexController;
 
 
 Auth::routes();
@@ -93,6 +99,7 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
+        Route::get('/', [IndexController::class, 'homepage'])->name('/');
 
  });
 

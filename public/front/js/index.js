@@ -26,33 +26,23 @@ $(document).ready(function(){
 
 // -------------------------------===========-------------------------------
 
-if (mobileVersion) {
-    mobileVersion.addEventListener("click", () => {
-        const newWin = window.open("/", "example", "width=480px,height=600px");
-        newWin.onload = function () {
-            let div = newWin.document.createElement("div"),
-            body = newWin.document.body;
-            body.insertBefore(div, body.firstChild);
-        };
-    });
-}
-
-// -------------------------------===========-------------------------------
-
-$(function(){
-  let Catalog_max__pro__ul_link = document.querySelectorAll('.news__pagination__link');
-
-  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-              Catalog_max__pro__ul_link[j].classList.remove('active');
-          }
-          this.classList.add('active');
-
+$(document).ready(function(){
+    (function($){
+      $('.numbers').each(function(){
+          $(this).prop('Counter',0).animate({
+              Counter:$(this).text()
+          },
+          {
+              duration:9000,
+              easing:"swing",
+              step:function(now){
+                  $(this).text(Math.ceil(now));
+              }  
+         });
       })
-  }
+    })(jQuery);
 });
-
+  
 // -------------------------------===========-------------------------------
 
 const buttons_5 = document.querySelectorAll('.header__bottom__links');
@@ -68,110 +58,6 @@ buttons_5.forEach(function(button, index) {
       }
     });
   });
-});
-
-// -------------------------------===========-------------------------------
-
-$( ".leadership__button__open" ).click(function() {
-  $(this ).each(function( i ) {
-    if ( this.style.position !== "relative" ) {
-      this.style.position = "relative";
-      let Catalog_max__pro__ul_link = document.querySelectorAll('.leadership__item');
-      for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-          Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-              for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-                  Catalog_max__pro__ul_link[j].classList.remove('leadership__active');
-              }
-              this.classList.add('leadership__active');
-          })
-      }
-      
-    } else {
-      this.style.position = "";
-      let Catalog_max__pro__ul_link = document.querySelectorAll('.leadership__item');
-      for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-          Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-              for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-                  Catalog_max__pro__ul_link[j].classList.remove('leadership__active');
-              }
-              this.classList.add('leadership__active_12');
-          })
-      }
-    }
-  });
-});
-
-// -------------------------------===========-------------------------------
-
-$(function(){
-  let Catalog_max__pro__ul_link = document.querySelectorAll('.departmentsStaff_In__menu li');
-
-  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-              Catalog_max__pro__ul_link[j].classList.remove('active');
-          }
-          this.classList.add('active');
-
-      })
-  }
-});
-
-// -------------------------------===========-------------------------------
-
-$(function(){
-	let Catalog_max__pro__ul_link = document.querySelectorAll('.fotogalereya_in__item2');
-  
-	for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-		Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-			for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-				Catalog_max__pro__ul_link[j].classList.remove('active');
-			}
-			this.classList.add('active');
-  
-		})
-	}
-  });
-
-// -------------------------------===========-------------------------------
-
-const listVideoItem = document.querySelector('.videoGallery__menu__video');
-if(listVideoItem){
-  const videoItem = listVideoItem.querySelectorAll('.videoGallery__item__video');
-  const maxVideo = document.querySelector('.videoGallery__list__item a')
-  const videoItemImg = document.querySelector('.videoGallery__list__item .videoItem')
-  const videoItemTitele = document.querySelector('.videoGallery__list__item h3')
-  const videoItemData = document.querySelector('.videoGallery__list__item h4')
-  
-  videoItem.forEach(i => {
-    i.onclick = () =>{
-      const videoHref = i.querySelector('.videoGallery__item__video a');
-      const videoImg = i.querySelector('.videoGallery__item__video .videoImg');
-      const videoData = i.querySelector('.videoGallery__item__video h4');
-      const videoTitle = i.querySelector('.videoGallery__item__video h3');
-
-      let maxVideoList = maxVideo.href = videoHref.href
-      let maxvideoItemImg = videoItemImg.src = videoImg.src
-      let mrxTitle = videoItemTitele.textContent = videoTitle.textContent
-      let maxData = videoItemData.textContent = videoData.textContent
-    }
-  })
-}
-
-// -------------------------------===========-------------------------------
-
-$(function(){
-  let Catalog_max__pro__ul_link = document.querySelectorAll('.videoGallery__item__video');
-
-  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
-      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
-          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
-              Catalog_max__pro__ul_link[j].classList.remove('active');
-          }
-          this.classList.add('active');
-
-      })
-  }
 });
 
 // -------------------------------===========-------------------------------
@@ -217,3 +103,78 @@ if(checkboxNone){
 
   }
 }
+
+// -------------------------------===========-------------------------------
+
+const leadershipList = document.querySelector('.leadership__list');
+if(leadershipList){
+  const leadershipItem = document.querySelectorAll('.leadership__item');
+  
+  leadershipItem.forEach(i => {
+    const open = i.querySelector('.leadership__button__open')
+    const next = i.querySelector('.leadership__fixed')
+    
+    if(open){
+      open.onclick = () => {
+        i.classList.add('active')
+      }
+    }
+    
+    if(next){
+      next.onclick = () => {
+        i.classList.remove('active')
+      }
+    }
+  })
+}
+
+// -------------------------------===========-------------------------------
+
+const buttons_4 = document.querySelectorAll('.newsAll__filter__title');
+buttons_4.forEach(function(button, index) {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    this.parentNode.classList.toggle('active');
+    
+    buttons_4.forEach(function(button2, index2) {
+      if ( index !== index2 ) {
+        button2.parentNode.classList.remove('active');
+      }
+    });
+  });
+});
+
+// -------------------------------===========-------------------------------
+
+$(function(){
+  let Catalog_max__pro__ul_link = document.querySelectorAll('.newsAll__filter__link');
+
+  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+              Catalog_max__pro__ul_link[j].classList.remove('active');
+          }
+          this.classList.add('active');
+
+      })
+  }
+});
+
+// -------------------------------===========-------------------------------
+
+$(function(){
+  let Catalog_max__pro__ul_link = document.querySelectorAll('.newsAll__pagination__link');
+
+  for(let i = 0; i<Catalog_max__pro__ul_link.length; i++){
+      Catalog_max__pro__ul_link[i].addEventListener('click',function(){
+          for(let j = 0; j<Catalog_max__pro__ul_link.length;j++){
+              Catalog_max__pro__ul_link[j].classList.remove('active');
+          }
+          this.classList.add('active');
+
+      })
+  }
+});
+
+// -------------------------------===========-------------------------------
