@@ -16,4 +16,8 @@ class BachelorCategory extends Model
         'title_uz',
         'title_en',
     ];
+
+    public function bachelorins() {
+        return $this->hasMany(BachelorIn::class);
+    }
 }

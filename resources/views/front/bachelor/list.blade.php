@@ -40,13 +40,13 @@
                 </div>
 
                 <div class="bachelor__list">
-                    @foreach ($bachelorins as $bachelorin)
+                    @foreach (\App\Models\BachelorIn::all() as $bachelorin)
                     <section class="bachelor__item">
                         <h2 class="about__title__h2">{{ $bachelorin->bachelorcategory->{'title_' . app()->getLocale()} }}</h2>
 
                         <div class="educational__list">
                             <div class="educational__item">
-                                <a href="bachelor_in.html">
+                                <a href="#!">
                                     <div class="educational__img">
                                         <img src="{{ asset($bachelorin->image) }}" alt="educational">
                                     </div>

@@ -56,8 +56,11 @@ use App\Http\Controllers\Front\LabourUnionController;
 use App\Http\Controllers\Front\LeaderController;
 use App\Http\Controllers\Front\NormStatmentController;
 use App\Http\Controllers\Front\PartnersController;
+use App\Http\Controllers\Front\ScholarshipsController;
 use App\Http\Controllers\Front\StructurController;
 use App\Http\Controllers\Front\TeamInController;
+use App\Http\Controllers\Front\TransfersController;
+use App\Http\Controllers\Front\TuitionFeesController;
 
 Auth::routes();
 
@@ -125,8 +128,15 @@ Route::group(
         Route::get('E_reception', [EReceptionController::class, 'E_reception'])->name('E_reception');
         Route::post('save_quotecallbackSave', [EReceptionController::class, 'quotecallbackSave'])->name('quotecallbackSave');
         Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
-        Route::get('bachelor/{id?}', [BachelorsController::class, 'bachelor'])->name('bachelor');
-        // Route::get('bachelor/{slug}', [BachelorsController::class, 'show'])->name('bachelo');
+        Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
+        Route::get('bachelorins/{id?}', [BachelorsController::class, 'list'])->name('bachelorins');
+        Route::get('bachelorins/{slug}', [BachelorsController::class, 'show'])->name('bachelorin');
+        Route::get('transfer', [TransfersController::class, 'transfer'])->name('transfer');
+        Route::get('tuitionfees', [TuitionFeesController::class, 'tuitionfees'])->name('tuitionfees');
+        Route::get('scholarships', [ScholarshipsController::class, 'scholarships'])->name('scholarships');
+
+
+
 
 
 

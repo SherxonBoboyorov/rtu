@@ -126,7 +126,7 @@
                                     <nav class="header__bottom__none">
                                         <ul class="header__bottom__none__menu">
                                             <li>
-                                                <a href="{{ route('bachelor', ['id' => 1]) }}" class="header__bottom__link">
+                                                <a href="{{ route('bachelor') }}" class="header__bottom__link">
                                                     Bachelor
                                                 </a>
                                             </li>
@@ -173,19 +173,19 @@
                                             </li>
 
                                             <li>
-                                                <a href="transfer.html" class="header__bottom__link">
+                                                <a href="{{ route('transfer') }}" class="header__bottom__link">
                                                     Transfer
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="tuitionFees.html" class="header__bottom__link">
+                                                <a href="{{ route('tuitionfees') }}" class="header__bottom__link">
                                                     Tuition fees
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="scholarships.html" class="header__bottom__link">
+                                                <a href="{{ route('scholarships') }}" class="header__bottom__link">
                                                     Scholarships
                                                 </a>
                                             </li>
@@ -194,7 +194,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="research.html " class="header__bottom__link">Research</a>
+                                    <a href="research.html" class="header__bottom__link">Research</a>
                                 </li>
 
                                 <li>
@@ -248,7 +248,7 @@
 
                                             <li>
                                                 <a href="news.html" class="header__bottom__link">
-                                                    news
+                                                    News
                                                 </a>
                                             </li>
 
