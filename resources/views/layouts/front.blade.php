@@ -80,7 +80,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="labourUnion.html" class="header__bottom__link">
+                                                <a href="{{ route('labourUnion') }}" class="header__bottom__link">
                                                     Labour union
                                                 </a>
                                             </li>
@@ -90,13 +90,13 @@
                                         <ul class="header__bottom__none__menu">
 
                                             <li>
-                                                <a href="partners.html" class="header__bottom__link">
+                                                <a href="{{ route('partners') }}" class="header__bottom__link">
                                                     Partners
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="jobVacancies.html" class="header__bottom__link">
+                                                <a href="{{ route('jobVacancies') }}" class="header__bottom__link">
                                                     Job vacancies
                                                 </a>
                                             </li>

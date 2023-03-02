@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="advantages__item__img">
-                        <img src="foto/advantages.png" alt="advantages">
+                        <img src="{{ asset('front/foto/advantages.png') }}" alt="advantages">
                     </div>
                 </div>
             </div>

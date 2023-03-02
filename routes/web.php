@@ -48,8 +48,11 @@ use Unisharp\Laravel\LaravelFilemanager\Lfm;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
+use App\Http\Controllers\Front\JobVacancyController;
+use App\Http\Controllers\Front\LabourUnionController;
 use App\Http\Controllers\Front\LeaderController;
 use App\Http\Controllers\Front\NormStatmentController;
+use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\StructurController;
 use App\Http\Controllers\Front\TeamInController;
 
@@ -113,6 +116,11 @@ Route::group(
         Route::get('departmentsstaffs', [DepartmentsStaffController::class, 'list'])->name('departmentsstaffs');
         Route::get('departmentsstaffs/{slug}', [DepartmentsStaffController::class, 'show'])->name('departmentsstaff');
         Route::get('team/{slug}', [TeamInController::class, 'team'])->name('team');
+        Route::get('labourUnion', [LabourUnionController::class, 'labourUnion'])->name('labourUnion');
+        Route::get('partners', [PartnersController::class, 'partners'])->name('partners');
+        Route::get('jobVacancies', [JobVacancyController::class, 'jobVacancies'])->name('jobVacancies');
+
+
 
  });
 
