@@ -84,33 +84,14 @@
                         <h3 class="about__title__h3">how we are better than our competitors</h3>
 
                         <ul class="advantages__list__menu">
+                          @foreach ($advantages as $advantage)
                             <li>
-                                <h2 class="advantages__title__h2 numbers">200</h2>
+                                <h2 class="advantages__title__h2 numbers">{{ $advantage->result }}</h2>
                                 <div class="advantages__text">
-                                    <p>Unde omnis iste natus error</p>
+                                    <p>{{ $advantage->{'description_' . app()->getLocale()} }}</p>
                                 </div>
                             </li>
-
-                            <li>
-                                <h2 class="advantages__title__h2 numbers">50</h2>
-                                <div class="advantages__text">
-                                    <p>Voluptatem accusantium</p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <h2 class="advantages__title__h2 numbers">75</h2>
-                                <div class="advantages__text">
-                                    <p>Doloremque laudantium</p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <h2 class="advantages__title__h2 numbers">200</h2>
-                                <div class="advantages__text">
-                                    <p>Inventore veritatis quasi</p>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
 

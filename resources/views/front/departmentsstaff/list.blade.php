@@ -34,7 +34,7 @@
                     <div class="educational__item">
                         <a href="{{ url('departmentsstaffs', $department->{'slug_' . app()->getLocale()}) }}">
                             <div class="educational__img">
-                                <h2 class="about__title__h2">{{ $department->id }}</h2>
+                                <h2 class="about__title__h2">{{ $loop->iteration}}</h2>
                             </div>
 
                             <h3 class="educational__title__h3">

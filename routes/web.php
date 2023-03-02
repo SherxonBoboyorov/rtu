@@ -47,7 +47,9 @@ use Unisharp\Laravel\LaravelFilemanager\Lfm;
 //front
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\AcademicCouncilController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
+use App\Http\Controllers\Front\EReceptionController;
 use App\Http\Controllers\Front\JobVacancyController;
 use App\Http\Controllers\Front\LabourUnionController;
 use App\Http\Controllers\Front\LeaderController;
@@ -119,6 +121,12 @@ Route::group(
         Route::get('labourUnion', [LabourUnionController::class, 'labourUnion'])->name('labourUnion');
         Route::get('partners', [PartnersController::class, 'partners'])->name('partners');
         Route::get('jobVacancies', [JobVacancyController::class, 'jobVacancies'])->name('jobVacancies');
+        Route::get('E_reception', [EReceptionController::class, 'E_reception'])->name('E_reception');
+        Route::post('save_quotecallbackSave', [EReceptionController::class, 'quotecallbackSave'])->name('quotecallbackSave');
+        Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
+
+
+
 
 
 

@@ -102,13 +102,13 @@
                                             </li>
 
                                             <li>
-                                                <a href="e_reception.html" class="header__bottom__link">
+                                                <a href="{{ route('E_reception') }}" class="header__bottom__link">
                                                     E-reception
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="academicCouncil.html" class="header__bottom__link">
+                                                <a href="{{ route('academicCouncil') }}" class="header__bottom__link">
                                                     Academic Council
                                                 </a>
                                             </li>
