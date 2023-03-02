@@ -126,7 +126,7 @@
                                     <nav class="header__bottom__none">
                                         <ul class="header__bottom__none__menu">
                                             <li>
-                                                <a href="bachelor.html" class="header__bottom__link">
+                                                <a href="{{ route('bachelor', ['id' => 1]) }}" class="header__bottom__link">
                                                     Bachelor
                                                 </a>
                                             </li>

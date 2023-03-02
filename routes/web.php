@@ -48,6 +48,7 @@ use Unisharp\Laravel\LaravelFilemanager\Lfm;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\AcademicCouncilController;
+use App\Http\Controllers\Front\BachelorsController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
 use App\Http\Controllers\Front\EReceptionController;
 use App\Http\Controllers\Front\JobVacancyController;
@@ -124,6 +125,8 @@ Route::group(
         Route::get('E_reception', [EReceptionController::class, 'E_reception'])->name('E_reception');
         Route::post('save_quotecallbackSave', [EReceptionController::class, 'quotecallbackSave'])->name('quotecallbackSave');
         Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
+        Route::get('bachelor/{id?}', [BachelorsController::class, 'bachelor'])->name('bachelor');
+        // Route::get('bachelor/{slug}', [BachelorsController::class, 'show'])->name('bachelo');
 
 
 

@@ -29,9 +29,14 @@ class BachelorIn extends Model
         'meta_description_ru'
     ];
 
+    // public function bachelorcategory()
+    // {
+    //     return $this->belongsTo('App\Models\BachelorCategory', 'id', 'bachelorcategory_id');
+    // }
+
     public function bachelorcategory()
     {
-        return $this->belongsTo('App\Models\BachelorCategory', 'bachelorcategory_id');
+        return $this->hasMany(BachelorCategory::class, 'id', 'bachelorcategory_id');
     }
 
 
