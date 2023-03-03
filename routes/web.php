@@ -53,6 +53,7 @@ use App\Http\Controllers\Front\CareersController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
 use App\Http\Controllers\Front\DormitorysController;
 use App\Http\Controllers\Front\EReceptionController;
+use App\Http\Controllers\Front\EventsController;
 use App\Http\Controllers\Front\ForeignPartnersController;
 use App\Http\Controllers\Front\InternationalsController;
 use App\Http\Controllers\Front\JobVacancyController;
@@ -149,6 +150,8 @@ Route::group(
         Route::get('foreignPartners', [ForeignPartnersController::class, 'foreignPartners'])->name('foreignPartners');
         Route::get('articles', [NewsController::class, 'list'])->name('articles');
         Route::get('articles/{slug}', [NewsController::class, 'show'])->name('article');
+        Route::get('events', [EventsController::class, 'list'])->name('events');
+        Route::get('events/{slug}', [EventsController::class, 'show'])->name('event');
 
 
 

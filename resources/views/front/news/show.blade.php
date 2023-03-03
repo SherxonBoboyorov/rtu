@@ -57,19 +57,19 @@
 
                                 <ul class="newsIn__contacts__list">
                                     <li>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={!! request()->url() !!}" class="newsIn__contacts__link">
+                                        <a class="newsIn__contacts__link">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="http://twitter.com/share?text=Im Sharing on Twitter&url={!! request()->url() !!}" class="newsIn__contacts__link">
+                                        <a class="newsIn__contacts__link">
                                             <i class="fa-brands fa-twitter"></i>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#!" class="newsIn__contacts__link">
+                                        <a class="newsIn__contacts__link">
                                             <i class="fa-solid fa-envelope"></i>
                                         </a>
                                     </li>

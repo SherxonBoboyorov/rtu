@@ -253,7 +253,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="events.html" class="header__bottom__link">
+                                                <a href="{{ route('events') }}" class="header__bottom__link">
                                                     Events
                                                 </a>
                                             </li>
