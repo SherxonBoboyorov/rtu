@@ -49,15 +49,22 @@ use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\AcademicCouncilController;
 use App\Http\Controllers\Front\BachelorsController;
+use App\Http\Controllers\Front\CareersController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
+use App\Http\Controllers\Front\DormitorysController;
 use App\Http\Controllers\Front\EReceptionController;
+use App\Http\Controllers\Front\ForeignPartnersController;
+use App\Http\Controllers\Front\InternationalsController;
 use App\Http\Controllers\Front\JobVacancyController;
 use App\Http\Controllers\Front\LabourUnionController;
 use App\Http\Controllers\Front\LeaderController;
+use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\NormStatmentController;
 use App\Http\Controllers\Front\PartnersController;
+use App\Http\Controllers\Front\ResearchsController;
 use App\Http\Controllers\Front\ScholarshipsController;
 use App\Http\Controllers\Front\StructurController;
+use App\Http\Controllers\Front\StudentStudioController;
 use App\Http\Controllers\Front\TeamInController;
 use App\Http\Controllers\Front\TransfersController;
 use App\Http\Controllers\Front\TuitionFeesController;
@@ -134,6 +141,18 @@ Route::group(
         Route::get('transfer', [TransfersController::class, 'transfer'])->name('transfer');
         Route::get('tuitionfees', [TuitionFeesController::class, 'tuitionfees'])->name('tuitionfees');
         Route::get('scholarships', [ScholarshipsController::class, 'scholarships'])->name('scholarships');
+        Route::get('international', [InternationalsController::class, 'international'])->name('international');
+        Route::get('research', [ResearchsController::class, 'research'])->name('research');
+        Route::get('studentsStudio', [StudentStudioController::class, 'studentsStudio'])->name('studentsStudio');
+        Route::get('careers', [CareersController::class, 'careers'])->name('careers');
+        Route::get('dormitory', [DormitorysController::class, 'dormitory'])->name('dormitory');
+        Route::get('foreignPartners', [ForeignPartnersController::class, 'foreignPartners'])->name('foreignPartners');
+        Route::get('articles', [NewsController::class, 'list'])->name('articles');
+        Route::get('articles/{slug}', [NewsController::class, 'show'])->name('article');
+
+
+
+
 
 
 

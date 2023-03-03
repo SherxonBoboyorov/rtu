@@ -10,11 +10,11 @@
                 <h2 class="about__title__h2">News</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="index.html" class="aboutUniversity__menu__link">Main</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
                     </li>
 
                     <li>
-                        <a href="news.html" class="aboutUniversity__menu__link">News</a>
+                        <a class="aboutUniversity__menu__link">News</a>
                     </li>
                 </ul>
             </div>
@@ -41,364 +41,6 @@
                                     </li>
 
                                     <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2021 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2020 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2019 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2018 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2017 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2016 <span><i class="fas fa-angle-down"></i></span></h3>
-                                <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
                                         <a href="#!" class="newsAll__filter__link">Декабрь</a>
                                     </li>
                                 </ul>
@@ -408,128 +50,30 @@
 
                     <section>
                         <div class="newsAll__list__item">
+                            @foreach ($articles as $article)
                             <div class="newsAll__item">
-                                <a href="news_in.html">
+                                <a href="{{ route('article', $article->{'slug_' . app()->getLocale()}) }}">
                                     <div class="newsAll__imgs">
-                                        <img src="foto/news_1.png" alt="newsAll">
+                                        <img src="{{ asset($article->image) }}" alt="newsAll">
                                     </div>
 
                                     <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
+                                        <h4 class="newsAll__data">{{  date('d.m.Y', strtotime($article->created_at)) }}</h4>
                                         <h3 class="newsAll__title__h3">
-                                            Ut enim ad minim veniam, quis nostrud
+                                            {{ $article->{'title_' . app()->getLocale()} }}
                                         </h3>
                                         <div class="newsAll__text">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                                {!! $article->{'content_' . app()->getLocale()} !!}
                                             </p>
                                         </div>
                                     </section>
                                 </a>
                             </div>
-
-                            <div class="newsAll__item">
-                                <a href="news_in.html">
-                                    <div class="newsAll__imgs">
-                                        <img src="foto/news_2.png" alt="newsAll">
-                                    </div>
-
-                                    <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
-                                        <h3 class="newsAll__title__h3">
-                                            Exercitation ullamco laboris nisi ut aliquip ex ea
-                                        </h3>
-                                        <div class="newsAll__text">
-                                            <p>
-                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                                            </p>
-                                        </div>
-                                    </section>
-                                </a>
-                            </div>
-
-                            <div class="newsAll__item">
-                                <a href="news_in.html">
-                                    <div class="newsAll__imgs">
-                                        <img src="foto/news_3.png" alt="newsAll">
-                                    </div>
-
-                                    <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
-                                        <h3 class="newsAll__title__h3">
-                                            Ut enim ad minim veniam, quis nostrud
-                                        </h3>
-                                        <div class="newsAll__text">
-                                            <p>
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                                            </p>
-                                        </div>
-                                    </section>
-                                </a>
-                            </div>
-
-                            <div class="newsAll__item">
-                                <a href="news_in.html">
-                                    <div class="newsAll__imgs">
-                                        <img src="foto/news_1.png" alt="newsAll">
-                                    </div>
-
-                                    <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
-                                        <h3 class="newsAll__title__h3">
-                                            Ut enim ad minim veniam, quis nostrud
-                                        </h3>
-                                        <div class="newsAll__text">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                                            </p>
-                                        </div>
-                                    </section>
-                                </a>
-                            </div>
-
-                            <div class="newsAll__item">
-                                <a href="news_in.html">
-                                    <div class="newsAll__imgs">
-                                        <img src="foto/news_2.png" alt="newsAll">
-                                    </div>
-
-                                    <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
-                                        <h3 class="newsAll__title__h3">
-                                            Exercitation ullamco laboris nisi ut aliquip ex ea
-                                        </h3>
-                                        <div class="newsAll__text">
-                                            <p>
-                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                                            </p>
-                                        </div>
-                                    </section>
-                                </a>
-                            </div>
-
-                            <div class="newsAll__item">
-                                <a href="news_in.html">
-                                    <div class="newsAll__imgs">
-                                        <img src="foto/news_3.png" alt="newsAll">
-                                    </div>
-
-                                    <section>
-                                        <h4 class="newsAll__data">12.04.2022</h4>
-                                        <h3 class="newsAll__title__h3">
-                                            Ut enim ad minim veniam, quis nostrud
-                                        </h3>
-                                        <div class="newsAll__text">
-                                            <p>
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                                            </p>
-                                        </div>
-                                    </section>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
 
-                        <ul class="newsAll__pagination">
+                        {{-- <ul class="newsAll__pagination">
                             <li>
                                 <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-left"></i></a>
                             </li>
@@ -563,7 +107,7 @@
                             <li>
                                 <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-right"></i></a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </section>
                 </div>
             </div>

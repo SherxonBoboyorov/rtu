@@ -194,11 +194,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="research.html" class="header__bottom__link">Research</a>
+                                    <a href="{{ route('research') }}" class="header__bottom__link">Research</a>
                                 </li>
 
                                 <li>
-                                    <a href="international.html" class="header__bottom__link">International</a>
+                                    <a href="{{ route('international') }}" class="header__bottom__link">International</a>
                                 </li>
 
                                 <li>
@@ -210,25 +210,25 @@
                                     <nav class="header__bottom__none">
                                         <ul class="header__bottom__none__menu">
                                             <li>
-                                                <a href="studentsStudio.html" class="header__bottom__link">
+                                                <a href="{{ route('studentsStudio') }}" class="header__bottom__link">
                                                     Students studio
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="careers.html" class="header__bottom__link">
+                                                <a href="{{ route('careers') }}" class="header__bottom__link">
                                                     Careers
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="dormitory.html" class="header__bottom__link">
+                                                <a href="{{ route('dormitory') }}" class="header__bottom__link">
                                                     Dormitory
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="foreignPartners.html" class="header__bottom__link">
+                                                <a href="{{ route('foreignPartners') }}" class="header__bottom__link">
                                                     Foreign partners
                                                 </a>
                                             </li>
@@ -247,7 +247,7 @@
                                         <ul class="header__bottom__none__menu">
 
                                             <li>
-                                                <a href="news.html" class="header__bottom__link">
+                                                <a href="{{ route('articles') }}" class="header__bottom__link">
                                                     News
                                                 </a>
                                             </li>
@@ -266,32 +266,32 @@
 
                         <section class="header__ru__list__caer">
 
-                            <!-- language start -->
+                               <!-- language start -->
 
-                            <div class="header__ru">
+                               <div class="header__ru">
+                                <ul>
 
                                 <div class="header__ru_cart dropdown-trigger"data-target='dropdown1'>
-                                    <a data-target='dropdown1' class="header__en__link">Ru</a>
+                                    <a data-target='dropdown1' class="header__en__link">{{ strtoupper(app()->getLocale()) }}</a>
                                     <span><i class="fas fa-angle-down"></i></span>
                                 </div>
 
                                 <div class="header__ru_none dropdown-content" id='dropdown1'>
-                                    <div class="header__ru_list active">
-                                        <a href="#!-1" class="header__en__link">Ru</a>
-                                    </div>
-
-                                    <div class="header__ru_list">
-                                        <a href="#!-2" class="header__en__link">En</a>
-                                    </div>
-
-                                    <div class="header__ru_list">
-                                        <a href="#!-3" class="header__en__link">O’z</a>
-                                    </div>
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        @if($localeCode != app()->getLocale())
+                                        <div class="header__ru_list @if($localeCode == app()->getLocale()) active @endif">
+                                            <a rel="alternate" class="header__en__link" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ strtoupper($localeCode) }}
+                                            </a>
+                                        </div>
+                                        @endif
+                                    @endforeach
                                 </div>
-
-                                <!-- language start -->
-
+                            </ul>
                             </div>
+
+                            <!-- language start -->
+
 
                             <button class="header__burger__none sidenav-trigger" data-target="slide-out"><i class="fas fa-bars"></i></button>
 

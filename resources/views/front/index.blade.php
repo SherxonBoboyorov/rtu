@@ -254,39 +254,22 @@
                 <h3 class="about__title__h3">Latest events of our university</h3>
 
                 <div class="news__list">
-                    <div class="news__item">
-                        <a href="news_in.html">
-                            <div class="news__img">
-                                <img src="foto/news_1.png" alt="news">
-                            </div>
-                            <h4 class="news__title__h4">12.04.2022</h4>
-                            <h3 class="news__title__h3">Ut enim ad minim veniam, quis nostrud</h3>
-                        </a>
-                    </div>
+                    @foreach ($articles as $article)
 
                     <div class="news__item">
-                        <a href="news_in.html">
+                        <a href="{{ route('article', $article->{'slug_' . app()->getLocale()}) }}">
                             <div class="news__img">
-                                <img src="foto/news_2.png" alt="news">
+                                <img src="{{ asset($article->image) }}" alt="news">
                             </div>
-                            <h4 class="news__title__h4">08.04.2022</h4>
-                            <h3 class="news__title__h3">Exercitation ullamco laboris nisi ut aliquip ex ea</h3>
+                            <h4 class="news__title__h4">{{  date('d.m.Y', strtotime($article->created_at)) }}</h4>
+                            <h3 class="news__title__h3">{{ $article->{'title_' . app()->getLocale()} }}</h3>
                         </a>
                     </div>
-
-                    <div class="news__item">
-                        <a href="news_in.html">
-                            <div class="news__img">
-                                <img src="foto/news_3.png" alt="news">
-                            </div>
-                            <h4 class="news__title__h4">04.04.2022</h4>
-                            <h3 class="news__title__h3">Duis aute irure dolor in reprehenderit in voluptate</h3>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="educational__bootom__link">
-                    <a href="news.html" class="educational__all__link">
+                    <a href="{{ route('articles') }}" class="educational__all__link">
                         view all directions
                         <i class="fas fa-chevron-right"></i>
                     </a>
@@ -308,63 +291,15 @@
                 <h3 class="about__title__h3">Companies that trust us</h3>
 
                 <div class="our_partners__list owl-carousel">
-
+                   @foreach ($ourpartners as $ourpartner)
                     <div class="our_partners__item">
                         <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_1.png" alt="our_partners">
+                            <a>
+                                <img src="{{ asset($ourpartner->image) }}" alt="our_partners">
                             </a>
                         </div>
                     </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_2.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_3.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_4.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_5.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_3.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="our_partners__item">
-                        <div class="our_partners__img">
-                            <a href="#!">
-                                <img src="foto/our_partners_4.png" alt="our_partners">
-                            </a>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </section>
