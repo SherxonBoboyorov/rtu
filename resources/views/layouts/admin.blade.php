@@ -362,7 +362,7 @@
                                     <a href="#" class="nav-link">
                                     <i class="nav-icon"></i>
                                     <p style="color: #007bff">
-                                         Bachelor Category
+                                           Faculties
                                          <i class="right fas fa-angle-left"></i>
                                     </p>
                                     </a>
@@ -385,7 +385,7 @@
                                     <a href="#" class="nav-link">
                                     <i class="nav-icon"></i>
                                     <p style="color: #007bff">
-                                         Bachelor Product
+                                          Directions
                                          <i class="right fas fa-angle-left"></i>
                                     </p>
                                     </a>
@@ -436,7 +436,7 @@
                                     <a href="#" class="nav-link">
                                     <i class="nav-icon"></i>
                                     <p style="color: #007bff">
-                                         Master Category
+                                         Faculties
                                          <i class="right fas fa-angle-left"></i>
                                     </p>
                                     </a>
@@ -459,7 +459,7 @@
                                     <a href="#" class="nav-link">
                                     <i class="nav-icon"></i>
                                     <p style="color: #007bff">
-                                         Master Product
+                                         Directions
                                          <i class="right fas fa-angle-left"></i>
                                     </p>
                                     </a>
@@ -471,6 +471,80 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ route('masterin.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                 </li>
+                                 </li>
+
+                                </ul>
+                             </li>
+                            {{-- end --}}
+
+                               {{-- start--}}
+                               <li class="nav-item">
+
+                                <a href="#" class="nav-link">
+                                <i class="nav-icon"></i>
+                                <p>
+                                    Admission Bachelor
+                                     <i class="right fas fa-angle-left"></i>
+                                </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('admission.index') }}" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a href="{{ route('bachelor.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li> --}}
+
+
+                                <li class="nav-item">
+
+                                    <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p style="color: #007bff">
+                                           Faculties
+                                         <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('admissioncategory.index') }}" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('admissioncategory.create') }}" class="nav-link">
+                                           <p>Create</p>
+                                        </a>
+                                    </li>
+                                    </ul>
+
+
+                                 <li class="nav-item">
+
+                                    <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p style="color: #007bff">
+                                          Directions
+                                         <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
+                                           <p>List</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#!" class="nav-link">
                                            <p>Create</p>
                                         </a>
                                     </li>

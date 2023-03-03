@@ -29,26 +29,27 @@
     <div class="newsAll">
         <section class="container">
             <div class="newsAll__cart">
-                <div class="newsAll__list">
-                    <aside>
+                <div class="newsAll__list" id="filterForm">
+                    {{-- <form id="filterForm" action="">
+                        @csrf --}}
+                        <aside>
+
+                        @foreach ($news as $value)
                         <ul class="newsAll__filter">
-
                             <li>
-                                <h3 class="newsAll__filter__title">2022 <span><i class="fas fa-angle-down"></i></span></h3>
+                                <h3 class="newsAll__filter__title" >{{ $value }}<span><i class="fas fa-angle-down"></i></span></h3>
                                 <ul class="newsAll__filter__data">
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link active">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
+                                    <li type="checkbox">
+                                         <a href="#!" class="newsAll__filter__link" name="dates[]">{{  date('M', strtotime($value)) }}</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
+                        @endforeach
                     </aside>
 
-                    <section>
+                    <div id="result_section">
+                     <section>
                         <div class="newsAll__list__item">
                             @foreach ($articles as $article)
                             <div class="newsAll__item">
@@ -73,47 +74,19 @@
                             @endforeach
                         </div>
 
-                        {{-- <ul class="newsAll__pagination">
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-left"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-chevron-left"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link active">
-                                    1
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link">
-                                    2
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link">
-                                    3
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-chevron-right"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-right"></i></a>
-                            </li>
-                        </ul> --}}
+                        {{ $articles->links("vendor.pagination.pagination")}}
                     </section>
                 </div>
+            {{-- </form> --}}
             </div>
+        </div>
         </section>
     </div>
 
     <!-- newsAll end -->
 
+@endsection
+@section('pageScripts')
+    <!-- flot charts scripts-->
+    <script src="{{ asset('front/js/filter.js') }}"></script>
 @endsection

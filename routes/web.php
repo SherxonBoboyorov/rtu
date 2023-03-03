@@ -40,6 +40,8 @@ use App\Http\Controllers\Admin\StudentsstudioController;
 use App\Http\Controllers\Admin\DormitoryController;
 use App\Http\Controllers\Admin\ResearchStatisticController;
 use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\Admin\AdmissionController;
+use App\Http\Controllers\Admin\AdmissionCategoryController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -49,6 +51,7 @@ use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\AcademicCouncilController;
 use App\Http\Controllers\Front\BachelorsController;
+use App\Http\Controllers\Front\BachelorShowController;
 use App\Http\Controllers\Front\CareersController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
 use App\Http\Controllers\Front\DormitorysController;
@@ -59,6 +62,7 @@ use App\Http\Controllers\Front\InternationalsController;
 use App\Http\Controllers\Front\JobVacancyController;
 use App\Http\Controllers\Front\LabourUnionController;
 use App\Http\Controllers\Front\LeaderController;
+use App\Http\Controllers\Front\MastersController;
 use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\NormStatmentController;
 use App\Http\Controllers\Front\PartnersController;
@@ -111,7 +115,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'studentsstudio' => StudentsstudioController::class,
          'dormitory' => DormitoryController::class,
          'researchstatistic' => ResearchStatisticController::class,
-         'statistic' => StatisticController::class
+         'statistic' => StatisticController::class,
+         'admission' => AdmissionController::class,
+         'admissioncategory' => AdmissionCategoryController::class
      ]);
 });
 
@@ -138,7 +144,14 @@ Route::group(
         Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
         Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
         Route::get('bachelorins/{id?}', [BachelorsController::class, 'list'])->name('bachelorins');
-        Route::get('bachelorins/{slug}', [BachelorsController::class, 'show'])->name('bachelorin');
+
+        Route::get('bachelor_in/{id}', [BachelorShowController::class, 'bachelor_in'])->name('bachelor_in');
+        Route::get('master', [MastersController::class, 'master'])->name('master');
+        Route::get('masterins/{id?}', [MastersController::class, 'list'])->name('masterins');
+
+        Route::get('master_in/{id}', [MastersController::class, 'master_in'])->name('master_in');
+
+        // Route::get('bachelorin/{slug?}', [BachelorsController::class, 'show'])->name('bachelorin');
         Route::get('transfer', [TransfersController::class, 'transfer'])->name('transfer');
         Route::get('tuitionfees', [TuitionFeesController::class, 'tuitionfees'])->name('tuitionfees');
         Route::get('scholarships', [ScholarshipsController::class, 'scholarships'])->name('scholarships');
@@ -149,6 +162,7 @@ Route::group(
         Route::get('dormitory', [DormitorysController::class, 'dormitory'])->name('dormitory');
         Route::get('foreignPartners', [ForeignPartnersController::class, 'foreignPartners'])->name('foreignPartners');
         Route::get('articles', [NewsController::class, 'list'])->name('articles');
+        Route::post('articles/ajax-filter', [NewsController::class, 'ajaxFilterList'])->name('articles.ajaxFilter');
         Route::get('articles/{slug}', [NewsController::class, 'show'])->name('article');
         Route::get('events', [EventsController::class, 'list'])->name('events');
         Route::get('events/{slug}', [EventsController::class, 'show'])->name('event');

@@ -132,7 +132,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="bachelor.html" class="header__bottom__link">
+                                                <a href="{{ route('master') }}" class="header__bottom__link">
                                                     Master
                                                 </a>
                                             </li>

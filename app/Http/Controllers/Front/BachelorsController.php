@@ -27,17 +27,6 @@ class BachelorsController extends Controller
         ));
     }
 
-    public function show($slug)
-    {
-        $bachelorin = BachelorIn::where('slug_uz', $slug)
-            ->orWhere('slug_ru', $slug)
-            ->orWhere('slug_en', $slug)
-            ->first();
-
-        return view('front.bachelor.show', compact(
-            'bachelorin',
-        ));
-    }
 
 
 }

@@ -44,7 +44,7 @@ class BachelorController extends Controller
         if(Bachelor::create($data)) {
             return redirect()->route('bachelor.index')->with('message', "Bachelor created successfully!!!");
         }
-        return redirect()->route('bachelor.index')->with('message', "Bachelor created successfully!!!");
+        return redirect()->route('bachelor.index')->with('message', "Unable to created Bachelor!!!");
     }
 
     /**
@@ -88,7 +88,7 @@ class BachelorController extends Controller
         $data = $request->all();
 
         if ($bachelor->update($data)) {
-            return redirect()->route('bachelor.index')->with('message', "Bachelor changed successfully!!!");
+            return redirect()->route('bachelor.index')->with('message', "Bachelor update successfully!!!");
         }
         return redirect()->route('bachelor.index')->with('message', "Unable to update Bachelor!!!");
     }

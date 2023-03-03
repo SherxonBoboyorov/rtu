@@ -43,46 +43,6 @@
                                     <li>
                                         <a href="#!" class="newsAll__filter__link">Февраль</a>
                                     </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Март</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Апрель</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Май</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июнь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Июль</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Август</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Сентябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Октябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Ноябрь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Декабрь</a>
-                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -108,41 +68,7 @@
                             @endforeach
                         </div>
 
-                        {{-- <ul class="newsAll__pagination">
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-left"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-chevron-left"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link active">
-                                    1
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link">
-                                    2
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__link">
-                                    3
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-chevron-right"></i></a>
-                            </li>
-
-                            <li>
-                                <a href="#!" class="newsAll__pagination__next"><i class="fas fa-angle-double-right"></i></a>
-                            </li>
-                        </ul> --}}
+                       {{ $events->links("vendor.pagination.pagination")}}
                     </section>
                 </div>
             </div>

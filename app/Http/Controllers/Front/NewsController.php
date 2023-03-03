@@ -5,14 +5,33 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
     public function list()
     {
         $articles = Article::orderBy('created_at', 'DESC')->paginate(12);
-        return view('front.news.list', compact('articles'));
+        $news = Article::select(DB::raw('YEAR(created_at) as year'))->distinct()->pluck('year')->toArray();
+
+        return view('front.news.list', compact(
+            'articles',
+            'news'
+     ));
     }
+
+    public function ajaxFilterList(Request $request){
+        $dates = $request->dates;
+        $news =  Article::orderBy('created_at', 'DESC');
+
+        if(isset($dates)&&!empty($dates)){
+            $news = $news->whereYear('created_at',$dates);
+        }
+        $news = $news->paginate(6);
+
+        return response(view('front.news.filter_result',['news'=>$news]));
+    }
+
 
     public function show($slug)
     {

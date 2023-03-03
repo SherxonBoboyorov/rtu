@@ -8,14 +8,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Bachelor</h2>
+                <h2 class="about__title__h2">Master</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
                         <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Bachelor</a>
+                        <a class="aboutUniversity__menu__link">Master</a>
                     </li>
                 </ul>
             </div>
@@ -32,32 +32,32 @@
             <div class="bachelor__cart">
 
                 <div class="aboutContint__text">
-                    @foreach ($bachelors as $bachelor)
+                    @foreach ($masters as $master)
                     <p>
-                        {!! $bachelor->{'content_' . app()->getLocale()} !!}
+                        {!! $master->{'content_' . app()->getLocale()} !!}
                     </p>
                     @endforeach
                 </div>
 
                 <div class="bachelor__list">
-                    @foreach (\App\Models\BachelorIn::all() as $bachelorin)
+                    @foreach (\App\Models\MasterIn::all() as $masterin)
                     <section class="bachelor__item">
-                        <h2 class="about__title__h2">{{ $bachelorin->bachelorcategory->{'title_' . app()->getLocale()} }}</h2>
+                        <h2 class="about__title__h2">{{ $masterin->mastercategory->{'title_' . app()->getLocale()} }}</h2>
 
                         <div class="educational__list">
                             <div class="educational__item">
-                                <a href="{{ route('bachelor_in', $bachelorin->id) }}">
+                                <a href="{{ route('master_in', $masterin->id) }}">
                                     <div class="educational__img">
-                                        <img src="{{ asset($bachelorin->image) }}" alt="educational">
+                                        <img src="{{ asset($masterin->image) }}" alt="educational">
                                     </div>
 
                                     <section>
                                         <h3 class="educational__title__h3">
-                                           {{ $bachelorin->{'title_' . app()->getLocale()} }}
+                                           {{ $masterin->{'title_' . app()->getLocale()} }}
                                         </h3>
                                         <div class="educational__text">
                                             <p>
-                                                {!! $bachelorin->{'content_' . app()->getLocale()} !!}
+                                                {!! $masterin->{'content_' . app()->getLocale()} !!}
                                             </p>
                                         </div>
                                     </section>

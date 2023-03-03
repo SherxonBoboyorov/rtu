@@ -1,9 +1,9 @@
 @if ($paginator->hasPages())
     <nav>
-        <ul class="news__pagination">
+        <ul class="newsAll__pagination">
             @if (!$paginator->onFirstPage())
                 <li>
-                    <a href="{{ $paginator->previousPageUrl() }}" class="news__pagination__next"rel="prev" aria-label="@lang('pagination.previous')"><i class="fas fa-angle-double-left"></i></a>
+                    <a href="{{ $paginator->previousPageUrl() }}" class="newsAll__pagination__next"rel="prev" aria-label="@lang('pagination.previous')"><i class="fas fa-angle-double-left"></i></a>
                 </li>
             @endif
 
@@ -15,9 +15,9 @@
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
                         @if ($page == $paginator->currentPage())
-                            <li><a class="experts__pagination__link active">{{ $page }}</a></li>
+                            <li><a class="newsAll__pagination__link active">{{ $page }}</a></li>
                         @else
-                            <li><a class="experts__pagination__link" href="{{ $url }}">{{ $page }}</a></li>
+                            <li><a class="newsAll__pagination__link" href="{{ $url }}">{{ $page }}</a></li>
                         @endif
                     @endforeach
                 @endif
@@ -25,7 +25,7 @@
 
             @if ($paginator->hasMorePages())
                 <li>
-                    <a href="{{ $paginator->nextPageUrl() }}" class="news__pagination__next" rel="next" aria-label="@lang('pagination.next')"><i class="fas fa-chevron-right"></i></a>
+                    <a href="{{ $paginator->nextPageUrl() }}" class="newsAll__pagination__next" rel="next" aria-label="@lang('pagination.next')"><i class="fas fa-angle-double-righ"></i></a>
                 </li>
             @endif
         </ul>
