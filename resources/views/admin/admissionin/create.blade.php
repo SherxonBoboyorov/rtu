@@ -8,31 +8,31 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">Add Bachelor Products</h4>
+                    <h4 class="page-title">Add Admission Faculties</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
         <!-- end page title end breadcrumb -->
-        <form action="{{ route('bachelorin.store') }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('admissionin.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="card">
                 <div class="card-body">
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-3">
-                            <label>Bachelor Product</label>
-                            <select name="bachelorcategory_id" id="bachelorcategory_id" class="form-control">
-                                @foreach ($bachelorcategories as $bachelorcategory)
-                                    <option value="{{ $bachelorcategory->id }}">{{ $bachelorcategory->title_en }}</option>
+                            <label>Admission Faculties</label>
+                            <select name="admissioncategory_id" id="admissioncategory_id" class="form-control">
+                                @foreach ($admissioncategories as $admissioncategory)
+                                    <option value="{{ $admissioncategory->id }}">{{ $admissioncategory->title_en }}</option>
                                 @endforeach
                             </select>
-                            @if($errors->has('bachelorcategory_id'))
+                            @if($errors->has('admissioncategory_id'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('bachelorcategory_id') }}
+                                {{ $errors->first('admissioncategory_id') }}
                             </div>
                             @endif
                         </div>
@@ -75,130 +75,99 @@
                         </div>
                      </div><br>
 
+
                      <div class="row" style="margin-top: 15px">
-                        <div class="col-md-12">
-                            <label for="content_uz">Content [Uzbek]</label>
-                            <textarea name="content_uz" class="my-editor" id="content_uz" cols="30" rows="10"></textarea>
-                            @if($errors->has('content_uz'))
+                        <div class="col-md-3">
+                            <label for="daytime_shalk_now">To’lov miqdori (Kunduzgi shakl)</label>
+                            <input type="text" id="daytime_shalk_now" class="form-control" name="daytime_shalk_now">
+                            @if($errors->has('daytime_shalk_now'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('content_uz') }}
+                                {{ $errors->first('daytime_shalk_now') }}
                             </div>
                             @endif
                         </div>
                     </div>
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-12">
-                            <label for="content_ru">Content [Russian]</label>
-                            <textarea name="content_ru" class="my-editor" id="content_ru" cols="30" rows="10"></textarea>
-                            @if($errors->has('content_ru'))
+                        <div class="col-md-3">
+                            <label for="daytime_shalk_before">To’lov miqdori (Kunduzgi shakl) Chegirma</label>
+                            <input type="text" id="daytime_shalk_before" class="form-control" name="daytime_shalk_before">
+                            @if($errors->has('daytime_shalk_before'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('content_ru') }}
+                                {{ $errors->first('daytime_shalk_before') }}
+                            </div>
+                            @endif
+                        </div>
+                    </div><br><br> <hr><br>
+
+
+
+                    <div class="row" style="margin-top: 15px">
+                        <div class="col-md-3">
+                            <label for="evening_shalk_now">To’lov miqdori (Kechgi shakl)</label>
+                            <input type="text" id="evening_shalk_now" class="form-control" name="evening_shalk_now">
+                            @if($errors->has('evening_shalk_now'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                {{ $errors->first('evening_shalk_now') }}
                             </div>
                             @endif
                         </div>
                     </div>
-
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-12">
-                            <label for="content_en">Content [English]</label>
-                            <textarea name="content_en" class="my-editor" id="content_en" cols="30" rows="10"></textarea>
-                            @if($errors->has('content_en'))
+                        <div class="col-md-3">
+                            <label for="evening_shalk_before">To’lov miqdori (Kechgi shakl) Chegirma</label>
+                            <input type="text" id="evening_shalk_before" class="form-control" name="evening_shalk_before">
+                            @if($errors->has('evening_shalk_before'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('content_en') }}
+                                {{ $errors->first('evening_shalk_before') }}
                             </div>
                             @endif
                         </div>
-                    </div><br>
+                    </div><br><br> <hr><br>
+
+
+
+
 
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-6">
-                            <label for="meta_title_ru">Meta Title RU</label>
-                            <textarea name="meta_title_ru" class="form-control" id="meta_title_ru" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_title_ru'))
+                        <div class="col-md-3">
+                            <label for="external_shalk_now">To’lov miqdori (Sirtqi shakl)</label>
+                            <input type="text" id="external_shalk_now" class="form-control" name="external_shalk_now">
+                            @if($errors->has('external_shalk_now'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('meta_title_ru') }}
-                            </div>
-                            @endif
-                        </div>
-                        <div class="col-md-6">
-                            <label for="meta_description_ru">Meta Description RU</label>
-                            <textarea name="meta_description_ru" class="form-control" id="meta_description_ru" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_description_ru'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{ $errors->first('meta_description_ru') }}
+                                {{ $errors->first('external_shalk_now') }}
                             </div>
                             @endif
                         </div>
                     </div>
-
                     <div class="row" style="margin-top: 15px">
-                        <div class="col-md-6">
-                            <label for="meta_title_uz">Meta Title UZ</label>
-                            <textarea name="meta_title_uz" class="form-control" id="meta_title_uz" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_title_uz'))
+                        <div class="col-md-3">
+                            <label for="external_shalk_before">To’lov miqdori (Sirtqi shakl) Chegirma</label>
+                            <input type="text" id="external_shalk_before" class="form-control" name="external_shalk_before">
+                            @if($errors->has('external_shalk_before'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                {{ $errors->first('meta_title_uz') }}
+                                {{ $errors->first('external_shalk_before') }}
                             </div>
                             @endif
                         </div>
-                        <div class="col-md-6">
-                            <label for="meta_description_uz">Meta Description UZ</label>
-                            <textarea name="meta_description_uz" class="form-control" id="meta_description_uz" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_description_uz'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{ $errors->first('meta_description_uz') }}
-                            </div>
-                            @endif
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin-top: 15px">
-                        <div class="col-md-6">
-                            <label for="meta_title_en">Meta Title EN</label>
-                            <textarea name="meta_title_en" class="form-control" id="meta_title_en" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_title_en'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{ $errors->first('meta_title_en') }}
-                            </div>
-                            @endif
-                        </div>
-                        <div class="col-md-6">
-                            <label for="meta_description_en">Meta Description EN</label>
-                            <textarea name="meta_description_en" class="form-control" id="meta_description_en" cols="30" rows="5"></textarea>
-                            @if($errors->has('meta_description_en'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {{ $errors->first('meta_description_en') }}
-                            </div>
-                            @endif
-                        </div>
-                    </div><br>
+                    </div><br><br><br>
 
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-6">
@@ -216,7 +185,7 @@
                     </div>
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-success btn-block">Save</button>
+                            <button type="submit" class="btn btn-success btn-block">Update</button>
                         </div>
                     </div>
                 </div>
