@@ -556,6 +556,80 @@
                              </li>
                             {{-- end --}}
 
+                                 {{-- start--}}
+                                 <li class="nav-item">
+
+                                    <a href="#" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Admission Master
+                                         <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('admissionmaster.index') }}" class="nav-link">
+                                               <p>List</p>
+                                            </a>
+                                        </li>
+                                        {{-- <li class="nav-item">
+                                            <a href="{{ route('admissionmaster.create') }}" class="nav-link">
+                                               <p>Create</p>
+                                            </a>
+                                        </li> --}}
+
+
+                                    <li class="nav-item">
+
+                                        <a href="#" class="nav-link">
+                                        <i class="nav-icon"></i>
+                                        <p style="color: #007bff">
+                                               Faculties
+                                             <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                        </a>
+                                        <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="{{ route('admissionmastercategory.index') }}" class="nav-link">
+                                               <p>List</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('admissionmastercategory.create') }}" class="nav-link">
+                                               <p>Create</p>
+                                            </a>
+                                        </li>
+                                        </ul>
+
+
+                                     <li class="nav-item">
+
+                                        <a href="#" class="nav-link">
+                                        <i class="nav-icon"></i>
+                                        <p style="color: #007bff">
+                                              Directions
+                                             <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                        </a>
+                                        <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#!" class="nav-link">
+                                               <p>List</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#!" class="nav-link">
+                                               <p>Create</p>
+                                            </a>
+                                        </li>
+                                        </ul>
+                                     </li>
+                                     </li>
+
+                                    </ul>
+                                 </li>
+                                {{-- end --}}
+
 
 
                         {{-- start--}}

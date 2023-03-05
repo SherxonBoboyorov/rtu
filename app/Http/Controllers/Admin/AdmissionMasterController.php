@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CreateAdmissionMaster;
+use App\Http\Requests\Admin\UpdateAdmissionMaster;
 use App\Models\AdmissionMaster;
 use Illuminate\Http\Request;
 
@@ -16,6 +18,7 @@ class AdmissionMasterController extends Controller
     public function index()
     {
         $admissionmasters = AdmissionMaster::orderBy('created_at', 'DESC')->get();
+        return view('admin.admissionmaster.index', compact('admissionmasters'));
     }
 
     /**
@@ -25,18 +28,23 @@ class AdmissionMasterController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.admissionmaster.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\CreateAdmissionMaster  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateAdmissionMaster $request)
     {
-        //
+        $data = $request->all();
+
+        if(admissionmaster::create($data)) {
+            return redirect()->route('admissionmaster.index')->with('message', "Admission Master created successfully!!!");
+        }
+        return redirect()->route('admissionmaster.index')->with('message', "Unable to created Admission Master!!!");
     }
 
     /**
@@ -58,19 +66,31 @@ class AdmissionMasterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $admissionmaster = AdmissionMaster::find($id);
+        return view('admin.admissionmaster.edit', compact('admissionmaster'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\UpdateAdmissionMaster  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateAdmissionMaster $request, $id)
     {
-        //
+        if (!AdmissionMaster::find($id)) {
+            return redirect()->route('admissionmaster.index')->with('message', "Admission Master not fount");
+        }
+
+        $admissionmaster = AdmissionMaster::find($id);
+
+        $data = $request->all();
+
+        if ($admissionmaster->update($data)) {
+            return redirect()->route('admissionmaster.index')->with('message', "Admission Master update successfully!!!");
+        }
+        return redirect()->route('admissionmaster.index')->with('message', "Unable to update Admission Master !!!");
     }
 
     /**
@@ -81,6 +101,15 @@ class AdmissionMasterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (!AdmissionMaster::find($id)) {
+            return redirect()->route('admissionmaster.index')->with('message', "Admission Master union not found");
+        }
+
+        $admissionmaster = AdmissionMaster::find($id);
+
+        if ($admissionmaster->delete()) {
+            return redirect()->route('admissionmaster.index')->with('message', "Admission Master deleted successfully");
+        }
+        return redirect()->route('admissionmaster.index')->with('message', "unable to delete Admission Master");
     }
 }
