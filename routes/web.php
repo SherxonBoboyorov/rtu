@@ -45,6 +45,7 @@ use App\Http\Controllers\Admin\AdmissionCategoryController;
 use App\Http\Controllers\Admin\AdmissionInController;
 use App\Http\Controllers\Admin\AdmissionMasterController;
 use App\Http\Controllers\Admin\AdmissionMasterCategoryController;
+use App\Http\Controllers\Admin\AdmissionMasterInController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -123,7 +124,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'admissioncategory' => AdmissionCategoryController::class,
          'admissionin' => AdmissionInController::class,
          'admissionmaster' => AdmissionMasterController::class,
-         'admissionmastercategory' => AdmissionMasterCategoryController::class
+         'admissionmastercategory' => AdmissionMasterCategoryController::class,
+         'admissionmasterin' => AdmissionMasterInController::class
      ]);
 });
 
