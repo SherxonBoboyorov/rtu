@@ -28,8 +28,14 @@ class AdmissionMasterIn extends Model
 
     public function admissionmastercategory()
     {
-        return $this->hasOne(AdmissionMasterCategory::class, 'id', 'admissionmastercategory_id');
+        return $this->belongsTo('App\Models\AdmissionMasterCategory', 'admissionmastercategory_id');
     }
+
+    // public function aboutperson()
+    // {
+    //     return $this->belongsTo('App\Models\Aboutperson', 'aboutperson_id');
+    // }
+
 
     public static function uploadImage($request): ?string
     {

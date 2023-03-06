@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">Edit Admission</h4>
+                    <h4 class="page-title">Edit Directions</h4>
                 </div>
             </div>
             <div class="clearfix"></div>

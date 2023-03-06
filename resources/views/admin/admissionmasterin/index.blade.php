@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">List Admission Master Faculties</h4>
+                        <h4 class="page-title">List Admission Master Directions</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -33,7 +33,7 @@
                         <tr>
                             <th style="width: 2%;">#</th>
                             <th>Image</th>
-                            <th>Admission Faculties</th>
+                            <th>Admission Master Faculties</th>
                             <th>Name [Uzbek]</th>
                             <th>Name [Russian]</th>
                             <th>Name [English]</th>

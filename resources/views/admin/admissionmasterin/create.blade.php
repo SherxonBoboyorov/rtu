@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">Add Admission Master Faculties</h4>
+                    <h4 class="page-title">Add Admission Master Directions</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <div class="row" style="margin-top: 15px">
                         <div class="col-md-3">
-                            <label>Admission Faculties</label>
+                            <label>Admission Master Faculties</label>
                             <select name="admissionmastercategory_id" id="admissionmastercategory_id" class="form-control">
                                 @foreach ($admissionmastercategories as $admissionmastercategory)
                                     <option value="{{ $admissionmastercategory->id }}">{{ $admissionmastercategory->title_en }}</option>

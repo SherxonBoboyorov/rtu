@@ -16,4 +16,8 @@ class AdmissionMasterCategory extends Model
         'title_uz',
         'title_en',
     ];
+
+    public function admissionmasterins(){
+        return $this->hasMany(AdmissionMasterIn::class);
+    }
 }

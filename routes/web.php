@@ -46,6 +46,10 @@ use App\Http\Controllers\Admin\AdmissionInController;
 use App\Http\Controllers\Admin\AdmissionMasterController;
 use App\Http\Controllers\Admin\AdmissionMasterCategoryController;
 use App\Http\Controllers\Admin\AdmissionMasterInController;
+use App\Http\Controllers\Admin\EveningEdicationController;
+use App\Http\Controllers\Admin\EveningEdicationCategoryController;
+use App\Http\Controllers\Admin\EveningEdicationInController;
+use App\Http\Controllers\Admin\EdicationController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -54,6 +58,8 @@ use Unisharp\Laravel\LaravelFilemanager\Lfm;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\AcademicCouncilController;
+use App\Http\Controllers\Front\AdmissionBachelorController;
+use App\Http\Controllers\Front\AdmissionsMasterController;
 use App\Http\Controllers\Front\BachelorsController;
 use App\Http\Controllers\Front\BachelorShowController;
 use App\Http\Controllers\Front\CareersController;
@@ -125,7 +131,11 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'admissionin' => AdmissionInController::class,
          'admissionmaster' => AdmissionMasterController::class,
          'admissionmastercategory' => AdmissionMasterCategoryController::class,
-         'admissionmasterin' => AdmissionMasterInController::class
+         'admissionmasterin' => AdmissionMasterInController::class,
+         'eveningedication' => EveningEdicationController::class,
+         'eveningedicationcategory' => EveningEdicationCategoryController::class,
+         'eveningedicationin' => EveningEdicationInController::class,
+         'edication' => EdicationController::class
      ]);
 });
 
@@ -174,16 +184,9 @@ Route::group(
         Route::get('articles/{slug}', [NewsController::class, 'show'])->name('article');
         Route::get('events', [EventsController::class, 'list'])->name('events');
         Route::get('events/{slug}', [EventsController::class, 'show'])->name('event');
-
-
-
-
-
-
-
-
-
-
+        Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
+        Route::get('admissionBachelor/{id?}', [AdmissionBachelorController::class, 'admissionBachelor'])->name('admissionBachelor');
+        Route::get('admissionMaster', [AdmissionsMasterController::class, 'admissionMaster'])->name('admissionMaster');
 
 
 

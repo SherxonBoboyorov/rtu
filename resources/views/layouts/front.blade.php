@@ -149,13 +149,13 @@
                                     <nav class="header__bottom__none">
                                         <ul class="header__bottom__none__menu">
                                             <li>
-                                                <a href="admissionsBachelor.html" class="header__bottom__link">
+                                                <a href="{{ route('admissionBachelor', ['id' => 1]) }}" class="header__bottom__link">
                                                     Bachelor
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="admissionsMaster.html" class="header__bottom__link">
+                                                <a href="{{ route('admissionMaster') }}" class="header__bottom__link">
                                                     Master
                                                 </a>
                                             </li>

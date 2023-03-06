@@ -631,6 +631,81 @@
                                 {{-- end --}}
 
 
+                                     {{-- start--}}
+                                         <li class="nav-item">
+
+                                            <a href="#" class="nav-link">
+                                            <i class="nav-icon"></i>
+                                            <p>
+                                                Evening Education
+                                                 <i class="right fas fa-angle-left"></i>
+                                            </p>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="{{ route('eveningedication.index') }}" class="nav-link">
+                                                       <p>List</p>
+                                                    </a>
+                                                </li>
+                                                {{-- <li class="nav-item">
+                                                    <a href="{{ route('eveningedication.create') }}" class="nav-link">
+                                                       <p>Create</p>
+                                                    </a>
+                                                </li> --}}
+
+
+                                            <li class="nav-item">
+
+                                                <a href="#" class="nav-link">
+                                                <i class="nav-icon"></i>
+                                                <p style="color: #007bff">
+                                                       Faculties
+                                                     <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                                </a>
+                                                <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="{{ route('eveningedicationcategory.index') }}" class="nav-link">
+                                                       <p>List</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{{ route('eveningedicationcategory.create') }}" class="nav-link">
+                                                       <p>Create</p>
+                                                    </a>
+                                                </li>
+                                                </ul>
+
+
+                                             <li class="nav-item">
+
+                                                <a href="#" class="nav-link">
+                                                <i class="nav-icon"></i>
+                                                <p style="color: #007bff">
+                                                      Directions
+                                                     <i class="right fas fa-angle-left"></i>
+                                                </p>
+                                                </a>
+                                                <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a href="{{ route('eveningedicationin.index') }}" class="nav-link">
+                                                       <p>List</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{{ route('eveningedicationin.create') }}" class="nav-link">
+                                                       <p>Create</p>
+                                                    </a>
+                                                </li>
+                                                </ul>
+                                             </li>
+                                             </li>
+
+                                            </ul>
+                                         </li>
+                                        {{-- end --}}
+
+
 
                         {{-- start--}}
                          <li class="nav-item">

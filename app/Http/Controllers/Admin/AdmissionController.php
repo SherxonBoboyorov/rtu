@@ -102,7 +102,7 @@ class AdmissionController extends Controller
     public function destroy($id)
     {
         if (!Admission::find($id)) {
-            return redirect()->route('admission.index')->with('message', "Admission union not found");
+            return redirect()->route('admission.index')->with('message', "Admission not found");
         }
 
         $admission = Admission::find($id);

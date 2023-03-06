@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">Add Admission Bachelor Category</h4>
+                        <h4 class="page-title">Add Admission Bachelor Faculties</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
