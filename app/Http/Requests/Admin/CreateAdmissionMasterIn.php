@@ -29,12 +29,6 @@ class CreateAdmissionMasterIn extends FormRequest
             'title_ru' => 'required|max:255',
             'title_uz' => 'required|max:255',
             'title_en' => 'required|max:255',
-            'daytime_shalk_now' => 'required|max:255',
-            'daytime_shalk_before' => 'required|max:255',
-            'evening_shalk_now' => 'required|max:255',
-            'evening_shalk_before' => 'required|max:255',
-            'external_shalk_now' => 'required|max:255',
-            'external_shalk_before' => 'required|max:255',
         ];
     }
 }

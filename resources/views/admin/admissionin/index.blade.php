@@ -34,9 +34,9 @@
                             <th style="width: 2%;">#</th>
                             <th>Image</th>
                             <th>Admission Faculties</th>
-                            <th>Name [Uzbek]</th>
-                            <th>Name [Russian]</th>
-                            <th>Name [English]</th>
+                            <th>Title [Uzbek]</th>
+                            <th>Title [Russian]</th>
+                            <th>Title [English]</th>
                             <th colspan="2" style="width: 2%;">Actions</th>
                         </tr>
                         </thead>

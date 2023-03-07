@@ -50,8 +50,9 @@ use App\Http\Controllers\Admin\EveningEdicationController;
 use App\Http\Controllers\Admin\EveningEdicationCategoryController;
 use App\Http\Controllers\Admin\EveningEdicationInController;
 use App\Http\Controllers\Admin\EdicationController;
+use App\Http\Controllers\Admin\EdicationCategoryController;
+use App\Http\Controllers\Admin\EdicationInController;
 use Unisharp\Laravel\LaravelFilemanager\Lfm;
-
 
 
 //front
@@ -135,7 +136,9 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
          'eveningedication' => EveningEdicationController::class,
          'eveningedicationcategory' => EveningEdicationCategoryController::class,
          'eveningedicationin' => EveningEdicationInController::class,
-         'edication' => EdicationController::class
+         'edication' => EdicationController::class,
+         'edicationcategory' => EdicationCategoryController::class,
+         'edicationin' => EdicationInController::class
      ]);
 });
 
@@ -162,14 +165,10 @@ Route::group(
         Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
         Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
         Route::get('bachelorins/{id?}', [BachelorsController::class, 'list'])->name('bachelorins');
-
         Route::get('bachelor_in/{id}', [BachelorShowController::class, 'bachelor_in'])->name('bachelor_in');
         Route::get('master', [MastersController::class, 'master'])->name('master');
         Route::get('masterins/{id?}', [MastersController::class, 'list'])->name('masterins');
-
         Route::get('master_in/{id}', [MastersController::class, 'master_in'])->name('master_in');
-
-        // Route::get('bachelorin/{slug?}', [BachelorsController::class, 'show'])->name('bachelorin');
         Route::get('transfer', [TransfersController::class, 'transfer'])->name('transfer');
         Route::get('tuitionfees', [TuitionFeesController::class, 'tuitionfees'])->name('tuitionfees');
         Route::get('scholarships', [ScholarshipsController::class, 'scholarships'])->name('scholarships');
@@ -187,9 +186,6 @@ Route::group(
         Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
         Route::get('admissionBachelor/{id?}', [AdmissionBachelorController::class, 'admissionBachelor'])->name('admissionBachelor');
         Route::get('admissionMaster', [AdmissionsMasterController::class, 'admissionMaster'])->name('admissionMaster');
-
-
-
  });
 
 

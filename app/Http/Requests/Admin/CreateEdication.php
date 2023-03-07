@@ -11,9 +11,9 @@ class CreateEdication extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,12 @@ class CreateEdication extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'content_ru' => 'required',
+            'content_uz' => 'required',
+            'content_en' => 'required',
         ];
     }
 }

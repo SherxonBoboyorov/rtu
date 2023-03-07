@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateAdmissionIn extends FormRequest
+class CreateEdicationIn extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,8 @@ class UpdateAdmissionIn extends FormRequest
     public function rules(): array
     {
         return [
-            'admissioncategory_id' => 'required',
+            'edicationcategory_id' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp',
             'title_ru' => 'required|max:255',
             'title_uz' => 'required|max:255',
             'title_en' => 'required|max:255',
