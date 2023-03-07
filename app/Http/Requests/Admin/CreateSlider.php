@@ -31,7 +31,6 @@ class CreateSlider extends FormRequest
             'description_ru' => 'required|max:255',
             'description_uz' => 'required|max:255',
             'description_en' => 'required|max:255',
-            'link' => ''
         ];
     }
 }

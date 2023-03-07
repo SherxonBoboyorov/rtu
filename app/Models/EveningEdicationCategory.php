@@ -16,4 +16,8 @@ class EveningEdicationCategory extends Model
         'title_uz',
         'title_en',
     ];
+
+    public function eveningedicationins(){
+        return $this->hasMany(EveningEdicationIn::class, 'eveningedicationcategory_id');
+    }
 }

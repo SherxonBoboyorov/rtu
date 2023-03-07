@@ -28,8 +28,9 @@ class EdicationIn extends Model
 
     public function edicationcategory()
     {
-        return $this->hasOne(EdicationCategory::class, 'id', 'edicationcategory_id');
+        return $this->belongsTo('App\Models\EdicationCategory', 'edicationcategory_id');
     }
+
 
     public static function uploadImage($request): ?string
     {

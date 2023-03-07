@@ -115,18 +115,19 @@
                 <h3 class="about__title__h3">List of directions of our university</h3>
 
                 <div class="educational__list">
+                    @foreach ($bachelorins as $bachelorin)
                     <div class="educational__item">
-                        <a href="bachelor_in.html">
+                        <a href="{{ route('bachelorin', $bachelorin->id) }}}">
                             <div class="educational__img">
-                                <img src="foto/educational_1.png" alt="educational">
+                                <img src="{{ asset($bachelorin->image) }}" alt="educational">
                             </div>
 
                             <section>
                                 <h3 class="educational__title__h3">
-                                    Banking and auditing
+                                    {{ $bachelorin->{'title_' . app()->getLocale()} }}
                                 </h3>
                                 <div class="educational__text">
-                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <p>{!! $bachelorin->{'content_' . app()->getLocale()} !!}</p>
                                 </div>
                             </section>
 
@@ -137,79 +138,11 @@
                             </h4>
                         </a>
                     </div>
-
-                    <div class="educational__item">
-                        <a href="bachelor_in.html">
-                            <div class="educational__img">
-                                <img src="foto/educational_2.png" alt="educational">
-                            </div>
-
-                            <section>
-                                <h3 class="educational__title__h3">
-                                    Banking and auditing
-                                </h3>
-                                <div class="educational__text">
-                                    <p>Lorem ipsum dolor sit amet</p>
-                                </div>
-                            </section>
-
-                            <h4 class="educational__icons">
-                                <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 36L19.0711 19L2 2" stroke="#133654" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </h4>
-                        </a>
-                    </div>
-
-                    <div class="educational__item">
-                        <a href="bachelor_in.html">
-                            <div class="educational__img">
-                                <img src="foto/educational_3.png" alt="educational">
-                            </div>
-
-                            <section>
-                                <h3 class="educational__title__h3">
-                                    School management
-                                </h3>
-                                <div class="educational__text">
-                                    <p>Sed do eiusmod tempor</p>
-                                </div>
-                            </section>
-
-                            <h4 class="educational__icons">
-                                <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 36L19.0711 19L2 2" stroke="#133654" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </h4>
-                        </a>
-                    </div>
-
-                    <div class="educational__item">
-                        <a href="bachelor_in.html">
-                            <div class="educational__img">
-                                <img src="foto/educational_4.png" alt="educational">
-                            </div>
-
-                            <section>
-                                <h3 class="educational__title__h3">
-                                    Management (by industries and sectors)
-                                </h3>
-                                <div class="educational__text">
-                                    <p>Incididunt ut labore et</p>
-                                </div>
-                            </section>
-
-                            <h4 class="educational__icons">
-                                <svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 36L19.0711 19L2 2" stroke="#133654" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </h4>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
 
                 <div class="educational__bootom__link">
-                    <a href="bachelor.html" class="educational__all__link">
+                    <a href="{{ route('bachelor') }}" class="educational__all__link">
                         view all directions
                         <i class="fas fa-chevron-right"></i>
                     </a>
@@ -222,6 +155,7 @@
 
 
     <!-- connect with us start -->
+    @include('alert')
 
     <div class="connect_us">
         <section class="container">
@@ -229,10 +163,11 @@
                 <h2 class="about__title__h2">connect with us</h2>
                 <h3 class="about__title__h3">Write to us and we will contact you</h3>
 
-                <form action="#!" class="connect_us__form">
-                    <input type="text" placeholder="Your name" class="connect_us__input">
-                    <input type="tel" placeholder="Phone number" class="connect_us__input">
-                    <textarea  placeholder="Comment" class="connect_us__textarea"></textarea>
+                <form action="{{ route('yourSave') }}" class="connect_us__form" method="POST">
+                    @csrf
+                    <input type="text" name="fullname" placeholder="Your name" class="connect_us__input" required>
+                    <input type="tel" name="phone_number" placeholder="Phone number" class="connect_us__input" required>
+                    <textarea  placeholder="Comment" name="comment" class="connect_us__textarea"></textarea>
                     <button class="connect_us__button">
                         Send
                         <i class="fas fa-chevron-right"></i>

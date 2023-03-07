@@ -31,7 +31,7 @@ class BachelorIn extends Model
 
     public function bachelorcategory()
     {
-        return $this->hasOne(BachelorCategory::class, 'id', 'bachelorcategory_id');
+        return $this->belongsTo('App\Models\BachelorCategory', 'bachelorcategory_id');
     }
 
 

@@ -26,10 +26,9 @@ class AdmissionIn extends Model
         'external_shalk_before'
     ];
 
-
     public function admissioncategory()
     {
-        return $this->hasOne(AdmissionCategory::class, 'id', 'admissioncategory_id');
+        return $this->belongsTo('App\Models\AdmissionCategory', 'admissioncategory_id');
     }
 
     public static function uploadImage($request): ?string

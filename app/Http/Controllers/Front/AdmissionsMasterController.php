@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\AdmissionMaster;
 use App\Models\AdmissionMasterCategory;
-use App\Models\AdmissionMasterIn;
 use Illuminate\Http\Request;
 
 class AdmissionsMasterController extends Controller

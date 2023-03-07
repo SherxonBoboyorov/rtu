@@ -149,7 +149,7 @@
                                     <nav class="header__bottom__none">
                                         <ul class="header__bottom__none__menu">
                                             <li>
-                                                <a href="{{ route('admissionBachelor', ['id' => 1]) }}" class="header__bottom__link">
+                                                <a href="{{ route('admissionBachelor') }}" class="header__bottom__link">
                                                     Bachelor
                                                 </a>
                                             </li>
@@ -161,13 +161,13 @@
                                             </li>
 
                                             <li>
-                                                <a href="eveningEducation.html" class="header__bottom__link">
+                                                <a href="{{ route('eveninglEducation') }}" class="header__bottom__link">
                                                     Evening education
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="extramuralEducation.html" class="header__bottom__link">
+                                                <a href="{{ route('extramuralEducation') }}" class="header__bottom__link">
                                                     Extramural education
                                                 </a>
                                             </li>
@@ -317,33 +317,33 @@
                         <div class="footer__item__menu">
                             <ul class="footer__menu">
                                 <li>
-                                    <a href="aboutUniversity.html" class="footer__menu__link">University</a>
+                                    <a href="{{ route('about') }}" class="footer__menu__link">University</a>
                                 </li>
 
                                 <li>
-                                    <a href="bachelor.html" class="footer__menu__link">BACHELOR</a>
+                                    <a href="{{ route('bachelor') }}" class="footer__menu__link">BACHELOR</a>
                                 </li>
 
                                 <li>
-                                    <a href="bachelor.html" class="footer__menu__link">MASTER</a>
+                                    <a href="{{ route('master') }}" class="footer__menu__link">MASTER</a>
                                 </li>
 
                                 <li>
-                                    <a href="research.html" class="footer__menu__link">Research</a>
+                                    <a href="{{ route('research') }}" class="footer__menu__link">Research</a>
                                 </li>
                             </ul>
 
                             <ul class="footer__menu">
                                 <li>
-                                    <a href="international.html" class="footer__menu__link">International</a>
+                                    <a href="{{ route('international') }}" class="footer__menu__link">International</a>
                                 </li>
 
                                 <li>
-                                    <a href="studentsStudio.html" class="footer__menu__link">Students</a>
+                                    <a href="{{ route('studentsStudio') }}" class="footer__menu__link">Students</a>
                                 </li>
 
                                 <li>
-                                    <a href="news.html" class="footer__menu__link">News</a>
+                                    <a href="{{ route('articles') }}" class="footer__menu__link">News</a>
                                 </li>
                             </ul>
                         </div>

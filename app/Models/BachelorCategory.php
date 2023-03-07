@@ -18,6 +18,6 @@ class BachelorCategory extends Model
     ];
 
     public function bachelorins() {
-        return $this->hasMany(BachelorIn::class);
+        return $this->hasMany(BachelorIn::class, 'bachelorcategory_id');
     }
 }

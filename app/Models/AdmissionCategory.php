@@ -17,4 +17,8 @@ class AdmissionCategory extends Model
         'title_en',
     ];
 
+    public function admissionins(){
+        return $this->hasMany(AdmissionIn::class, 'admissioncategory_id');
+    }
+
 }

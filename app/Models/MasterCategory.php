@@ -16,4 +16,8 @@ class MasterCategory extends Model
         'title_uz',
         'title_en',
     ];
+
+    public function masterins() {
+        return $this->hasMany(MasterIn::class, 'mastercategory_id');
+    }
 }

@@ -67,7 +67,9 @@ use App\Http\Controllers\Front\CareersController;
 use App\Http\Controllers\Front\DepartmentsStaffController;
 use App\Http\Controllers\Front\DormitorysController;
 use App\Http\Controllers\Front\EReceptionController;
+use App\Http\Controllers\Front\EveningController;
 use App\Http\Controllers\Front\EventsController;
+use App\Http\Controllers\Front\ExtramuralController;
 use App\Http\Controllers\Front\ForeignPartnersController;
 use App\Http\Controllers\Front\InternationalsController;
 use App\Http\Controllers\Front\JobVacancyController;
@@ -164,11 +166,9 @@ Route::group(
         Route::post('save_quotecallbackSave', [EReceptionController::class, 'quotecallbackSave'])->name('quotecallbackSave');
         Route::get('academicCouncil', [AcademicCouncilController::class, 'academicCouncil'])->name('academicCouncil');
         Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
-        Route::get('bachelorins/{id?}', [BachelorsController::class, 'list'])->name('bachelorins');
-        Route::get('bachelor_in/{id}', [BachelorShowController::class, 'bachelor_in'])->name('bachelor_in');
+        Route::get('bachelorins/{id?}', [BachelorsController::class, 'show'])->name('bachelorin');
         Route::get('master', [MastersController::class, 'master'])->name('master');
-        Route::get('masterins/{id?}', [MastersController::class, 'list'])->name('masterins');
-        Route::get('master_in/{id}', [MastersController::class, 'master_in'])->name('master_in');
+        Route::get('masterins/{id?}', [MastersController::class, 'show'])->name('masterin');
         Route::get('transfer', [TransfersController::class, 'transfer'])->name('transfer');
         Route::get('tuitionfees', [TuitionFeesController::class, 'tuitionfees'])->name('tuitionfees');
         Route::get('scholarships', [ScholarshipsController::class, 'scholarships'])->name('scholarships');
@@ -183,9 +183,15 @@ Route::group(
         Route::get('articles/{slug}', [NewsController::class, 'show'])->name('article');
         Route::get('events', [EventsController::class, 'list'])->name('events');
         Route::get('events/{slug}', [EventsController::class, 'show'])->name('event');
-        Route::get('bachelor', [BachelorsController::class, 'bachelor'])->name('bachelor');
-        Route::get('admissionBachelor/{id?}', [AdmissionBachelorController::class, 'admissionBachelor'])->name('admissionBachelor');
+        Route::get('admissionBachelor', [AdmissionBachelorController::class, 'admissionBachelor'])->name('admissionBachelor');
         Route::get('admissionMaster', [AdmissionsMasterController::class, 'admissionMaster'])->name('admissionMaster');
+        Route::post('save_yourSave', [IndexController::class, 'yourSave'])->name('yourSave');
+        Route::get('extramuralEducation', [ExtramuralController::class, 'extramuralEducation'])->name('extramuralEducation');
+        Route::get('eveninglEducation', [EveningController::class, 'eveninglEducation'])->name('eveninglEducation');
+
+
+
+
  });
 
 

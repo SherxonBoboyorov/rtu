@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class AdmissionMasterCategory extends Model
 {
     use HasFactory;
@@ -18,6 +19,6 @@ class AdmissionMasterCategory extends Model
     ];
 
     public function admissionmasterins(){
-        return $this->hasMany(AdmissionMasterIn::class);
+        return $this->hasMany(AdmissionMasterIn::class, 'admissionmastercategory_id');
     }
 }

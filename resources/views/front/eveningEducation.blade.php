@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Master</h2>
+                <h2 class="about__title__h2">Evening education</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('mian.main')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Master</a>
+                        <a class="aboutUniversity__menu__link">Evening education</a>
                     </li>
                 </ul>
             </div>
@@ -23,36 +23,37 @@
 
     <!-- aboutUniversity end -->
 
-  <!-- admissionsBachelor start -->
+
+     <!-- admissionsBachelor start -->
 
   <div class="admissionsBachelor">
     <section class="container">
         <div class="admissionsBachelor__cart">
 
             <div class="aboutContint__text">
-                @foreach ($admissionmasters as $admissionmaster)
+                @foreach ($eveningedications as $eveningedication)
                 <p>
-                    {!! $admissionmaster->{'content_' . app()->getLocale()} !!}
+                    {!! $eveningedication->{'content_' . app()->getLocale()} !!}
                 </p>
                 @endforeach
             </div>
 
             <div class="admissionsBachelor__list">
-               @foreach ($admissionmastercategories as $admissionmastercategory)
+               @foreach ($eveningedicationcategories as $eveningedicationcategory)
                 <section class="admissionsBachelor__ietm__cart">
-                    <h2 class="about__title__h2">{{ $admissionmastercategory->{'title_' . app()->getLocale()} }}</h2>
+                    <h2 class="about__title__h2">{{ $edicationcategory->{'title_' . app()->getLocale()} }}</h2>
 
                     <div class="admissionsBachelor__list__item">
-                        @foreach ($admissionmastercategory->admissionmasterins as $admissionmasterin)
+                        @foreach ($edicationcategory->eveningedicationins as $eveningedicationin)
 
                         <div class="admissionsBachelor__item">
                             <div class="educational__img">
-                                <img src="{{ asset($admissionmasterin->image) }}" alt="educational">
+                                <img src="{{ asset($eveningedicationin->image) }}" alt="educational">
                             </div>
 
                             <section class="admissionsBachelor__list__text">
                                 <h3 class="educational__title__h3">
-                                    {{ $admissionmasterin->{'title_' . app()->getLocale()} }}
+                                    {{ $eveningedicationin->{'title_' . app()->getLocale()} }}
                                 </h3>
 
                                 <ul class="admissionsBachelor__menu">
@@ -60,24 +61,24 @@
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->daytime_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->daytime_shalk_now }}</h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->daytime_shalk_before }}</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->daytime_shalk_now }}</h3>
                                     </li>
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->evening_shalk_before }} </s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->evening_shalk_now }} </h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->evening_shalk_before }}</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->evening_shalk_now }}</h3>
                                     </li>
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->external_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->external_shalk_now }} </h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->external_shalk_before }}</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->external_shalk_now }}</h3>
                                     </li>
                                 </ul>
 

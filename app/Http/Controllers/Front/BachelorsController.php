@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bachelor;
+use App\Models\BachelorCategory;
 use App\Models\BachelorIn;
 use Illuminate\Http\Request;
 
@@ -12,17 +13,19 @@ class BachelorsController extends Controller
     public function bachelor()
     {
         $bachelors = Bachelor::all();
+        $bachalorcategories = BachelorCategory::with('bachelorins')->get();
 
         return view('front.bachelor.list', compact(
             'bachelors',
+            'bachalorcategories'
         ));
     }
 
-    public function list($id)
+    public function show($id)
     {
-        $bachelorins = BachelorIn::where('bachelorcategory_id', $id)->orderBy('created_at', 'DESC')->get();
-        return view('front.bachelor.list', compact(
-            'bachelorins'
+        $bachelorin = BachelorIn::find($id);
+        return view('front.bachelor_show', compact(
+            'bachelorin'
         ));
     }
 

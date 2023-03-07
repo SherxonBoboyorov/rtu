@@ -28,9 +28,8 @@ class EveningEdicationIn extends Model
 
     public function eveningedicationcategory()
     {
-        return $this->hasOne(EveningEdicationCategory::class, 'id', 'eveningedicationcategory_id');
+        return $this->belongsTo('App\Models\EveningEdicationCategory', 'eveningedicationcategory_id');
     }
-
     public static function uploadImage($request): ?string
     {
         if ($request->hasFile('image')) {

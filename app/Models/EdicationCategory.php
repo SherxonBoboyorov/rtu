@@ -16,4 +16,8 @@ class EdicationCategory extends Model
         'title_uz',
         'title_en',
     ];
+
+    public function edicationins(){
+        return $this->hasMany(EdicationIn::class, 'edicationcategory_id');
+    }
 }
