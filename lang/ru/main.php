@@ -95,6 +95,17 @@ return [
     'academics' => 'Академики',
     'bachelor' => 'Бакалавр',
     'leadership' => 'Лидерство',
-    'evening_education' => 'Вечернее образование'
+    'evening_education' => 'Вечернее образование',
+    'extramural_education' => 'Заочное образование',
+    'transfer' => 'Перечислить',
+    'tuition_fees' => 'Плата за обучение',
+    'scholarships' => 'Стипендии',
+    'students' => 'Студенты',
+    'students_studio' => 'Студенческая студия',
+    'careers' => 'Карьера',
+    'dormitory' => 'Общежитие',
+    'foreign_partners' => 'Зарубежные партнеры',
+    'events' => 'События',
+    'admissions' => 'Поступление'
 
 ];

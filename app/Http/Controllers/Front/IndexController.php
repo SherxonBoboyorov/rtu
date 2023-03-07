@@ -10,6 +10,7 @@ use App\Models\OurPartner;
 use App\Models\Slider;
 use App\Models\Page;
 use App\Models\Connect;
+use App\Models\Options;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -23,13 +24,16 @@ class IndexController extends Controller
         $articles = Article::orderBy('created_at', 'DESC')->paginate(3);
         $ourpartners = OurPartner::orderBy('created_at', 'DESC')->get();
         $bachelorins = BachelorIn::orderBy('created_at', 'DESC')->paginate(4);
+        $options = Options::orderBy('created_at', 'DESC')->get();
+        
         return view('front.index', compact(
             'sliders',
             'pages',
             'advantages',
             'articles',
             'ourpartners',
-            'bachelorins'
+            'bachelorins',
+            'options'
         ));
     }
 

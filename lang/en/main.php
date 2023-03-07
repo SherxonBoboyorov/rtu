@@ -90,6 +90,17 @@ return  [
     'academics' => 'Academics',
     'bachelor' => 'Bachelor',
     'leadership' => 'Leadership',
-    'evening_education' => 'Evening education'
+    'evening_education' => 'Evening education',
+    'extramural_education' => 'Extramural education',
+    'transfer' => 'Transfer',
+    'tuition_fees' => 'Tuition fees',
+    'scholarships' => 'Scholarships',
+    'students' => 'Students',
+    'students_studio' => 'Students studio',
+    'careers' => 'Careers',
+    'dormitory' => 'Dormitory',
+    'foreign_partners' => 'Foreign partners',
+    'events' => 'Events',
+    'admissions' => 'Admissions'
 
  ];

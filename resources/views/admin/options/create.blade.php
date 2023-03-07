@@ -29,9 +29,7 @@
                                   <option value="address_ru">Address Ru</option>
                                   <option value="address_en">Address En</option>
                                   <option value="phone">Phone</option>
-                                  <option value="fax">Fax</option>
                                   <option value="email">E-mail</option>
-                                  <option value="map">Google or Yandex MAP</option>
                                   <option value="instagram">Instagram</option>
                                   <option value="facebook">Facebook</option>
                                   <option value="telegram">Telegram</option>

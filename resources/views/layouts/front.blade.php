@@ -142,7 +142,7 @@
 
                                 <li>
                                     <h4 class="header__bottom__links">
-                                        Admissions
+                                        @lang('main.admissions')
                                         <span><i class="fas fa-chevron-down"></i></span>
                                     </h4>
 
@@ -162,31 +162,31 @@
 
                                             <li>
                                                 <a href="{{ route('eveninglEducation') }}" class="header__bottom__link">
-                                                    Evening education
+                                                    @lang('main.evening_education')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('extramuralEducation') }}" class="header__bottom__link">
-                                                    Extramural education
+                                                    @lang('main.extramural_education')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('transfer') }}" class="header__bottom__link">
-                                                    Transfer
+                                                    @lang('main.transfer')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('tuitionfees') }}" class="header__bottom__link">
-                                                    Tuition fees
+                                                    @lang('main.tuition_fees')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('scholarships') }}" class="header__bottom__link">
-                                                    Scholarships
+                                                    @lang('main.scholarships')
                                                 </a>
                                             </li>
                                         </ul>
@@ -198,12 +198,12 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('international') }}" class="header__bottom__link">International</a>
+                                    <a href="{{ route('international') }}" class="header__bottom__link">@lang('main.international')</a>
                                 </li>
 
                                 <li>
                                     <h4 class="header__bottom__links">
-                                        Students
+                                        @lang('main.students')
                                         <span><i class="fas fa-chevron-down"></i></span>
                                     </h4>
 
@@ -211,25 +211,25 @@
                                         <ul class="header__bottom__none__menu">
                                             <li>
                                                 <a href="{{ route('studentsStudio') }}" class="header__bottom__link">
-                                                    Students studio
+                                                    @lang('main.students_studio')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('careers') }}" class="header__bottom__link">
-                                                    Careers
+                                                    @lang('main.careers')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('dormitory') }}" class="header__bottom__link">
-                                                    Dormitory
+                                                    @lang('main.dormitory')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('foreignPartners') }}" class="header__bottom__link">
-                                                    Foreign partners
+                                                    @lang('main.foreign_partners')
                                                 </a>
                                             </li>
 
@@ -254,7 +254,7 @@
 
                                             <li>
                                                 <a href="{{ route('events') }}" class="header__bottom__link">
-                                                    Events
+                                                    @lang('main.events')
                                                 </a>
                                             </li>
 
@@ -317,33 +317,33 @@
                         <div class="footer__item__menu">
                             <ul class="footer__menu">
                                 <li>
-                                    <a href="{{ route('about') }}" class="footer__menu__link">University</a>
+                                    <a href="{{ route('about') }}" class="footer__menu__link">@lang('main.university')</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('bachelor') }}" class="footer__menu__link">BACHELOR</a>
+                                    <a href="{{ route('bachelor') }}" class="footer__menu__link">@lang('main.bachelor')</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('master') }}" class="footer__menu__link">MASTER</a>
+                                    <a href="{{ route('master') }}" class="footer__menu__link">@lang('main.master')</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('research') }}" class="footer__menu__link">Research</a>
+                                    <a href="{{ route('research') }}" class="footer__menu__link">@lang('main.research')</a>
                                 </li>
                             </ul>
 
                             <ul class="footer__menu">
                                 <li>
-                                    <a href="{{ route('international') }}" class="footer__menu__link">International</a>
+                                    <a href="{{ route('international') }}" class="footer__menu__link">@lang('main.international')</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('studentsStudio') }}" class="footer__menu__link">Students</a>
+                                    <a href="{{ route('studentsStudio') }}" class="footer__menu__link">@lang('main.students')</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('articles') }}" class="footer__menu__link">News</a>
+                                    <a href="{{ route('articles') }}" class="footer__menu__link">@lang('main.news')</a>
                                 </li>
                             </ul>
                         </div>
@@ -352,37 +352,37 @@
                             <ul class="footer__list__address">
                                 <li>
                                     <a class="footer__link__address">
-                                        <span>Address:</span>
-                                        68 Sadik Azimov St., Tashkent city, Uzbekistan
+                                        <span>@lang('main.address'):</span>
+                                        {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="tel:+99 893 505 45 05" class="footer__link__address">
-                                        <span>Phone number:</span>
-                                        +99 893 505 45 05
+                                    <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="footer__link__address">
+                                        <span>@lang('main.phone'):</span>
+                                        {{ $options->where('key', 'phone')->first()->value }}
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="mailto:info@rtu.uz" class="footer__link__address">
-                                        <span>Email:</span>
-                                        info@rtu.uz
+                                    <a href="mailto:{{ $options->where('key', 'email')->first()->value }}" class="footer__link__address">
+                                        <span>@lang('main.email'):</span>
+                                        {{ $options->where('key', 'email')->first()->value }}
                                     </a>
                                 </li>
                             </ul>
 
                             <ul class="footer__icons__menu">
                                 <li>
-                                    <a href="#!" class="footer__icons__link"><i class="fab fa-instagram"></i></a>
+                                    <a href="{{ $options->where('key', 'instagram')->first()->value }}" class="footer__icons__link"><i class="fab fa-instagram"></i></a>
                                 </li>
 
                                 <li>
-                                    <a href="#!" class="footer__icons__link"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ $options->where('key', 'facebook')->first()->value }}" class="footer__icons__link"><i class="fab fa-facebook-f"></i></a>
                                 </li>
 
                                 <li>
-                                    <a href="#!" class="footer__icons__link"><i class="fab fa-telegram-plane"></i></a>
+                                    <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="footer__icons__link"><i class="fab fa-telegram-plane"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -393,8 +393,8 @@
             <div class="footer__bottom">
                 <section class="container">
                     <div class="footer__bottom__list">
-                        <h4 class="footer__bottom__title">«Renessans Ta'lim universiteti» Все права защищены</h4>
-                        <h4 class="footer__bottom__title">© Copyright 2021 - Web developed by <a href="http://sos.uz" target="_blank">SOS Group</a></h4>
+                        <h4 class="footer__bottom__title">«Renessans Ta'lim universiteti» @lang('main.all_rights_reserved')</h4>
+                        <h4 class="footer__bottom__title">© Copyright {{ date("Y") }} - Web developed by <a href="http://sos.uz" target="_blank">SOS Group</a></h4>
                     </div>
                 </section>
             </div>

@@ -95,6 +95,17 @@ return [
     'academics' => 'Akademiklar',
     'bachelor' => 'Bakalavr',
     'leadership' => 'Etakchilik',
-    'evening_education' => 'Kechki ta\'lim'
+    'evening_education' => 'Kechki ta\'lim',
+    'extramural_education' => 'Sirtqi ta\'lim',
+    'transfer' => 'O\'tkazish',
+    'tuition_fees' => 'O\'qish to\'lov pullari',
+    'scholarships' => 'Stipendiyalar',
+    'students' => 'Talabalar',
+    'students_studio' => 'Talabalar studiyasi',
+    'careers' => 'Karyera',
+    'dormitory' => 'talabalar umumiy yotoqxonasi',
+    'foreign_partners' => 'Xorijiy hamkorlar',
+    'events' => 'Voqealar',
+    'admissions' => 'Qabullar'
 
 ];
