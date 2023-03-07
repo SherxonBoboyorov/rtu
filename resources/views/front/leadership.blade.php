@@ -10,7 +10,7 @@
                 <h2 class="about__title__h2">Leadership</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>

@@ -2,18 +2,13 @@
 
 // English
 return  [
-    'video_gallery' => 'Video gallery',
     'main' => 'Home',
-    'the_academy' => 'The Academy',
-    'academy' => 'Academy',
-    'supervisory_board' => 'Supervisory Board',
     'management' => 'Management',
     'regulations_acts' => 'Norms & Statements',
     'departments_and_employees' => 'Departments and Employees',
     'science_council' => 'Science Council',
     'faculty_of_retraining' => 'Faculty of retraining',
     'daculty_of_practical_diplomacy' => 'Faculty of Practical Diplomacy',
-    'photo_gallery' => 'Photo gallery',
     'jobs' => 'Job vacancies',
     'electronic_reception' => 'Electronic reception',
     'programmes' => 'Programmes',
@@ -72,6 +67,28 @@ return  [
     'share' => 'Share',
     'similar_news' => 'Similar news',
     'searching_results' => 'Searching results',
-    'alumni_reviews' => 'Alumni reviews'
+    'alumni_reviews' => 'Alumni reviews',
+    'read_more' => 'Read more',
+    'partners' => 'Partners',
+    'renaissance_university_of_education' => 'Renaissance University of Education',
+    'university' => 'University',
+    'about_university' => 'About university',
+    'a_little_about_our_university' => 'A little about our university',
+    'advantages' => 'Advantages',
+    'how_we_are_better_than_our_competitors' => 'How we are better than our competitors',
+    'educational_directions' => 'Educational directions',
+    'list_of_directions_of_our_university' => 'List of directions of our university',
+    'connect_with_us' => 'Connect with us',
+    'write_to_us_and_we_will_contact_you' => 'Write to us and we will contact you',
+    'latest_events_of_our_university' => 'Latest events of our university',
+    'view_all_news' => 'View all news',
+    'companies_that_trust_us' => 'Companies that trust us',
+    'view_all_directions' => 'View all directions',
+    'structure' => 'Structure',
+    'labour_union' => 'Labour union',
+    'academic_council' => 'Academic Council',
+    'academics' => 'Academics',
+    'bachelor' => 'Bachelor',
+    'leadership' => 'Leadership'
 
-];
+ ];

@@ -34,7 +34,7 @@
                         <div class="header__logo">
                             <a href="{{ route('/') }}">
                                 <img src="{{ asset('front/foto/logo.svg') }}" alt="logo">
-                                <h2 class="header__title__logo">Renessans Ta'lim universiteti</h2>
+                                <h2 class="header__title__logo">@lang('main.renaissance_university_of_education')</h2>
                             </a>
                         </div>
 
@@ -42,7 +42,7 @@
                             <ul class="header__bottom__menu">
                                 <li>
                                     <h4 class="header__bottom__links">
-                                        University
+                                        @lang('main.university')
                                         <span><i class="fas fa-chevron-down"></i></span>
                                     </h4>
 
@@ -51,37 +51,37 @@
 
                                             <li>
                                                 <a href="{{ route('about') }}" class="header__bottom__link">
-                                                    About university
+                                                    @lang('main.about_university')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('leadership') }}" class="header__bottom__link">
-                                                    Leadership
+                                                    @lang('main.leadership')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('structure') }}" class="header__bottom__link">
-                                                    Structure
+                                                    @lang('main.structure')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('normsstatements') }}" class="header__bottom__link">
-                                                    Norms & statements
+                                                    @lang('main.regulations_acts')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('departmentsstaffs') }}" class="header__bottom__link">
-                                                    Departments & staff
+                                                   @lang('main.departments_and_employees')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('labourUnion') }}" class="header__bottom__link">
-                                                    Labour union
+                                                    @lang('main.labour_union')
                                                 </a>
                                             </li>
 
@@ -91,25 +91,25 @@
 
                                             <li>
                                                 <a href="{{ route('partners') }}" class="header__bottom__link">
-                                                    Partners
+                                                    @lang('main.partners')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('jobVacancies') }}" class="header__bottom__link">
-                                                    Job vacancies
+                                                    @lang('main.jobs')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('E_reception') }}" class="header__bottom__link">
-                                                    E-reception
+                                                    @lang('main.electronic_reception')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('academicCouncil') }}" class="header__bottom__link">
-                                                    Academic Council
+                                                    @lang('main.academic_council')
                                                 </a>
                                             </li>
 
@@ -119,7 +119,7 @@
 
                                 <li>
                                     <h4 class="header__bottom__links">
-                                        Academics
+                                        @lang('main.academics')
                                         <span><i class="fas fa-chevron-down"></i></span>
                                     </h4>
 
@@ -127,13 +127,13 @@
                                         <ul class="header__bottom__none__menu">
                                             <li>
                                                 <a href="{{ route('bachelor') }}" class="header__bottom__link">
-                                                    Bachelor
+                                                    @lang('main.bachelor')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('master') }}" class="header__bottom__link">
-                                                    Master
+                                                    @lang('main.master')
                                                 </a>
                                             </li>
                                         </ul>
@@ -150,13 +150,13 @@
                                         <ul class="header__bottom__none__menu">
                                             <li>
                                                 <a href="{{ route('admissionBachelor') }}" class="header__bottom__link">
-                                                    Bachelor
+                                                    @lang('main.bachelor')
                                                 </a>
                                             </li>
 
                                             <li>
                                                 <a href="{{ route('admissionMaster') }}" class="header__bottom__link">
-                                                    Master
+                                                    @lang('main.master')
                                                 </a>
                                             </li>
 
@@ -194,7 +194,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('research') }}" class="header__bottom__link">Research</a>
+                                    <a href="{{ route('research') }}" class="header__bottom__link">@lang('main.research')</a>
                                 </li>
 
                                 <li>
@@ -239,7 +239,7 @@
 
                                 <li>
                                     <h4 class="header__bottom__links">
-                                        News
+                                        @lang('main.news')
                                         <span><i class="fas fa-chevron-down"></i></span>
                                     </h4>
 
@@ -248,7 +248,7 @@
 
                                             <li>
                                                 <a href="{{ route('articles') }}" class="header__bottom__link">
-                                                    News
+                                                    @lang('main.news')
                                                 </a>
                                             </li>
 

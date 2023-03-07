@@ -14,7 +14,7 @@
                         <div class="slider__text">
                             <p>{{ $slider->{'description_' . app()->getLocale()} }}</p>
                         </div>
-                        <a href="{{ $slider->link }}" class="slider__link">Read more <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ $slider->link }}" class="slider__link">@lang('main.read_more') <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </section>
             </div>
@@ -34,14 +34,14 @@
                     @foreach ($pages as $page)
                     <div class="about__item__text">
                         <h2 class="about__title__h2">{{ $page->{'title_' . app()->getLocale()} }}</h2>
-                        <h3 class="about__title__h3">A little about our university</h3>
+                        <h3 class="about__title__h3">@lang('main.a_little_about_our_university')</h3>
                         <div class="about__text">
                             <p>
                                 {!! $page->{'content_' . app()->getLocale()} !!}
                             </p>
                         </div>
 
-                        <a href="{{ route('about') }}" class="about__link">more <i class="fas fa-chevron-right"></i></a>
+                        <a href="{{ route('about') }}" class="about__link">@lang('main.moew') <i class="fas fa-chevron-right"></i></a>
                     </div>
 
                     <div class="about__item">
@@ -80,8 +80,8 @@
             <div class="advantages__cart">
                 <div class="advantages__list">
                     <div class="advantages__item">
-                        <h2 class="about__title__h2">advantages</h2>
-                        <h3 class="about__title__h3">how we are better than our competitors</h3>
+                        <h2 class="about__title__h2">@lang('main.advantages')</h2>
+                        <h3 class="about__title__h3">@lang('main.how_we_are_better_than_our_competitors')</h3>
 
                         <ul class="advantages__list__menu">
                           @foreach ($advantages as $advantage)
@@ -111,8 +111,8 @@
     <div class="educational">
         <section class="container">
             <div class="educational__cart">
-                <h2 class="about__title__h2">Educational directions</h2>
-                <h3 class="about__title__h3">List of directions of our university</h3>
+                <h2 class="about__title__h2">@lang('main.educational_directions')</h2>
+                <h3 class="about__title__h3">@lang('main.list_of_directions_of_our_university')</h3>
 
                 <div class="educational__list">
                     @foreach ($bachelorins as $bachelorin)
@@ -143,7 +143,7 @@
 
                 <div class="educational__bootom__link">
                     <a href="{{ route('bachelor') }}" class="educational__all__link">
-                        view all directions
+                        @lang('main.view_all_directions')
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -160,8 +160,8 @@
     <div class="connect_us">
         <section class="container">
             <div class="connect_us__cart">
-                <h2 class="about__title__h2">connect with us</h2>
-                <h3 class="about__title__h3">Write to us and we will contact you</h3>
+                <h2 class="about__title__h2">@lang('main.connect_with_us')</h2>
+                <h3 class="about__title__h3">@lang('main.write_to_us_and_we_will_contact_you')</h3>
 
                 <form action="{{ route('yourSave') }}" class="connect_us__form" method="POST">
                     @csrf
@@ -169,7 +169,7 @@
                     <input type="tel" name="phone_number" placeholder="Phone number" class="connect_us__input" required>
                     <textarea  placeholder="Comment" name="comment" class="connect_us__textarea"></textarea>
                     <button class="connect_us__button">
-                        Send
+                        @lang('main.send')
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </form>
@@ -185,8 +185,8 @@
     <div class="news">
         <section class="container">
             <div class="news__cart">
-                <h2 class="about__title__h2">News</h2>
-                <h3 class="about__title__h3">Latest events of our university</h3>
+                <h2 class="about__title__h2">@lang('main.news')</h2>
+                <h3 class="about__title__h3">@lang('main.latest_events_of_our_university')</h3>
 
                 <div class="news__list">
                     @foreach ($articles as $article)
@@ -205,7 +205,7 @@
 
                 <div class="educational__bootom__link">
                     <a href="{{ route('articles') }}" class="educational__all__link">
-                        view all directions
+                        @lang('main.view_all_news')
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -222,8 +222,8 @@
         <section class="container">
             <div class="our_partners__cart">
 
-                <h2 class="about__title__h2">Our partners</h2>
-                <h3 class="about__title__h3">Companies that trust us</h3>
+                <h2 class="about__title__h2">@lang('main.our_partners')</h2>
+                <h3 class="about__title__h3">@lang('main.companies_that_trust_us')</h3>
 
                 <div class="our_partners__list owl-carousel">
                    @foreach ($ourpartners as $ourpartner)
