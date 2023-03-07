@@ -94,6 +94,7 @@ return [
     'academic_council' => 'Ilmiy kengash',
     'academics' => 'Akademiklar',
     'bachelor' => 'Bakalavr',
-    'leadership' => 'Etakchilik'
+    'leadership' => 'Etakchilik',
+    'evening_education' => 'Kechki ta\'lim'
 
 ];

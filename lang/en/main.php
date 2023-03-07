@@ -89,6 +89,7 @@ return  [
     'academic_council' => 'Academic Council',
     'academics' => 'Academics',
     'bachelor' => 'Bachelor',
-    'leadership' => 'Leadership'
+    'leadership' => 'Leadership',
+    'evening_education' => 'Evening education'
 
  ];

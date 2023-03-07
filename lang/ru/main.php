@@ -94,6 +94,7 @@ return [
     'academic_council' => 'Ученый совет',
     'academics' => 'Академики',
     'bachelor' => 'Бакалавр',
-    'leadership' => 'Лидерство'
+    'leadership' => 'Лидерство',
+    'evening_education' => 'Вечернее образование'
 
 ];

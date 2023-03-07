@@ -57,7 +57,7 @@
                                 </h3>
 
                                 <ul class="admissionsBachelor__menu">
-                                    <li>
+                                    {{-- <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
@@ -71,7 +71,7 @@
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $edicationin->evening_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $edicationin->evening_shalk_now }}</h3>
-                                    </li>
+                                    </li> --}}
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">

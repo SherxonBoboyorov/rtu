@@ -10,7 +10,7 @@
                 <h2 class="about__title__h2">Evening education</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('mian.main')</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
@@ -29,7 +29,6 @@
   <div class="admissionsBachelor">
     <section class="container">
         <div class="admissionsBachelor__cart">
-
             <div class="aboutContint__text">
                 @foreach ($eveningedications as $eveningedication)
                 <p>
@@ -41,10 +40,10 @@
             <div class="admissionsBachelor__list">
                @foreach ($eveningedicationcategories as $eveningedicationcategory)
                 <section class="admissionsBachelor__ietm__cart">
-                    <h2 class="about__title__h2">{{ $edicationcategory->{'title_' . app()->getLocale()} }}</h2>
+                    <h2 class="about__title__h2">{{ $eveningedicationcategory->{'title_' . app()->getLocale()} }}</h2>
 
                     <div class="admissionsBachelor__list__item">
-                        @foreach ($edicationcategory->eveningedicationins as $eveningedicationin)
+                        @foreach ($eveningedicationcategory->eveningedicationins as $eveningedicationin)
 
                         <div class="admissionsBachelor__item">
                             <div class="educational__img">
@@ -57,29 +56,29 @@
                                 </h3>
 
                                 <ul class="admissionsBachelor__menu">
-                                    <li>
+                                    {{-- <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->daytime_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->daytime_shalk_now }}</h3>
-                                    </li>
+                                    </li> --}}
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
-                                            To’lov miqdori (kunduzgi shakl)
+                                            To’lov miqdori (kechgi shakl)
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->evening_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->evening_shalk_now }}</h3>
                                     </li>
-
+{{--
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             To’lov miqdori (kunduzgi shakl)
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->external_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->external_shalk_now }}</h3>
-                                    </li>
+                                    </li> --}}
                                 </ul>
 
                                 <a href="{{ route('E_reception') }}" class="admissionsBachelor__link">

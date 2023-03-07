@@ -14,7 +14,7 @@ class EveningController extends Controller
         $eveningedications = EveningEdication::all();
         $eveningedicationcategories = EveningEdicationCategory::with('eveningedicationins')->get();
 
-        return view('front.extramuralEducation', compact(
+        return view('front.eveningEducation', compact(
             'eveningedications',
             'eveningedicationcategories'
         ));
