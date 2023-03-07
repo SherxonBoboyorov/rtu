@@ -8,14 +8,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Bachelor</h2>
+                <h2 class="about__title__h2">@lang('main.bachelor')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Bachelor</a>
+                        <a class="aboutUniversity__menu__link">@lang('main.bachelor')</a>
                     </li>
                 </ul>
             </div>
