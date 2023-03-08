@@ -102,6 +102,11 @@ return  [
     'foreign_partners' => 'Foreign partners',
     'events' => 'Events',
     'admissions' => 'Admissions',
-    'related_news' => 'Related news'
+    'related_news' => 'Related news',
+    'statistics' => 'Statistics',
+    'sign_up' => 'Sign up',
+    'payment_amount_daytime_form' => 'Payment Amount (daytime form)',
+    'payment_amount_late_form' => 'Payment Amount (late form)',
+    'payment_amount_correspondence_course' => 'Payment Amount (correspondence course)'
 
  ];

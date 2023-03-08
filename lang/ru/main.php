@@ -107,6 +107,11 @@ return [
     'foreign_partners' => 'Зарубежные партнеры',
     'events' => 'События',
     'admissions' => 'Поступление',
-    'related_news' => 'Связанные новости'
+    'related_news' => 'Связанные новости',
+    'statistics' => 'Статистика',
+    'sign_up' => 'Зарегистрироваться',
+    'payment_amount_daytime_form' => 'Сумма платежа (дневная форма)',
+    'payment_amount_late_form' => 'Сумма платежа (поздняя форма)',
+    'payment_amount_correspondence_course' => 'Сумма платежа (заочное обучение)'
 
 ];

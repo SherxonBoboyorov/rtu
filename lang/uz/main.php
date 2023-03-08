@@ -107,6 +107,11 @@ return [
     'foreign_partners' => 'Xorijiy hamkorlar',
     'events' => 'Voqealar',
     'admissions' => 'Qabullar',
-    'related_news' => 'Tegishli yangiliklar'
+    'related_news' => 'Tegishli yangiliklar',
+    'statistics' => 'Statistika',
+    'sign_up' => 'Ro’yxatdan o’ting',
+    'payment_amount_daytime_form' => 'To’lov miqdori (kunduzgi shakl)',
+    'payment_amount_late_form' => 'To’lov miqdori (kechgi shakl)',
+    'payment_amount_correspondence_course' => 'To’lov miqdori (sirtqi shakl)'
 
 ];

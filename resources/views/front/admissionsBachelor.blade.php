@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Bachelor</h2>
+                <h2 class="about__title__h2">@lang('main.bachelor')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
                         <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Bachelor</a>
+                        <a class="aboutUniversity__menu__link">@lang('main.bachelor')</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
                                 <ul class="admissionsBachelor__menu">
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
-                                            To’lov miqdori (kunduzgi shakl)
+                                            @lang('main.payment_amount_daytime_form')
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionin->daytime_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $admissionin->daytime_shalk_now }}</h3>
@@ -67,7 +67,7 @@
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
-                                            To’lov miqdori (kunduzgi shakl)
+                                            @lang('main.payment_amount_late_form')
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionin->evening_shalk_before }} </s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $admissionin->evening_shalk_now }} </h3>
@@ -75,7 +75,7 @@
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
-                                            To’lov miqdori (kunduzgi shakl)
+                                            @lang('main.payment_amount_correspondence_course')
                                         </h4>
                                         <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionin->external_shalk_before }}</s></h3>
                                         <h3 class="admissionsBachelor__title__h3">{{ $admissionin->external_shalk_now }} </h3>
@@ -83,7 +83,7 @@
                                 </ul>
 
                                 <a href="{{ route('E_reception') }}" class="admissionsBachelor__link">
-                                    Ro’yxatdan o’ting
+                                    @lang('main.sign_up')
                                     <i class="fas fa-chevron-right"></i>
                                 </a>
                             </section>

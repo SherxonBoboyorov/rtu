@@ -10,7 +10,7 @@
                 <h2 class="about__title__h2">{{ $team->{'name_' . app()->getLocale()} }}</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ url('departmentsstaffs') }}" class="aboutUniversity__menu__link">Consectetur adipiscing elit</a>
+                        <a href="{{ url('departmentsstaffs') }}" class="aboutUniversity__menu__link">@lang('main.departments_and_employees')</a>
                     </li>
 
                     <li>

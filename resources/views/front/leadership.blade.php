@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Leadership</h2>
+                <h2 class="about__title__h2">@lang('main.leadership')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
                         <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
-                        <a  class="aboutUniversity__menu__link">Leadership</a>
+                        <a  class="aboutUniversity__menu__link">@lang('main.leadership')</a>
                     </li>
                 </ul>
             </div>
@@ -45,26 +45,26 @@
                                 <h2 class="leadership__title__h2">{{ $leadership->{'name_' . app()->getLocale()} }}</h2>
                                 <ul class="leadership__menu__contacts">
                                     <li>
-                                        <span>Должность:</span>
+                                        <span>@lang('main.job_title'):</span>
                                         <h4 class="leadership__link__contacts">{{ $leadership->{'job_title_' . app()->getLocale()} }}</h4>
                                     </li>
 
                                     <li>
-                                        <span>Телефон:</span>
+                                        <span>@lang('main.phone'):</span>
                                         <a href="tel:{{ $leadership->phone_number }}" class="leadership__link__contacts">{{ $leadership->phone_number }}</a>
                                     </li>
 
                                     <li>
-                                        <span>Дни приема:</span>
+                                        <span>@lang('main.reception_days'):</span>
                                         <h4 class="leadership__link__contacts">{{ $leadership->{'reception_days_' . app()->getLocale()} }}</h4>
                                     </li>
 
                                     <li>
-                                        <span>Электронная почта:</span>
+                                        <span>>@lang('main.email'):</span>
                                         <a href="mailto:{{ $leadership->email }}" class="leadership__link__contacts">{{ $leadership->email }}</a>
                                     </li>
                                 </ul>
-                                <button class="leadership__button__open">Подробнее</button>
+                                <button class="leadership__button__open">@lang('main.more')</button>
                             </section>
 
                         </div>
@@ -82,22 +82,22 @@
                                         <h2 class="leadership__title__h2">{{ $leadership->{'name_' . app()->getLocale()} }}</h2>
                                         <ul class="leadership__menu__contacts">
                                             <li>
-                                                <span>Должность:</span>
+                                                <span>@lang('main.job_title'):</span>
                                                 <h4 class="leadership__link__contacts">{{ $leadership->{'job_title_' . app()->getLocale()} }}</h4>
                                             </li>
 
                                             <li>
-                                                <span>Телефон:</span>
+                                                <span>@lang('main.phone'):</span>
                                                 <a href="tel:{{ $leadership->phone_number }}" class="leadership__link__contacts">{{ $leadership->phone_number }}</a>
                                             </li>
 
                                             <li>
-                                                <span>Дни приема:</span>
+                                                <span>@lang('main.reception_days'):</span>
                                                 <h4 class="leadership__link__contacts">{{ $leadership->{'reception_days_' . app()->getLocale()} }}</h4>
                                             </li>
 
                                             <li>
-                                                <span>Электронная почта:</span>
+                                                <span>>@lang('main.email'):</span>
                                                 <a href="mailto:{{ $leadership->email }}" class="leadership__link__contacts">{{ $leadership->email }}</a>
                                             </li>
                                         </ul>

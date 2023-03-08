@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">E-reception</h2>
+                <h2 class="about__title__h2">@lang('main.electronic_reception')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.dormitory')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">E-reception</a>
+                        <a class="aboutUniversity__menu__link">@lang('main.electronic_reception')</a>
                     </li>
                 </ul>
             </div>

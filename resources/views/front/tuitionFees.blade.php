@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Tuition fees</h2>
+                <h2 class="about__title__h2">@lang('main.tuition_fees')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
                         <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Tuition fees</a>
+                        <a class="aboutUniversity__menu__link">@lang('main.tuition_fees')</a>
                     </li>
                 </ul>
             </div>
