@@ -106,6 +106,7 @@ return [
     'dormitory' => 'Общежитие',
     'foreign_partners' => 'Зарубежные партнеры',
     'events' => 'События',
-    'admissions' => 'Поступление'
+    'admissions' => 'Поступление',
+    'related_news' => 'Связанные новости'
 
 ];

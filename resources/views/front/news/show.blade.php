@@ -10,7 +10,7 @@
                 <h2 class="about__title__h2">{{ $article->{'title_' . app()->getLocale()} }}</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('articles') }}" class="aboutUniversity__menu__link">News</a>
+                        <a href="{{ route('articles') }}" class="aboutUniversity__menu__link">@lang('main.news')</a>
                     </li>
 
                     <li>
@@ -77,7 +77,7 @@
                             </li>
                         </ul>
 
-                        <h3 class="newsIn__title__news">Related news</h3>
+                        <h3 class="newsIn__title__news">@lang('main.related_news')</h3>
 
                         <div class="newsIn__aside__list">
                             @foreach ($articles_list_alls as $articles_list_all)

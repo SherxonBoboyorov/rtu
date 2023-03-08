@@ -106,6 +106,7 @@ return [
     'dormitory' => 'talabalar umumiy yotoqxonasi',
     'foreign_partners' => 'Xorijiy hamkorlar',
     'events' => 'Voqealar',
-    'admissions' => 'Qabullar'
+    'admissions' => 'Qabullar',
+    'related_news' => 'Tegishli yangiliklar'
 
 ];

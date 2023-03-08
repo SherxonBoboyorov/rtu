@@ -101,6 +101,7 @@ return  [
     'dormitory' => 'Dormitory',
     'foreign_partners' => 'Foreign partners',
     'events' => 'Events',
-    'admissions' => 'Admissions'
+    'admissions' => 'Admissions',
+    'related_news' => 'Related news'
 
  ];

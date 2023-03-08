@@ -7,14 +7,14 @@
     <div class="aboutUniversity">
         <section class="container">
             <div class="aboutUniversity__cart">
-                <h2 class="about__title__h2">Departments & staff</h2>
+                <h2 class="about__title__h2">@lang('main.departments_and_employees')</h2>
                 <ul class="aboutUniversity__menu">
                     <li>
-                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">Main</a>
+                        <a href="{{ route('/') }}" class="aboutUniversity__menu__link">@lang('main.main')</a>
                     </li>
 
                     <li>
-                        <a class="aboutUniversity__menu__link">Departments & staff</a>
+                        <a class="aboutUniversity__menu__link">@lang('main.departments_and_employees')</a>
                     </li>
                 </ul>
             </div>
