@@ -9,27 +9,19 @@ use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
-    public function list()
+    public function list(Request $request)
     {
-        $articles = Article::orderBy('created_at', 'DESC')->paginate(12);
-        $news = Article::select(DB::raw('YEAR(created_at) as year'))->distinct()->pluck('year')->toArray();
+        $articles = Article::select(DB::raw('*, MONTH(created_at) as month'))->orderBy('created_at', 'DESC');
+        if($request->month){
+            $articles = $articles->whereMonth('created_at', $request->month);
+        }
+        $articles = $articles->paginate(12);
+        $years = Article::select(DB::raw('YEAR(created_at) as year'))->distinct()->pluck('year')->toArray();
 
         return view('front.news.list', compact(
             'articles',
-            'news'
+            'years'
      ));
-    }
-
-    public function ajaxFilterList(Request $request){
-        $dates = $request->dates;
-        $news =  Article::orderBy('created_at', 'DESC');
-
-        if(isset($dates)&&!empty($dates)){
-            $news = $news->whereYear('created_at',$dates);
-        }
-        $news = $news->paginate(6);
-
-        return response(view('front.news.filter_result',['news'=>$news]));
     }
 
 

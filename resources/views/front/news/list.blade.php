@@ -1,5 +1,14 @@
 @extends('layouts.front')
 
+@php
+    $months = [
+        1 => 'yanvar',
+        2 => 'fevral',
+        3 => 'mart',
+        4 => 'aprel'
+    ]
+@endphp
+
 @section('content')
 
     <!-- aboutUniversity start -->
@@ -31,15 +40,17 @@
             <div class="newsAll__cart">
                 <div class="newsAll__list">
                     <aside>
-                        @foreach ($news as $value)
+                        @foreach ($years as $value)
                         <ul class="newsAll__filter">
                             <li id="filterForm">
                                 @csrf
                                 <h3 class="newsAll__filter__title" >{{ $value }}<span><i class="fas fa-angle-down"></i></span></h3>
                                 <ul class="newsAll__filter__data">
+                                    @foreach ($months as $k=>$item)
                                     <li>
-                                         <a href="#!" type="checkbox" data-less="0" class="filter_show_more newsAll__filter__link" name="dates">{{  date('M', strtotime($value)) }}</a>
+                                         <a href="{{ route('articles', ["month" => $k]) }}" class="filter_show_more newsAll__filter__link" name="month">{{ $item }}</a>
                                     </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
