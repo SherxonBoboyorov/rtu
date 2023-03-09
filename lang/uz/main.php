@@ -94,7 +94,7 @@ return [
     'academic_council' => 'Ilmiy kengash',
     'academics' => 'Akademiklar',
     'bachelor' => 'Bakalavr',
-    'leadership' => 'Yetakchilik',
+    'leadership' => 'Rahbariyat',
     'evening_education' => 'Kechki ta\'lim',
     'extramural_education' => 'Sirtqi ta\'lim',
     'transfer' => 'O\'tkazish',
