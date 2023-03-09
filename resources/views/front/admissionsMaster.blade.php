@@ -60,24 +60,24 @@
                                         <h4 class="admissionsBachelor__title__h4">
                                             @lang('main.payment_amount_daytime_form')
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->daytime_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->daytime_shalk_now }}</h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->daytime_shalk_before }} @lang('main.sum')</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->daytime_shalk_now }} @lang('main.sum')</h3>
                                     </li>
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             @lang('main.payment_amount_late_form')
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->evening_shalk_before }} </s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->evening_shalk_now }} </h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->evening_shalk_before }} @lang('main.sum')</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->evening_shalk_now }} @lang('main.sum')</h3>
                                     </li>
 
                                     <li>
                                         <h4 class="admissionsBachelor__title__h4">
                                             @lang('main.payment_amount_correspondence_course')
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->external_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->external_shalk_now }} </h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $admissionmasterin->external_shalk_before }} @lang('main.sum')</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $admissionmasterin->external_shalk_now }} @lang('main.sum')</h3>
                                     </li>
                                 </ul>
 

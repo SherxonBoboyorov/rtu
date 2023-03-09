@@ -118,6 +118,7 @@ return [
     'specialties' => 'Специальности',
     'your_name' => 'Ваше имя',
     'phone_number' => 'Номер телефона',
-    'comment' => 'Комментарий'
+    'comment' => 'Комментарий',
+    'sum' => 'сум'
 
 ];

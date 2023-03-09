@@ -60,8 +60,8 @@
                                         <h4 class="admissionsBachelor__title__h4">
                                             @lang('main.payment_amount_late_form')
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->evening_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->evening_shalk_now }}</h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $eveningedicationin->evening_shalk_before }} @lang('main.sum')</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $eveningedicationin->evening_shalk_now }} @lang('main.sum')</h3>
                                     </li>
                                 </ul>
 

@@ -94,7 +94,7 @@ return [
     'academic_council' => 'Ilmiy kengash',
     'academics' => 'Akademiklar',
     'bachelor' => 'Bakalavr',
-    'leadership' => 'Etakchilik',
+    'leadership' => 'Yetakchilik',
     'evening_education' => 'Kechki ta\'lim',
     'extramural_education' => 'Sirtqi ta\'lim',
     'transfer' => 'O\'tkazish',
@@ -118,6 +118,7 @@ return [
     'specialties' => 'Mutaxassisliklar',
     'your_name' => 'Sizning ismingiz',
     'phone_number' => 'Telefon raqami',
-    'comment' => 'Fikr bildirish'
+    'comment' => 'Fikr bildirish',
+    'sum' => 'so’m'
 
 ];

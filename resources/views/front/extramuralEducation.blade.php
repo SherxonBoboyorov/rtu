@@ -61,8 +61,8 @@
                                         <h4 class="admissionsBachelor__title__h4">
                                             @lang('main.payment_amount_correspondence_course')
                                         </h4>
-                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $edicationin->external_shalk_before }}</s></h3>
-                                        <h3 class="admissionsBachelor__title__h3">{{ $edicationin->external_shalk_now }}</h3>
+                                        <h3 class="admissionsBachelor__title__h3"><s>{{ $edicationin->external_shalk_before }} @lang('main.sum')</s></h3>
+                                        <h3 class="admissionsBachelor__title__h3">{{ $edicationin->external_shalk_now }} @lang('main.sum')</h3>
                                     </li>
                                 </ul>
 

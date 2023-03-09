@@ -113,6 +113,7 @@ return  [
     'specialties' => 'Specialties',
     'your_name' => 'Your name',
     'phone_number' => 'Phone number',
-    'comment' => 'Comment'
+    'comment' => 'Comment',
+    'sum' => 'Sum'
 
  ];

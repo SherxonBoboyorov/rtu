@@ -60,7 +60,7 @@
                                     </li>
 
                                     <li>
-                                        <span>>@lang('main.email'):</span>
+                                        <span>@lang('main.email'):</span>
                                         <a href="mailto:{{ $leadership->email }}" class="leadership__link__contacts">{{ $leadership->email }}</a>
                                     </li>
                                 </ul>
@@ -97,7 +97,7 @@
                                             </li>
 
                                             <li>
-                                                <span>>@lang('main.email'):</span>
+                                                <span>@lang('main.email'):</span>
                                                 <a href="mailto:{{ $leadership->email }}" class="leadership__link__contacts">{{ $leadership->email }}</a>
                                             </li>
                                         </ul>

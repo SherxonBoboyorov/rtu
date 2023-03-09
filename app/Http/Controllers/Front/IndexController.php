@@ -25,7 +25,7 @@ class IndexController extends Controller
         $ourpartners = OurPartner::orderBy('created_at', 'DESC')->get();
         $bachelorins = BachelorIn::orderBy('created_at', 'DESC')->paginate(4);
         $options = Options::orderBy('created_at', 'DESC')->get();
-        
+
         return view('front.index', compact(
             'sliders',
             'pages',
@@ -47,7 +47,7 @@ class IndexController extends Controller
         $data =  $request->validate([
             'fullname' => 'required',
             'phone_number' => 'required',
-            'comment' => 'required'
+            'comment' => ''
        ]);
        Connect::create($data);
 
