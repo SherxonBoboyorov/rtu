@@ -413,6 +413,8 @@
     <script src="{{ asset('front/js/slic.js') }}"></script>
     <script src="{{ asset('front/js/mar_ru.js') }}"></script>
     <script src="{{ asset('front/js/index.js') }}"></script>
+    
+    @yield('pageScripts')
 </body>
 </html>
 

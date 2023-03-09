@@ -29,18 +29,16 @@
     <div class="newsAll">
         <section class="container">
             <div class="newsAll__cart">
-                <div class="newsAll__list" id="filterForm">
-                    {{-- <form id="filterForm" action="">
-                        @csrf --}}
-                        <aside>
-
+                <div class="newsAll__list">
+                    <aside>
                         @foreach ($news as $value)
                         <ul class="newsAll__filter">
-                            <li>
+                            <li id="filterForm">
+                                @csrf
                                 <h3 class="newsAll__filter__title" >{{ $value }}<span><i class="fas fa-angle-down"></i></span></h3>
                                 <ul class="newsAll__filter__data">
-                                    <li type="checkbox">
-                                         <a href="#!" class="newsAll__filter__link" name="dates[]">{{  date('M', strtotime($value)) }}</a>
+                                    <li>
+                                         <a href="#!" type="checkbox" data-less="0" class="filter_show_more newsAll__filter__link" name="dates">{{  date('M', strtotime($value)) }}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -77,7 +75,6 @@
                         {{ $articles->links("vendor.pagination.pagination")}}
                     </section>
                 </div>
-            {{-- </form> --}}
             </div>
         </div>
         </section>

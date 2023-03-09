@@ -1,14 +1,23 @@
 
 $(document).ready(function(){
     let filterForm = $('#filterForm');
-    let newsAll__filter__link = $('input[type="checkbox"]');
+    let newsAll__filter__link = $('a[type="checkbox"]');
     let resultSection = $('#result_section');
+
+
+    let showMoreButton = $('.filter_show_more');
+    console.log(showMoreButton);
+    newsAll__filter__link.click(function(e){
+        formValues = filterForm.serialize();
+        getMessage(formValues)
+    });
 
 
     newsAll__filter__link.click(function(e){
         formValues = filterForm.serialize();
         getMessage(formValues)
     });
+
 
     function getMessage(formValues) {
         $.ajax({
@@ -24,3 +33,6 @@ $(document).ready(function(){
         });
     }
 })
+
+
+

@@ -37,11 +37,7 @@
                                 <h3 class="newsAll__filter__title">2022 <span><i class="fas fa-angle-down"></i></span></h3>
                                 <ul class="newsAll__filter__data">
                                     <li>
-                                        <a href="#!" class="newsAll__filter__link active">Январь</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#!" class="newsAll__filter__link">Февраль</a>
+                                        <a href="#!" class="newsAll__filter__link active">March</a>
                                     </li>
                                 </ul>
                             </li>
