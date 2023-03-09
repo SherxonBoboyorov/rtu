@@ -165,9 +165,9 @@
 
                 <form action="{{ route('yourSave') }}" class="connect_us__form" method="POST">
                     @csrf
-                    <input type="text" name="fullname" placeholder="Your name" class="connect_us__input" required>
-                    <input type="tel" name="phone_number" placeholder="Phone number" class="connect_us__input" required>
-                    <textarea  placeholder="Comment" name="comment" class="connect_us__textarea"></textarea>
+                    <input type="text" name="fullname" placeholder="@lang('main.your_name')" class="connect_us__input" required>
+                    <input type="tel" name="phone_number" placeholder="@lang('main.phone_number')" class="connect_us__input" required>
+                    <textarea  placeholder="@lang('main.comment')" name="comment" class="connect_us__textarea"></textarea>
                     <button class="connect_us__button">
                         @lang('main.send')
                         <i class="fas fa-chevron-right"></i>

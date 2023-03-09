@@ -41,17 +41,17 @@
                             <h2 class="leadership__title__h2">{{ $team->{'name_' . app()->getLocale()} }}</h2>
                             <ul class="leadership__menu__contacts">
                                 <li>
-                                    <span>Position:</span>
+                                    <span>@lang('main.position'):</span>
                                     <h4 class="leadership__link__contacts">{{ $team->{'job_title_' . app()->getLocale()} }}</h4>
                                 </li>
 
                                 <li>
-                                    <span>Teaching work experience:</span>
+                                    <span>@lang('main.teaching_work_experience'):</span>
                                     <a class="leadership__link__contacts">{{ $team->{'reception_days_' . app()->getLocale()} }}</a>
                                 </li>
 
                                 <li>
-                                    <span>Specialties:</span>
+                                    <span>@lang('main.specialties'):</span>
                                     <h4 class="leadership__link__contacts">{{ $team->{'specialties_' . app()->getLocale()} }}</h4>
                                 </li>
                             </ul>

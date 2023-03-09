@@ -112,6 +112,12 @@ return [
     'sign_up' => 'Зарегистрироваться',
     'payment_amount_daytime_form' => 'Сумма платежа (дневная форма)',
     'payment_amount_late_form' => 'Сумма платежа (поздняя форма)',
-    'payment_amount_correspondence_course' => 'Сумма платежа (заочное обучение)'
+    'payment_amount_correspondence_course' => 'Сумма платежа (заочное обучение)',
+    'position' => 'Позиция',
+    'teaching_work_experience' => 'Опыт преподавательской работы',
+    'specialties' => 'Специальности',
+    'your_name' => 'Ваше имя',
+    'phone_number' => 'Номер телефона',
+    'comment' => 'Комментарий'
 
 ];
