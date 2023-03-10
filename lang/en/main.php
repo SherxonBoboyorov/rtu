@@ -114,6 +114,19 @@ return  [
     'your_name' => 'Your name',
     'phone_number' => 'Phone number',
     'comment' => 'Comment',
-    'sum' => 'Sum'
+    'sum' => 'Sum',
+    'january' => 'January',
+    'february' => 'February',
+    'march' => 'March',
+    'april' => 'April',
+    'may' => 'May',
+    'june' => 'June',
+    'july' => 'July',
+    'august' => 'August',
+    'september' => 'September',
+    'october' => 'October',
+    'november' => 'November',
+    'december' => 'December'
 
- ];
+
+];

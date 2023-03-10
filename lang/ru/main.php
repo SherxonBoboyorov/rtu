@@ -119,6 +119,18 @@ return [
     'your_name' => 'Ваше имя',
     'phone_number' => 'Номер телефона',
     'comment' => 'Комментарий',
-    'sum' => 'сум'
+    'sum' => 'сум',
+    'january' => 'Январь',
+    'february' => 'Февраль',
+    'march' => 'Март',
+    'april' => 'Aпрель',
+    'may' => 'Май',
+    'june' => 'Июнь',
+    'july' => 'Июль',
+    'august' => 'Август',
+    'september' => 'Сентябрь',
+    'october' => 'Октябрь',
+    'november' => 'Ноябрь',
+    'december' => 'Декабрь'
 
 ];

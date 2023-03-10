@@ -2,11 +2,19 @@
 
 @php
     $months = [
-        1 => 'yanvar',
-        2 => 'fevral',
-        3 => 'mart',
-        4 => 'aprel'
-    ]
+        1 =>  app('translator')->get('main.january'),
+        2 =>  app('translator')->get('main.february'),
+        3 =>  app('translator')->get('main.march'),
+        4 =>  app('translator')->get('main.april'),
+        5 =>  app('translator')->get('main.may'),
+        6 =>  app('translator')->get('main.june'),
+        7 =>  app('translator')->get('main.july'),
+        8 =>  app('translator')->get('main.august'),
+        9 =>  app('translator')->get('main.september'),
+        10 =>  app('translator')->get('main.october'),
+        11 =>  app('translator')->get('main.november'),
+        12 =>  app('translator')->get('main.december'),
+    ];
 @endphp
 
 @section('content')

@@ -119,6 +119,18 @@ return [
     'your_name' => 'Sizning ismingiz',
     'phone_number' => 'Telefon raqami',
     'comment' => 'Fikr bildirish',
-    'sum' => 'so’m'
+    'sum' => 'so’m',
+    'january' => 'Yanvar',
+    'february' => 'Fevral',
+    'march' => 'Mart',
+    'april' => 'Aprel',
+    'may' => 'May',
+    'june' => 'Iyun',
+    'july' => 'Iyul',
+    'august' => 'Avgust',
+    'september' => 'Sentyabr',
+    'october' => 'Oktyabr',
+    'november' => 'Noyabr',
+    'december' => 'Dekabr'
 
 ];

@@ -1,5 +1,22 @@
 @extends('layouts.front')
 
+@php
+    $months = [
+        1 =>  app('translator')->get('main.january'),
+        2 =>  app('translator')->get('main.february'),
+        3 =>  app('translator')->get('main.march'),
+        4 =>  app('translator')->get('main.april'),
+        5 =>  app('translator')->get('main.may'),
+        6 =>  app('translator')->get('main.june'),
+        7 =>  app('translator')->get('main.july'),
+        8 =>  app('translator')->get('main.august'),
+        9 =>  app('translator')->get('main.september'),
+        10 =>  app('translator')->get('main.october'),
+        11 =>  app('translator')->get('main.november'),
+        12 =>  app('translator')->get('main.december'),
+    ];
+@endphp
+
 @section('content')
 
     <!-- aboutUniversity start -->
@@ -31,19 +48,22 @@
             <div class="events__cart">
                 <div class="newsAll__list">
                     <aside>
+                        @foreach ($years as $value)
                         <ul class="newsAll__filter">
-
-                            <li>
-                                <h3 class="newsAll__filter__title">2023 <span><i class="fas fa-angle-down"></i></span></h3>
+                            <li id="filterForm">
+                                @csrf
+                                <h3 class="newsAll__filter__title" >{{ $value }}<span><i class="fas fa-angle-down"></i></span></h3>
                                 <ul class="newsAll__filter__data">
+                                    @foreach ($months as $k=>$item)
                                     <li>
-                                        <a href="#!" class="newsAll__filter__link active">March</a>
+                                         <a href="{{ route('events', ["month" => $k]) }}" class="filter_show_more newsAll__filter__link" name="month">{{ $item }}</a>
                                     </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
+                        @endforeach
                     </aside>
-
                     <section>
 
                         <div class="events__list">
